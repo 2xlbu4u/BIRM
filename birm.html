@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta id="viewport" name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    <title></title>
+    <link href="css/BIRM-Custom.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/BIRM.js" type="text/javascript"></script>
+    <script src="js/FileSystem.js" type="text/javascript"></script>
+    <script src="phonegap.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <!-- Start Page -->
+    <div data-role="page">
+        <!-- Start Header -->
+        <div data-id="header" data-role="header" data-tap-toggle="false">
+            <a href="#" id="MenuButton" class="ui-btn-center ui-btn ui-btn-inline ui-corner-all ui-btn-icon-center ui-icon-BIRMMenu ui-btn-BIRM"></a>
+            <h1>BIRM</h1>
+            <a href="#" id="MenuOptions" class="ui-btn ui-btn-right ui-btn-inline ui-corner-all ui-btn-icon-center ui-icon-BIRMPreferences ui-btn-BIRM"></a>
+            <div id="grayChaptersBar">
+                <div id="currentChapterName" class="flc-epubReader-chapter-title"></div>
+            </div>
+            <!-- Start Searchbar -->
+            <div id="searchbar-manual" class="searchbar-search searchbar-manual">
+                <table class="searchbar-table">
+                    <tr>
+                        <td style="width: 95%;"><input id="searchField" data-type="search" data-shadow="false" placeholder="Search All BIRM Chapters ..." /></td>
+                        <td style="width: 5%;"><input type="button" id="searchButton" class="flc-epubReader-search-button" data-icon="search" data-iconpos="notext" value="Go" /></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- End Searchbar -->
+        </div>
+        <!-- END Header -->
+
+        <!-- Start Content -->
+        <div id="BIRMContent" role="main" class="ui-content">
+
+            <!-- Start Options Menu -->
+            <div id="OptionsMenu" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="true" data-shadow="false">
+                <div role="main" class="ui-content ui-fhwa-popup-content-list">
+                    <ul data-role="listview">
+                        <!--<li data-role="list-divider">Choose an Action</li>-->
+                        <li id="HomeButton" data-icon="false"><a href="#"> Home </a></li>
+                        <li id="btnChapters" data-icon="false"><a href="#"> Chapters </a></li>
+                        <li id="btnShowNotes" data-icon="false" class="ui-state-disabled"><a href="#"> My Notes </a></li>
+                        <li id="btnShowBookmarks" data-icon="false" class="ui-state-disabled"><a href="#"> My Bookmarks </a></li>
+                        <li id="btnChangeContrast" data-icon="false"><a href="#"> Change Contrast </a></li>
+                        <li data-role="collapsible" data-iconpos="right" data-inset="false">
+                            <h2> Change Font </h2>
+                            <ul data-role="listview" data-inset="false">
+                                <li id="btnSmallText" data-icon="false"><a href="#">Small</a></li>
+                                <li id="btnMediumText" data-icon="false"><a href="#">Medium</a></li>
+                                <li id="btnLargeText" data-icon="false"><a href="#">Large</a></li>
+                                <li id="btnXLargeText" data-icon="false"><a href="#">Extra Large</a></li>
+                                <li id="btnXXLargeText" data-icon="false"><a href="#">Extra Extra Large</a></li>
+                            </ul>
+                        </li>
+                        <li id="btnShowSearch" data-icon="false"><a href="#"> Show Search </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Options Menu -->
+
+            <div id="DocMenu" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="false">
+                <a class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-notext ui-btn-right" href="#" data-rel="back">Close</a>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider" data-theme="a">Choose an Action</li>
+                    <li id="btnNotes" data-icon="false"><a href="#"> Add Note </a></li>
+                    <li id="btnBookmark" data-icon="false"><a href="#"> Add Bookmark </a></li>
+                    <li id="btnNavigateURL" data-value="" data-icon="false"><a href="#"> Follow Link </a></li>
+                    <li id="btnEnlargeImage" data-icon="false"><a href="#"> Enlarge Image </a></li>
+                    <li id="btnHighlight" data-value="" data-icon="false"><a href="#"> Highlight </a></li>
+                    <li id="btnRemoveHighlight" data-icon="false"><a href="#"> Remove Highlight </a></li>
+                </ul>
+            </div>
+            <!-- END Bookmark Notes Highlight PopUp Selector -->
+
+            <!-- START Photo Popup -->
+            <div class="photopopup" id="popupPhotoLandscape" data-role="popup" data-overlay-theme="a" data-tolerance="30,15" data-corners="false">
+                <a class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" href="#" data-rel="back">Close</a>
+                <img alt="Photo landscape" src="../_assets/img/photo-landscape.jpg">
+            </div>
+            <!-- END Photo Popup -->
+
+        </div>
+        <!-- End Content -->
+
+    </div>
+    <!-- End Page -->
+
+    <!-- TOC Menu Start  -->
+    <nav id="menu"><ol id="toc"></ol></nav>
+    <!-- TOC Menu End -->
+
+</body>
+</html>

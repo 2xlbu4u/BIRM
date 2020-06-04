@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />  
+    
+    <link href="css/BIRM-Custom.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/BIRM.js" type="text/javascript"></script>
+  <!--  <script src="js/Connection.js" type="text/javascript"></script> -->
+    <script src="js/Database.js" type="text/javascript"></script>
+    <script src="js/Notes.js" type="text/javascript"></script>
+    <script src="js/NotesDetail.js" type="text/javascript"></script>
+    <script src="phonegap.js" type="text/javascript"></script>
+    <title>Note</title>
+</head>
+
+<body>
+
+    <!-- Start Notes List Page -->
+    <div data-role="page">
+
+        <!--  Start Header -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" >
+            <a href="#" id="BackButton" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-btn-icon-center ui-icon-BIRMBack ui-btn-BIRM" title="Go back to notes list"></a>
+            <h1>Edit/View Note</h1>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div role="main" class="ui-content" id="NoteContent">
+
+            <fieldset class="ui-field-contain">
+                <label for="txtTitle">Title:</label>
+                <input type="text" id="txtTitle" name="txtTitle" placeholder="Enter Title " title="Field Notes Title" />
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="txtDate">Date:</label>
+                <input type="date" id="txtDate" name="txtDate" title="Field Notes Date" />
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="txtLocation">Location:</label>
+                <input type="text" id="txtLocation" name="txtLocation" title="Field Notes Location" placeholder="Enter Location" />
+            </fieldset>
+            <fieldset class="ui-field-contain">
+                <label for="txtNote">Note:</label>
+                <textarea id="txtNote" placeholder="Enter Field Note Details" title="Field Notes Note Entry Text Area"></textarea>
+            </fieldset>
+
+        </div>
+        <!-- End Content -->
+
+        <!-- Start Footer -->
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <a href="#" id="DoneButton" class="preferences-save-button"><img src="img/downloaded-40-blue-ko.png" alt="Finished" /></a>
+        </div>
+        <!-- End Footer -->
+    </div>
+    <!-- End Note Detail Page -->
+
+</body>
+</html>

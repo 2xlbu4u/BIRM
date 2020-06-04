@@ -1,0 +1,1194 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- Phonegap Styles -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- mmMenu Style for sliding menus -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css"/>
+    <!-- highlight plug-in style -->
+    <link rel="stylesheet" type="text/css" href="css/highlightPlugin.css"/>
+    <!-- jquery mobile styles -->
+    <link rel="stylesheet" type="text/css" href="js/jquery.mobile.theme-1.4.5.css"/>
+    <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.css"/>
+    <!--<script src="js/jquery-2.1.3.js"></script>-->
+
+    <!-- ------------------------------------------------------------------------------------------------------ -->
+    <!-- jQuery js -->
+    <script src="js/jquery-2.1.3.js"></script>
+
+ <!--   &lt;!&ndash; jStorage plugin js &ndash;&gt;
+    <script src="js/json2.js"></script>
+    <script src="js/jstorage.js"></script>-->
+
+    <!-- this script has to be executed prior to jquery.mobile code -->
+    <script>
+
+        $(document).on("mobileinit", function () {
+            $.mobile.pushStateEnabled = false;
+        });
+
+    </script>
+
+    <!-- jqueryMobile js -->
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+
+
+    <!-- highlight plugin js -->
+    <script src="js/jquery.highlight-5.js"></script>
+
+    <!-- mmenu sliding menus plugin js -->
+    <script src="js/jquery.mmenu.min.all.js"></script>
+
+    <!-- wait for loading images plugin js -->
+    <script src="js/jquery.waitforimages.js"></script>
+
+    <!-- webstorm added this for a phonegap/cordova project js -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- moment plugin js -->
+    <script src="js/moment.js"></script>
+    <title>BIRM Glossary</title>
+
+    <link href="css/BIRM-Custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/glossary.css" rel="stylesheet" type="text/css" />
+    <script src="js/Glossary.js" type="text/javascript"></script>
+    <!--<script src="phonegap.js" type="text/javascript"></script>-->
+</head>
+
+<body>
+    <!-- Start BIRM Glossary Page -->
+    <div data-role="page">
+
+        <!--  Start Header -->
+        <!--<div data-role="header" data-position="fixed" data-tap-toggle="false" data-add-back-btn="false" data-disable-page-zoom="false">-->
+
+            <!--<h1>BIRM - Glossary</h1>-->
+            <!--<a href="#" id="HomeButton" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-btn-icon-center ui-icon-BIRMHome ui-btn-BIRM"></a>-->
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a href="index.html" data-rel="back" class="glossaryClose-btn ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            <h3 id="headerText" style="font-family:'Lato', Helvetica, Arial, sans-serif">BIRM-Glossary</h3>
+            <div id="searchbar" class="searchbar-search">
+                <table class="searchbar-table">
+                    <tr>
+                        <td style="width: 99%;"><input id="searchField" data-type="search" data-shadow="false" placeholder="Filter Glossary Terms..." /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Start Content -->
+        <div role="main" class="ui-content">
+
+            <div id="sortedList">
+                <!--<ul data-role="listview" data-autodividers="true" data-filter="true">-->
+                <ul data-role="listview" data-autodividers="true" data-filter="true" data-input="#searchField">
+                    <li><strong>AASHTO</strong> - American Association of  State Highway and Transportation Officials, name changed from AASHO (American  Association of State Highway Officials) in 1973</li>
+                    <li><strong><em>American  Association of State Highway  and Transportation Officials (AASHTO) Manual</em></strong> - &ldquo;Manual for Condition Evaluation  of Bridges,&rdquo; second edition, published by the American Association of State  Highway and Transportation Officials (incorporated by reference into 23 CFR  650)</li>
+                    <li><strong>abrasion</strong> - wearing<strong> </strong>or  grinding away of material by friction; usually caused by sand, gravel, or  stones, carried by wind or water</li>
+                    <li><strong>absorption</strong> - the process of a liquid  being taken into a permeable solid (e.g., the wetting of concrete)</li>
+                    <li><strong>abutment</strong> - part  of bridge  substructure at either end of bridge which transfers loads from superstructure  to foundation and provides lateral support for the approach roadway embankment</li>
+                    <li><strong>ADT</strong> - Average Daily Traffic</li>
+                    <li><strong>ADTT</strong> - Average Daily Truck  Traffic</li>
+                    <li><strong>admixture</strong> - an ingredient added to  concrete other than cement, aggregate or water (e.g., air entraining agent)</li>
+                    <li><strong>aggradation</strong> - progressive raising of a  streambed by deposition of sediment</li>
+                    <li><strong>aggregate</strong> -  hard inert material such as sand, gravel, or crushed rock that may be combined with  a cementing material to form mortar or concrete</li>
+                    <li><strong>air entrainment</strong> - the addition of air into  a concrete mixture in order to increase the durability and resist thermal  forces</li>
+                    <li><strong>alkali silica reactivity (ASR</strong>) - an expansive reaction that results in swelling and  expansion of concrete.</li>
+                    <li><strong>alignment</strong> - the relative horizontal  and vertical positioning between components, such as the bridge and its  approaches</li>
+                    <li><strong>alignment bearing</strong> - a bearing embedded in a  bridge seat to prevent lateral movements (see BEARING)</li>
+                    <li><strong>alligator cracking</strong> - cracks initiated by  inadequate base support or drainage that form on the surface of a road in  adjacent, rectangular shapes (like the skin of an alligator)</li>
+                    <li><strong>alloy</strong> - two or more metals, or  metal and non-metal, intimately combined, usually by dissolving together in a  molten state to form a new base metal</li>
+                    <li><strong>anchorage </strong>-  the<strong> </strong>complete assemblage of members and parts, embedded  in concrete, rock or other fixed material, designed to hold a portion of a  structure in correct position</li>
+                    <li><strong>anchor bolt </strong>-  a metal rod or  bar commonly threaded and fitted with a nut and washer at one end only, used to  secure in a fixed position upon the substructure the bearings of a bridge, the  base of a column, a pedestal, shoe, or other member of a structure</li>
+                    <li><strong>anchor span </strong>-  the span that  counterbalances and holds in equilibrium the cantilevered portion of an  adjacent span; also called the back span; see CANTILEVER BEAM, GIRDER, or TRUSS</li>
+                    <li><strong>angle </strong>-  a basic member shape, usually steel, in the form of an &quot;L&quot;</li>
+                    <li><strong>anisotropy </strong>-  the property of  certain materials, such as crystals, that exhibits different strengths in  different directions</li>
+                    <li><strong>anode</strong> - the positively charged  pole of a corrosion cell at which oxidation occurs</li>
+                    <li><strong>anti-friction bearing</strong> - a ball or roller-type  bearing; a bearing that reduces transfer of horizontal loads between components</li>
+                    <li><strong>appraisal rating</strong> - a judgment of a bridge  component's adequacy in comparison to current standards</li>
+                    <li><strong>approach</strong> - the part of the roadway  immediately before and after the bridge structure<strong> </strong></li>
+                    <li><strong>approach pavement</strong> - an approach which has a  cross section that is either the same as or slightly wider than the bridge deck  width</li>
+                    <li><strong>approach slab </strong>-  a<strong> </strong>reinforced concrete slab placed on the approach  embankment adjacent to and usually resting upon the abutment back wall; the  function of the approach slab is to carry wheel loads on the approaches  directly to the abutment, thereby transitioning any approach roadway  misalignment due to approach embankment settlement</li>
+                    <li><strong>appurtenance</strong> - an element that  contributes to the general functionality of the bridge site (e.g., lighting,  signing)</li>
+                    <li><strong>apron </strong>-  a<strong> </strong>form of scour (erosion) protection consisting of  timber, concrete, riprap, paving, or other construction material placed  adjacent to abutments and piers to prevent undermining</li>
+                    <li><strong>arch </strong>-  a<strong> </strong>curved structure element primarily in compression  that transfers vertical loads through inclined reactions to its end supports </li>
+                    <li><strong>arch barrel </strong>-  a<strong> </strong>single arch member that extends the width of the  structure</li>
+                    <li><strong>arch rib </strong>- the main support element  used in open spandrel arch construction; also known as arch ring</li>
+                    <li><strong>armor </strong>-  a<strong> </strong>secondary steel member installed to protect a  vulnerable part of another member, e.g., steel angles placed over the edges of  a joint; also scour protection such as rip rap</li>
+                    <li><strong>armoring countermeasures</strong> - devices that resist erosive forces caused by the  flow, but do not alter the flow direction.</li>
+                    <li><strong>as-built plans</strong> - plans made after the  construction of a project, showing all field changes to the final design plans  (i.e.. showing how the bridge was actually built)</li>
+                    <li>
+                        <strong>asphalt</strong> - a  brown to black bituminous substance that is found in natural beds and is also  obtained as a residue in petroleum refining and that consists chiefly of  hydrocarbons; an asphaltic composition used for pavements and as a waterproof  cement
+                    </li>
+                    <li><strong>ASTM </strong>-  American<strong> </strong>Society for Testing and Materials</li>
+                    <li><strong>auger</strong> - a drill with a spiral  channel used for boring</li>
+                    <li><strong>axial </strong>-  in line with  the longitudinal axis of a member</li>
+                    <li><strong>axial force</strong> - the force that acts through the longitudinal axis of a member.</li>
+                    <li><strong>axle load </strong>-  the load borne  by one axle of a traffic vehicle, a movable bridge, or other motive equipment  or device and transmitted through a wheel or wheels</li>
+
+                    <li><strong>back</strong> - see EXTRADOS</li>
+                    <li><strong>backfill</strong> - material, usually soil or  coarse aggregate, used to fill the unoccupied portion of a substructure  excavation such as behind an abutment stem and backwall</li>
+                    <li><strong>backstay</strong> - cable or chain attached at the top of a tower  and extending to and secured upon the anchorage to resist overturning stresses  exerted upon the tower by a suspended span </li>
+                    <li><strong>backwall</strong> - the topmost portion of an  abutment above the elevation of the bridge seat, functioning primarily as a  retaining wall with a live load surcharge; it may serve also as a support for  the extreme end of the bridge deck and the approach slab</li>
+                    <li><strong>backwater</strong> - the back up of water in a  stream due to a downstream obstruction or constriction</li>
+                    <li><strong>bank</strong> - sloped sides of a waterway  channel or approach roadway, short for embankment</li>
+                    <li><strong>bascule bridge</strong> - a bridge over a waterway  with one or two leaves which rotate from a horizontal to a near-vertical  position, providing unlimited overhead clearance</li>
+                    <li><strong>base course</strong> - a layer of compacted  material found just below the wearing course that supports the pavement</li>
+                    <li><strong>base  metal</strong> - the surface metal of a  steel element to be incorporated in a welded joint; also known as structure  metal, parent metal</li>
+                    <li><strong>base plate</strong> - steel plate,  whether cast, rolled or forged, connected to a column, bearing or other member  to transmit and distribute its load to the substructure</li>
+                    <li><strong>batten plate</strong> - a<strong> </strong>plate  with two or more fasteners at each end used in lieu of lacing to tie together  the shapes comprising a built-up member</li>
+                    <li><strong>batter</strong> - the inclination of a surface in relation to a horizontal or a vertical  plane; commonly designated on bridge detail plans as a ratio (e.g., 1:3, H:V);  see RAKE</li>
+                    <li><strong>battered pile </strong> - a pile  driven in an inclined position to resist horizontal forces as well as vertical  forces </li>
+                    <li><strong>bay</strong> - the area of a bridge floor  system between adjacent multi-beams or between adjacent floor beams</li>
+                    <li><strong>beam</strong> - a linear structural member  designed to span from one support to another and support vertical loads</li>
+                    <li id="bearing">  <strong>bearing</strong> - a support element  transferring loads from superstructure to substructure while permitting limited  movement capability</li>
+                    <li><strong>bearing  capacity</strong> -  the load per unit area which a structural material, rock, or soil can safely carry</li>
+                    <li><strong>bearing  failure</strong> - crushing  of material under extreme compressive load</li>
+                    <li><strong>bearing pile</strong> - a pile which provides  support through the tip (or lower end) of the pile</li>
+                    <li><strong>bearing plate</strong> - a steel plate, which  transfers loads from the superstructure to the substructure</li>
+                    <li><strong>bearing  pressure</strong> -  the bearing load divided by the area to which it is applied</li>
+                    <li><strong>bearing seat</strong> - a prepared horizontal  surface at or near the top of a substructure unit upon which the bearings are  placed</li>
+                    <li><strong>bearing  stiffener</strong> -  a vertical web stiffener at the bearing location</li>
+                    <li><strong>bearing stress</strong> - see BEARING PRESSURE</li>
+                    <li><strong>bedding</strong> - the soil or backfill material used to support  pipe culverts</li>
+                    <li><strong>bedrock</strong> - the undisturbed rock layer  below the surface soil</li>
+                    <li><strong>bench mark</strong> - an established reference  point with known elevation and coordinates, used to document dimensions,  elevations or position movement</li>
+                    <li><strong>bending moment</strong> - a combination of tension and compression forces  developed when an external load is applied transversely to a bridge member,  causing it to bend</li>
+                    <li><strong>bent</strong> - a substructure unit made up  of two or more column or column-like members connected at their top-most ends  by a cap, strut, or other member holding them in their correct positions</li>
+                    <li><strong>berm</strong> - the line that defines the  location where the top surface of an approach embankment or causeway is  intersected by the surface of the side slope</li>
+                    <li><strong>beveled washer</strong> - a wedge-shaped washer used in connections  incorporating members with sloped flange legs, e.g., channels and S-beams</li>
+                    <li>
+                        <strong>bitumen</strong> - a black sticky mixture of  hydrocarbons obtained from natural deposits or from distilling petroleum; tar
+                    </li>
+                    <li><strong>bituminous  concrete</strong> -  a mixture of aggregate and liquid asphalt or bitumen, which is compacted into a  dense mass</li>
+                    <li><strong>blanket</strong> - a streambed protection  against scour placed adjacent to abutments and piers</li>
+                    <li><strong>BMS</strong> - Bridge Management System</li>
+                    <li><strong>bolt</strong> - a mechanical fastener with  machine threads at one end to receive a nut, and an integral head at the other  end</li>
+                    <li><strong>bolster</strong> - a block-like member used  to support a bearing on top of a pier cap or abutment bridge seat; see PEDESTAL</li>
+                    <li><strong>bond</strong> - in reinforced concrete, the grip of the  concrete on the reinforcing bars, which prevents slippage of the bars relative to the concrete mass</li>
+                    <li><strong>bond stress</strong> - a term commonly applied  in reinforced concrete construction to the stress developed by a force tending  to produce movement or slippage at the interface between the concrete and the  reinforcement bars</li>
+                    <li><strong>bowstring  truss</strong> - a  general term applied to a truss of any type having a polygonal arrangement of  its top chord members conforming to or nearly conforming to the arrangement required  for a parabolic truss; a truss with a curved top chord</li>
+                    <li><strong>box beam</strong> - a hollow structural beam  with a square, rectangular, or trapezoidal cross-section that supports vertical  loads and provides torsional rigidity</li>
+                    <li><strong>box culvert</strong> - a culvert of rectangular or  square cross-section</li>
+                    <li><strong>box girder</strong> - a hollow, rectangular or  trapezoidal shaped girder, a primary member along the longitudinal axis of the  bridge, which provides good torsional rigidity</li>
+                    <li><strong>bracing</strong> - a system of secondary  members that maintains the geometric configuration of primary members</li>
+                    <li><strong>bracket</strong> - a projecting support fixed  upon two intersecting members to strengthen and provide rigidity to the  connection</li>
+                    <li><strong>breastwall</strong> - the portion of an  abutment between the wings and beneath the bridge seat; the breast wall  supports the superstructure loads, and retains the approach fill; see STEM</li>
+                    <li><strong>bridge</strong> - a structure including supports erected over a  depression or an obstruction, such as water, highway, or railway, and having a  track or passageway for carrying traffic or other moving loads, and having an  opening measured along the center of the roadway of more than 20 feet between  undercopings of abutments or spring lines of arches, or extreme ends of  openings for multiple boxes; it may also include multiple pipes, where the  clear distance between openings is less than half of the smaller contiguous  opening </li>
+                    <li><strong>bridge  deficiency</strong> - a defect in a bridge component or member that makes the bridge less capable or  less desirable for use</li>
+                    <li><strong>bridge elements</strong> - structural elements that are commonly used in  highway bridge construction and are encountered on bridge safety inspections</li>
+                    <li><strong>bridge inspection experience</strong> - active participation in bridge  inspections in accordance with the NBIS, in either a field inspection,  supervisory, or management role. A combination of bridge design, bridge  maintenance, bridge construction and bridge inspection experience, with the  predominant amount in bridge inspection, is acceptable.</li>
+                    <li>
+                        <strong>bridge inspection refresher training</strong> - the National Highway Institute &ldquo;Bridge  Inspection Refresher Training Course&rdquo;* or other State, local, or  federally developed instruction aimed to improve quality of inspections,  introduce new techniques, and maintain the consistency of the inspection  program. <br />
+                        * The National Highway Institute training may be found at  the following URL: <em><a href="http://www.nhi.fhwa.dot.gov/" title="Go to NHI website" target="_blank">http://www.nhi.fhwa.dot.gov/</a></em>
+                    </li>
+                    <li> <strong><em>Bridge  Inspector's Reference Manual (BIRM)</em></strong> - a comprehensive FHWA manual on  programs, procedures and techniques for inspecting and evaluating a variety of  in-service highway bridges. This manual may be purchased from the U.S.  Government Printing Office, Washington, DC 20402 and from National Technical  Information Service, Springfield, Virginia 22161, and is available at the  following URL: <em><a href="http://www.fhwa.dot.gov/bridge/bripub.cfm" title="Go to Bridge Programs Publications page of FHWA website" target="_blank">http://www.fhwa.dot.gov/bridge/bripub.htm</a>.</em></li>
+                    <li><strong>bridge pad</strong> - the raised, leveled area upon which the pedestal, masonry plate or  other corresponding element of the superstructure bears on the substructure;  also called bridge seat bearing area</li>
+                    <li><strong>bridge seat</strong> - the top surface of an  abutment or pier upon which the superstructure span is placed and supported;  for an abutment it is the surface forming the support for the superstructure  and from which the backwall rises; for a pier it is the entire top surface</li>
+                    <li><strong>bridge site</strong> - the position or location  of a bridge and its surrounding area</li>
+                    <li><strong>bridging</strong> - a carpentry term applied  to the cross-bracing fastened between timber beams to increase the rigidity of  the floor construction, limit differential deflection and minimize the effects  of impact and vibration</li>
+                    <li><strong>brittle  fracture</strong> - the  failure of a steel member occurring without warning, prior to plastic  deformation</li>
+                    <li><strong>brittleness </strong>- the ability of a material to break while exhibiting  little to no plastic deformation</li>
+                    <li><strong>brush curb</strong> - a narrow curb, 9 inches  or less in width, which prevents a vehicle from brushing against the railing or  parapet</li>
+                    <li><strong>buckle</strong> - to fail by an inelastic  change in alignment (deflection) as a result of compression in axial loaded  members</li>
+                    <li><strong>buckle plate</strong> - an obsolete style of steel deck using dished  steel plates as structural members</li>
+                    <li><strong>built-up  member</strong> - a column or beam composed of plates and angles  or other structural shapes united by bolting, riveting or welding to enhance  section properties</li>
+                    <li><strong>bulb t-girder </strong> - a  t-shaped concrete girder with a bulb shape at the bottom of the girder cross  section</li>
+                    <li><strong>bulkhead</strong> - a retaining wall-like  structure commonly composed of driven sheet piles or a barrier of wooden  timbers or reinforced concrete members</li>
+                    <li><strong>buoyancy</strong> - upward pressure exerted by  the fluid in which an object is immersed</li>
+                    <li><strong>butt joint</strong> - a joint between two  pieces of metal that have been connected in the same plane</li>
+                    <li><strong>buttress</strong> - a bracket-like wall, of  full or partial height, projecting from another wall; the buttress strengthens  and stiffens the wall against overturning forces; all parts of a buttress act  in compression</li>
+                    <li><strong>buttressed  wall</strong> - a  retaining wall designed with projecting buttresses to provide strength and  stability</li>
+                    <li><strong>butt weld</strong> - a weld joining two plates  or shapes end to end; also splice weld</li>
+
+                    <li><strong>cable</strong> - a tension member comprised  of numerous individual steel wires or strands twisted and wrapped in such a  fashion to form a rope of steel; see SUSPENSION BRIDGE</li>
+                    <li><strong>cable band</strong> - a steel casting with clamp bolts which fixes a  floor system suspender cable to the catenary cable of a suspension bridge</li>
+                    <li><strong>cable-stayed bridge</strong> - a bridge in which the superstructure is directly  supported by cables, or stays, passing over or attached to towers located at  the main piers</li>
+                    <li><strong>caddisfly</strong> - a winged insect closely  related to the moth and butterfly whose aquatic larvae seek shelter by digging  small shallow holes into submerged timber elements</li>
+                    <li><strong>caisson</strong> - a rectangular or  cylindrical chamber for keeping water or soft ground from flowing into an  excavation</li>
+                    <li><strong>camber</strong> - the slightly arched or  convex curvature provided in beams to compensate for dead load deflection; in  general, a structure built with perfectly straight lines appears slightly  sagged </li>
+                    <li><strong>cantilever</strong> - a structural member that  has a free end projecting beyond a support; length of span overhanging the  support</li>
+                    <li><strong>cantilever  abutment</strong> - an abutment that resists lateral earth pressure through the opposing cantilever  action of a vertical stem and horizontal footing</li>
+                    <li><strong>cantilever  bridge</strong> - a  general term applying to a bridge having a superstructure incorporating  cantilever design</li>
+                    <li><strong>cantilever  span</strong> - a  superstructure span composed of two cantilever arms, or of a suspended span  supported by one or two cantilever arms</li>
+                    <li><strong>cap</strong> - the topmost portion of a  pier or a pile bent serving to  distribute the loads upon the columns or piles and to hold them in their proper  relative positions; see PIER CAP, PILE CAP</li>
+                    <li><strong>cap beam</strong> - the top member in a bent  that ties together the supporting members</li>
+                    <li><strong>capstone</strong> - the topmost stone of a  masonry pillar, column or other structure requiring the use of a single capping  element</li>
+                    <li><strong>carbon steel</strong> - steel (iron with dissolved  carbon) owing its properties principally to its carbon content; ordinary,  unalloyed steel </li>
+                    <li><strong>cast-in-place  (C.I.P.)</strong> -  the act of placing and curing concrete within formwork to construct a concrete  element in its final position</li>
+                    <li><strong>cast iron</strong> - relatively pure iron,  smelted from iron ore, containing 1.8 to 4.5% free carbon and cast to shape</li>
+                    <li><strong>catch basin</strong> - a receptacle, commonly  box shaped and fitted with a grilled inlet and a pipe outlet drain, designed to  collect the rainwater and floating debris from the roadway surface and retain  the solid material so that it may be periodically removed</li>
+                    <li><strong>catchment area </strong> - see  DRAINAGE AREA</li>
+                    <li><strong>catenary</strong> - the curve obtained by  suspending a uniformly loaded rope or cable between two points</li>
+                    <li><strong>cathode</strong> - the negatively charged pole  of a corrosion cell that accepts electrons and does not corrode</li>
+                    <li><strong>cathodic  protection</strong> - a means of preventing metal from corroding by making it a cathode through the  use of impressed direct current or by attaching a sacrificial anode</li>
+                    <li><strong>catwalk</strong> - a narrow walkway for  access to some part of a structure</li>
+                    <li><strong>causeway</strong> - an elevated roadway  crossing a body of water</li>
+                    <li><strong>cellular  abutment</strong> -  an abutment in which the space between wings, abutment stem, approach slab, and  footings is hollow. Also known as a  vaulted abutment</li>
+                    <li><strong>cement mortar </strong> - a mixture  of sand and cement with enough water to make it plastic</li>
+                    <li><strong>cement paste </strong> - the plastic combination of cement and water  that supplies the cementing action in concrete</li>
+                    <li><strong>centerline of  bearings</strong> -  a horizontal line that passes through the centers of the bearings, used in  abutment/pier layout and beam erection</li>
+                    <li><strong>center of  gravity</strong> - the point at which the entire mass of a body acts; the balancing point of an  object</li>
+                    <li><strong>centroid</strong> - that point about which the  static moment of all the elements of area is equal to zero</li>
+                    <li><strong>chain drag</strong> - a chain or a series of  short medium weight chains attached to a T-shaped handle; used as a preliminary  technique for sounding a large deck area for delamination</li>
+                    <li><strong>chamfer</strong> - an angled edge or corner,  typically formed in concrete</li>
+                    <li><strong>channel</strong> - a waterway connecting two  bodies of water or containing moving water; a rolled steel member having a  C-shaped cross section</li>
+                    <li><strong>channel lining</strong> - rigid concrete pavement or flexible protective  revetment mats placed on the bottom of a streambed</li>
+                    <li><strong>channel  profile</strong> - a  longitudinal section of a channel along its centerline</li>
+                    <li><strong>checks</strong> - a crack in wood occurring  parallel with the grain and through the rings of annual growth</li>
+                    <li><strong>cheek wall</strong> - see KNEE WALL</li>
+                    <li><strong>chipping hammer</strong> - hammer such as a geologist's pick or masonry hammer used to remove  corrosion from steel members and to sound concrete for delamination; a welder's  tool for cleaning slag from steel after welding</li>
+                    <li><strong>chloride</strong> - an ingredient in deicing  agents that can damage concrete and steel bridge elements</li>
+                    <li><strong>chloride contamination</strong> - the presence of recrystalized soluble salts, which  causes accelerated corrosion of the steel reinforcement</li>
+                    <li>
+                        <strong>chord</strong> - a generally horizontal  member of a truss<br />
+                    </li>
+                    <li> <strong>circular arch</strong> - an arch in which the  intrados surface has a constant radius</li>
+                    <li><strong>clearance</strong> - the unobstructed vertical  or horizontal space provided between two objects</li>
+                    <li><strong>clear headroom</strong> - the vertical clearance  beneath a bridge structure available for navigational use </li>
+                    <li><strong>clear span</strong> - the unobstructed space or  distance between support elements of a bridge or bridge member</li>
+                    <li><strong>clip angle</strong> - see CONNECTION ANGLE</li>
+                    <li><strong>closed  spandrel arch</strong> - a stone, brick or reinforced concrete arch span having spandrel walls  to retain the spandrel fill or to support either entirely or in part the floor system  of the structure when the spandrel is not filled</li>
+                    <li><strong>coarse  aggregate</strong> - aggregate that stays on a sieve of 5 mm (.25&quot;) square opening</li>
+                    <li><strong>coating</strong> - a material that provides  a continuous film over a surface in order to protect or seal it; a film formed  by the material</li>
+                    <li><strong>coefficient of  thermal expansion</strong> - the unit change in dimension produced in a material by a change of one  degree in temperature</li>
+                    <li><strong>cofferdam</strong> - a temporary dam-like  structure constructed around an excavation to exclude water; see SHEET PILE  COFFERDAM</li>
+                    <li><strong>cold chisel </strong>-  short bar with a sharp end used for cold-cutting soft metals when struck with a hammer</li>
+                    <li><strong>collision damage</strong> - a special case of overload that occurs when any  vehicle, railroad car, marine traffic or flowing ice strikes a bridge member,  railing or column</li>
+                    <li><strong>column</strong> - a general term applying  to a vertical member resisting compressive stresses and having, in general, a  considerable length in comparison with its transverse dimensions</li>
+                    <li><strong>column bent</strong> - a bent shaped pier that  uses columns incorporated with a cap beam</li>
+                    <li>
+                        <strong>compaction</strong> - the process by which a  sufficient amount of energy (compressive pressure) is applied to soil or other  material to increase its density
+                    </li>
+                    <li><strong>complex  bridge</strong> - movable, suspension, cable  stayed, and other bridges with unusual characteristics</li>
+                    <li><strong>component</strong> - a general term reserved to  define a bridge deck, superstructure or substructure </li>
+                    <li><strong>composite  action</strong> - the  contribution of a concrete deck to the moment resisting capacity of the  superstructure beam when the superstructure beams are not the same material as  the deck</li>
+                    <li><strong>composite  construction</strong> - a method of construction whereby a cast-in-place concrete deck is  mechanically attached to superstructure members by shear connectors</li>
+                    <li><strong>comprehensive bridge inspection training</strong> - training that covers all aspects  of bridge inspection and enables inspectors to relate conditions observed on a  bridge to established criteria (see the Bridge Inspector's Reference Manual for  the recommended material to be covered in a comprehensive training course).</li>
+                    <li><strong>compression</strong> - a type of stress involving  pressing together; tends to shorten a member; opposite of tension</li>
+                    <li><strong>compression  failure</strong> - buckling, crushing, or collapse caused by compression stress</li>
+                    <li><strong>compression  flange</strong> - the part of a beam that is compressed due to a bending moment</li>
+                    <li><strong>compression  seal joint</strong> - a joint consisting of a neoprene elastic seal squeezed into the joint opening</li>
+                    <li><strong>concentrated  load</strong> - a  force applied over a small contact area; also known as point load</li>
+                    <li><strong>concrete</strong> - a stone-like mass made from a mixture of  aggregates and cementing material, which is moldable prior to hardening; see  BITUMINOUS CONCRETE and PORTLAND CEMENT CONCRETE</li>
+                    <li><strong>concrete beam </strong> - a  structural member of reinforced concrete designed to carry bending loads</li>
+                    <li><strong>concrete pile </strong> - a pile  constructed of reinforced concrete either precast and driven into the ground or  cast-in-place in a hole bored into the ground</li>
+                    <li><strong>concrete tee team</strong> - &quot;T&quot; shaped section of reinforced  concrete; cast-in-place monolithic deck and beam system</li>
+                    <li><strong>condition  rating</strong> - a  judgment of a bridge component condition in comparison to its original as-built  condition</li>
+                    <li><strong>conductor</strong> - a material that is  suitable for carrying electric current</li>
+                    <li><strong>connection  angle</strong> - a  piece of angle serving to connect two elements of a member or two members of a  structure; also known as clip angle</li>
+                    <li><strong>consolidation</strong> - the time dependent change  in volume of a soil mass under compressive load caused by water slowly escaping  from the pores or voids of the soil</li>
+                    <li><strong>construction  joint</strong> - a  pair of adjacent surfaces in reinforced concrete where two pours have met,  reinforcement steel extends through this joint</li>
+                    <li><strong>continuous  beam</strong> - a general term applied to a beam that spans  uninterrupted over one or more intermediate supports</li>
+                    <li><strong>continuous  bridge</strong> - a  bridge designed to extend without joints over one or more interior supports</li>
+                    <li><strong>continuous  footing</strong> - a  common footing that is underneath a wall, or columns</li>
+                    <li><strong>continuous  span</strong> - spans designed to extend without joints over one or more intermediate supports</li>
+                    <li><strong>continuous  truss</strong> - a  truss without hinges having its chord and web members arranged to continue  uninterrupted over one or more intermediate points of support</li>
+                    <li><strong>continuous  weld</strong> - a  weld extending throughout the entire length of a connection</li>
+                    <li><strong>contraction</strong> - the thermal action of the  shrinking of an object when cooled; opposite of expansion</li>
+                    <li><strong>contraction scour</strong> - the removal of the material under the structure  only</li>
+                    <li><strong>coping</strong> - a course of stone laid  with a projection beyond the general surface of the masonry below it and  forming the topmost portion of a wall; a course of stone capping the curved or  V-shaped extremity of a pier, providing a transition to the pier head proper,  when so used it is commonly termed the &quot;starling coping,&quot; &quot;nose  coping,&quot; the &quot;cutwater coping&quot; or the &quot;pier extension  coping&quot;</li>
+                    <li><strong>corbel</strong> - a piece constructed to project from the surface of a wall, column or other  portion of a structure to serve as a support for another member</li>
+                    <li><strong>core</strong> - a cylindrical sample of  concrete or timber removed from a bridge component for the purpose of  destructive testing to determine the condition of the component</li>
+                    <li><strong>corrosion</strong> - the general  disintegration of metal through oxidation</li>
+                    <li><strong>corrugated</strong> - an element with alternating  ridges and valleys</li>
+                    <li><strong>counter</strong> - a truss web member that  undergoes stress reversal and resists only live load tension; see WEB MEMBERS</li>
+                    <li><strong>counterfort</strong> - a bracket-like wall  connecting a retaining wall stem to its footing on the side of the retained  material to stabilize the wall against overturning; a counterfort, as opposed  to a buttress, acts entirely in tension</li>
+                    <li><strong>counterforted  abutment</strong> - an abutment that develops resistance to  bending moment in the stem by use of counterforts. This permits the breast wall  to be designed as a horizontal beam or slab spanning between counterforts,  rather than as a vertical cantilever slab</li>
+                    <li><strong>counterforted  wall</strong> - a  retraining wall designed with projecting counterforts to provide strength and  stability</li>
+                    <li><strong>counterweight</strong> - a weight which is used to balance the weight  of a movable member; in bridge applications counterweights are used to balance  a movable span so that it rotates or lifts with minimum resistance. Also sometimes used in continuous structures  to prevent uplift</li>
+                    <li><strong>couplant</strong> - a viscous fluid material  used with ultrasonic gages to enhance transmission of sound waves</li>
+                    <li><strong>couple</strong> - two forces that are equal  in magnitude, opposite in direction, and parallel with respect to each other</li>
+                    <li><strong>coupon</strong> - a sample of steel taken  from an element in order to test material properties</li>
+                    <li><strong>course</strong> - a horizontal layer of  bricks or stone</li>
+                    <li><strong>cover</strong> - the clear thickness of  concrete between a reinforcing bar and the surface of the concrete; the depth  of backfill over the top of a pipe or  culvert</li>
+                    <li><strong>covered bridge</strong> - an indefinite term applied to a wooden bridge having its roadway  protected by a roof and enclosing sides</li>
+                    <li><strong>cover plate</strong> - a plate used in  conjunction with a flange or other structural shapes to increase flange section  properties in a beam, column, or similar member</li>
+                    <li><strong>crack</strong> - a break without complete  separation of parts; a fissure</li>
+                    <li><strong>crack  comparator card</strong> - A crack comparator card can be used to measure the width of  cracks. This type of crack width  measuring device is a transparent card about the size of an identification  card. The card has lines on it that  represent crack widths. The line on the  card that best matches the width of the crack lets the inspector know the  measured width of the crack. </li>
+                    <li><strong>cracking  (reflection)</strong> - visible cracks in an overlay indicating cracks in the concrete underneath</li>
+                    <li><strong>crack  initiation</strong> - the beginning of a crack usually at some microscopic defect</li>
+                    <li><strong>crack  propagation</strong> - the growth of a crack due to energy supplied by repeated stress cycles</li>
+                    <li><strong>creep</strong> - an inelastic deformation  that occurs under a constant load, below the yield point, and increases with  time</li>
+                    <li><strong>creosote</strong> - an oily liquid obtained by  the distillation of coal or wood tar and used as a wood preservative</li>
+                    <li><strong>crevice corrosion</strong> - occurs between adjacent surfaces but the rust may  not expand, even though significant section loss may have occurred </li>
+                    <li><strong>crib</strong> - a structure consisting of  a foundation grillage combined with a superimposed framework providing  compartments or coffers which are filled with gravel, concrete or other  material satisfactory for supporting the structure to be placed thereon</li>
+                    <li><strong>cribbing</strong> - a construction consisting of  wooden, metal or reinforced concrete units so assembled as to form an open  cellular-like structure for supporting a superimposed load or for resisting  horizontal or overturning forces acting against it.</li>
+                    <li><strong>cribwork</strong> - large timber cells that are  submerged full of concrete to make an underwater foundation</li>
+                    <li><strong>critical  finding</strong>- a structural or safety related deficiency that requires  immediate follow-up inspection or action</li>
+                    <li><strong>cross</strong> - transverse bracings between  two main longitudinal members; see DIAPHRAGM, BRACING</li>
+                    <li><strong>cross frame</strong> - steel elements placed in  &quot;X&quot; shaped patterns to act as stiffeners between the main carrying  superstructure members</li>
+                    <li><strong>cross girders</strong> - transverse girders,  supported by bearings, which support longitudinal beams or girders</li>
+                    <li><strong>cross-section</strong> - the shape of an object  cut transversely to its length</li>
+                    <li><strong>cross-sectional  area</strong> - the  area of a cross-section</li>
+                    <li><strong>crown</strong> - the highest point of the transverse cross  section of a roadway, pipe or arch; also known as soffit or vertex</li>
+                    <li><strong>crown of  roadway</strong> -  the vertical dimension describing the total amount the surface is convexed or  raised from gutter to centerline; this is sometimes termed the cross fall or  cross slope of roadway</li>
+                    <li><strong>crushing</strong> - occurs perpendicular to the grain, usually at  support points</li>
+                    <li><strong>culvert</strong> - a drainage structure  beneath an embankment (e.g., corrugated metal pipe, concrete box culvert)</li>
+                    <li> <strong>curb</strong> - a low barrier at the side  limit of the roadway used to guide the movement of vehicles</li>
+                    <li><strong>curb inlet</strong> - see SCUPPER</li>
+                    <li><strong>curtain wall</strong> - a term commonly applied to  a thin wall between main columns designed to withstand only secondary  loads. Also the wall portion of a  buttress or counterfort abutment that spans between the buttresses or  counterforts</li>
+                    <li><strong>curvature</strong> - the degree of curving of a  line or surface</li>
+                    <li><strong>curved girder</strong> - a girder that is curved in the horizontal plane in order to adjust to  the horizontal alignment of the bridge<strong> </strong></li>
+                    <li><strong>cutoff wall</strong> - vertical wall at the end of an apron or slab  to prevent scour undermining</li>
+                    <li><strong>cutwater</strong> - a sharp-edged structure,  facing the water channel current, built around a bridge pier to protect if from  the flow of water and debris in the water</li>
+                    <li><strong>cyclic stress</strong> - stress that varies with the passage of live  loads; see STRESS RANGE</li>
+                    <li><strong>damage  inspection</strong> - this is an unscheduled inspection to  assess structural damage resulting from environmental factors or human actions</li>
+                    <li><strong>dead load</strong> - a static load due to the  weight of the structure itself</li>
+                    <li><strong>debris</strong> - material including floating wood, trash,  suspended sediment or bed load moved by a flowing stream</li>
+                    <li><strong>decay</strong> - the result of fungi feeding on the cell walls of the wood</li>
+                    <li><strong>deck</strong> - that portion of a bridge  which provides direct support for vehicular and pedestrian traffic, supported  by a superstructure</li>
+                    <li><strong>deck arch</strong> - an arch bridge with the  deck above the top of the arch</li>
+                    <li><strong>deck bridge</strong> - a bridge in which the  supporting members are all beneath the roadway</li>
+                    <li><strong>decking</strong> - bridge flooring installed in panels, e.g.,  timber planks</li>
+                    <li><strong>deck joint</strong> - a gap allowing for  rotation or horizontal movement between two spans or an approach and a span</li>
+                    <li><strong>deficiency</strong> - see BRIDGE DEFICIENCY</li>
+                    <li><strong>deflection</strong> - elastic movement of a  structural member under a load</li>
+                    <li><strong>deformation</strong> - distortion of a loaded  structural member; may be elastic or inelastic</li>
+                    <li><strong>deformed bars</strong> - concrete reinforcement consisting of steel bars with projections or  indentations (deformations) to increase the mechanical bond between the steel  and concrete</li>
+                    <li><strong>degradation</strong> - general progressive  lowering of a stream channel by scour</li>
+                    <li><strong>delamination</strong> - surface separation of  concrete into layers; separation of glulaminated timber plies</li>
+                    <li><strong>design load</strong> - the force for which a  structure is designed; the most severe combination of loads</li>
+                    <li><strong>distributed loads</strong> - loads that are applied along a significant length  of a structure</li>
+                    <li><strong>deterioration </strong> - decline  in quality over a period of time due to chemical or physical degradation</li>
+                    <li><strong>diagonal</strong> - a sloping structural  member of a truss or bracing system</li>
+                    <li><strong>diagonal stay </strong> - a cable  support in a suspension bridge extending diagonally from the tower to the  roadway to add stiffness to the structure and diminish the deformations and  undulations resulting from traffic service</li>
+                    <li><strong>diagonal  tension</strong> - the tensile force due to horizontal and vertical shear in a beam</li>
+                    <li><strong>diaphragm</strong> - a transverse member  placed within a member or superstructure system to distribute stresses and  improves strength and rigidity; see BRACING</li>
+                    <li><strong>diaphragm wall </strong> - a wall  built transversely to the longitudinal centerline of a spandrel arch serving to  tie together and reinforce the spandrel walls, together with providing a  support for the floor system in conjunction with the spandrel walls; also known  as cross wall</li>
+                    <li><strong>differential  settlement</strong> - uneven settlement of individual or independent elements of a substructure;  tilting in the longitudinal or transverse direction due to deformation or loss  of foundation material</li>
+                    <li><strong>dike</strong> - an earthen embankment  constructed to retain or redirect water; when used in conjunction with a  bridge, it prevents stream erosion and localized scour and/or so directs the  stream current such that debris does not accumulate; see SPUR</li>
+                    <li><strong>discharge</strong> - the volume of fluid per  unit of time flowing along a pipe or channel </li>
+                    <li><strong>displacement  induced stress</strong> - stresses caused by differential deflection  of adjacent parts </li>
+                    <li><strong>distributed  load</strong> - a  load uniformly applied along the length of an element or component of a bridge</li>
+                    <li><strong>ditch</strong> - a trough-like excavation  made to collect water</li>
+                    <li><strong>diver</strong> - a specially trained  individual who inspects the underwater portion of a bridge substructure and the  surrounding channel</li>
+                    <li><strong>dolphin</strong> - a group of piles driven close together or a caisson placed to protect  portions of a bridge exposed to possible damage by collision with river or  marine traffic</li>
+                    <li><strong>double movable bridge</strong> - a bridge in which the clear span over the  navigation channel is produced by joining the arms of two adjacent swing spans  or the leaves of two adjacent bascule spans at or near the center of the  navigable channel; see MOVABLE BRIDGE</li>
+                    <li><strong>dowel</strong> - a length of bar embedded  in two parts of a structure to hold the parts in place and to transfer stress</li>
+                    <li><strong>drainage</strong> - a system designed to remove  water from a structure</li>
+                    <li><strong>drainage area </strong> - an area  in which surface run-off collects and from which it is carried by a drainage  system; also known as catchment area</li>
+                    <li><strong>drain hole</strong> - hole in a box shaped member  or a wall to provide means for the exit of accumulated water or other liquid;  also known as drip hole; see WEEP HOLE</li>
+                    <li><strong>drain pipes</strong> - pipes that carry storm  water</li>
+                    <li><strong>drawbridge</strong> - a general term applied to a  bridge over a navigable body of water having a movable superstructure span of  any type </li>
+                    <li><strong>drift bolt</strong> - a short length of metal bar  used to connect and hold in position wooden members placed in contact; similar  to a dowel</li>
+                    <li><strong>drift pin</strong> - tapered steel rod used by ironworkers to align  bolt holes</li>
+                    <li><strong>drip notch</strong> - a recess cast on the  underside of an overhang that prevents water from following the concrete  surface onto the supporting beams</li>
+                    <li><strong>drop inlet</strong> - a type of inlet structure  that conveys the water from a higher elevation to a lower outlet elevation  smoothly without a free fall at the discharge</li>
+                    <li> <strong>duct</strong> - the hollow space where a  prestressing tendon is placed in a post-tensioned prestressed concrete girder</li>
+                    <li><strong>ductile</strong> - capable of being molded or  shaped without breaking; plastic</li>
+                    <li><strong>ductile  fracture </strong>-  a fracture characterized by plastic deformation</li>
+                    <li><strong>ductility</strong> - the ability to withstand  non-elastic deformation without rupture</li>
+                    <li><strong>dumbbell pier </strong> - a pier  consisting of two cylindrical or rectangular shaped piers joined by an integral  web</li>
+                    <li><strong>dummy member</strong> - truss member that carries no primary loads; may  be included for bracing or for appearance</li>
+
+
+                    <li><strong>E</strong> - modulus of elasticity of  a material; Young's modulus; the stiffness of a material</li>
+                    <li><strong>efflorescence</strong> - a deposit on concrete or  brick caused by crystallization of carbonates brought to the surface by  moisture in the masonry or concrete</li>
+                    <li><strong>elastic</strong> - capable of sustaining  deformation without permanent loss of shape</li>
+                    <li><strong>elastic strain</strong> - the reversible distortion of a material</li>
+                    <li><strong>elastic  deformation</strong> - non-permanent deformation; when the stress is removed, the material returns  to its original shape</li>
+                    <li><strong>elasticity</strong> - the property whereby a  material changes its shape under the action of loads but recovers its original  shape when the loads are removed</li>
+                    <li><strong>elastomer</strong> - a natural or synthetic  rubber-like material</li>
+                    <li><strong>elastomeric  pad</strong> - a  synthetic rubber pad used in bearings that compresses under loads and  accommodates horizontal movement by deforming</li>
+                    <li>
+                        <strong>electrolyte</strong> - a medium of air, soil, or liquid carrying  ionic current between two metal surfaces, the anode and the cathode
+                    </li>
+                    <li><strong>electrolytic  cell</strong> - a  device for producing electrolysis consisting of the electrolyte and the  electrodes </li>
+                    <li><strong>electrolytic  corrosion</strong> -  corrosion of a metal associated with the flow of electric current in an electrolyte</li>
+                    <li><strong>elevation view</strong> - a drawing of the side  view of a structure</li>
+                    <li><strong>elliptic arch</strong> - an arch in which the  intrados surface is a full half of the surface of an elliptical cylinder; this  terminology is sometimes incorrectly applied to a multicentered arch </li>
+                    <li><strong>elongation</strong> - the elastic or plastic  extension of a member</li>
+                    <li><strong>embankment</strong> - a mound of earth  constructed above the natural ground surface to carry a road or to prevent water from passing beyond  desirable limits; also known as bank</li>
+                    <li><strong>end block</strong> - in a prestressed concrete  I-beam, the widened beam web at the end to provide adequate anchorage bearing  for the post tensioning steel and to resist high shear stresses; similarly, the  solid end diaphragm of a box beam</li>
+                    <li><strong>end post</strong> - the end compression  member of a truss, either vertical or inclined in position and extending from  top chord to bottom chord</li>
+                    <li><strong>end rotation</strong> - Occurs when a structure deflects </li>
+                    <li><strong>end section</strong> - a concrete or steel  appurtenance attached to the end of a culvert for the purpose of hydraulic  efficiency, embankment retention or anchorage</li>
+                    <li><strong>end span</strong> - a span adjacent to an  abutment</li>
+                    <li> <strong>epoxy</strong> - a synthetic resin which cures or hardens by chemical reaction between  components which are mixed together shortly before use</li>
+                    <li><strong>epoxy coated  reinforcement</strong> - reinforcement steel coated with epoxy; used to prevent corrosion</li>
+                    <li><strong>equilibrium</strong> - in statics, the condition  in which the forces acting upon a body are such that no external effect (or  movement) is produced</li>
+                    <li><strong>equivalent  uniform load</strong> - a load having a constant intensity per unit of its length producing an effect  equal to that of a live load consisting of vehicle axle or wheel concentrations  spaced at varying distances</li>
+                    <li><strong>erosion</strong> - wearing away of soil by  flowing water not associated with a channel; see SCOUR</li>
+                    <li><strong>expansion</strong> - an increase in size or  volume</li>
+                    <li><strong>expansion  bearing</strong> - a  bearing designed to permit longitudinal or lateral movements resulting from  temperature changes and superimposed loads with minimal transmission of  horizontal force to the substructure; see BEARING</li>
+                    <li><strong>expansion dam</strong> - the part of an expansion  joint serving as an end form for the placing of concrete at a joint; also  applied to the expansion joint device itself; see EXPANSION JOINT</li>
+                    <li><strong>expansion  joint</strong> - a  joint designed to permit expansion and contraction movements produced by  temperature changes, loadings or other forces</li>
+                    <li><strong>expansion  rocker</strong> - a  bearing device at the expansion end of a beam or truss that allows the  longitudinal movements resulting from temperature changes and superimposed  loads through a tilting motion </li>
+                    <li><strong>expansion  roller</strong> - a  cylinder so mounted that by revolution it facilitates expansion, contraction or  other movements resulting from temperature changes, loadings or other forces</li>
+                    <li><strong>expansion shoe</strong> - expansion bearing,  generally of all metal construction</li>
+                    <li><strong>exterior girder</strong> - an outermost girder supporting the bridge  floor</li>
+                    <li><strong>extrados</strong> - the curve defining the  exterior (upper) surface of an arch; also known as back</li>
+                    <li><strong>eyebar</strong> - a member consisting of a  rectangular bar with enlarged forged ends having holes for engaging connecting  pins</li>
+
+
+                    <li><strong>failure</strong> - a condition at which a structure reaches a limit state such as  cracking or deflection where it is no longer able to perform its usual  function; collapse; fracture</li>
+                    <li><strong>falsework</strong> - a temporary wooden or metal framework built to support the weight of  a structure during the period of its construction and until it becomes  self-supporting</li>
+                    <li><strong>fascia</strong> - an outside, covering member  designed on the basis of architectural effect rather than strength and  rigidity, although its function may involve both</li>
+                    <li><strong>fascia girder</strong> - an exposed outermost girder of a span sometimes treated  architecturally or otherwise to provide an attractive appearance</li>
+                    <li><strong>fatigue</strong> - the tendency of a member  to fail at a stress below the yield  point when subjected to repetitive loading</li>
+                    <li><strong>fatigue crack</strong> - any crack caused by  repeated cyclic loading at a stress below the yield point</li>
+                    <li><strong>fatigue damage</strong> - member damage (crack  formation) due to cyclic loading</li>
+                    <li><strong>fatigue life</strong> - the length of service of  a member subject to fatigue, based on the number of cycles it can undergo</li>
+                    <li><strong>fender</strong> - a structure that acts as a  buffer to protect the portions of a bridge exposed to floating debris and  water-borne traffic from collision damage; sometimes called an ice guard in  regions with ice floes</li>
+                    <li><strong>fender pier</strong> - a pier-like structure  which performs the same service as a fender but is generally more substantially  built; see GUARD PIER</li>
+                    <li><strong>field coat</strong> - a coat of paint applied  after the structure is assembled and its joints completely connected; quite  commonly a part of the field erection procedure; field painting</li>
+                    <li><strong>fill</strong> - material, usually earth,  used to change the surface contour of an area, or to construct an embankment</li>
+                    <li><strong>filler</strong> - a piece used primarily to  fill a space beneath a batten, splice plate, gusset, connection angle,  stiffener or other element; also known as filler plate</li>
+                    <li><strong>filler metal</strong> - metal prepared in wire,  rod, electrode or other form to be fused with the structure metal in the  formation of a weld</li>
+                    <li><strong>filler plate</strong> - see FILLER</li>
+                    <li><strong>fillet</strong> - a curved portion forming  a junction of two surfaces that would otherwise intersect at an angle</li>
+                    <li><strong>fillet weld</strong> - a weld of triangular or  fillet shaped cross-section between two pieces at right angles</li>
+                    <li><strong>filling</strong> - see FILL</li>
+                    <li><strong>fine aggregate </strong> - sand or  grit for concrete or mortar that passes a No. 4 sieve (4.75 mm)</li>
+                    <li><strong>finger dam</strong> - expansion joint in which the  opening is spanned by meshing steel fingers or teeth</li>
+                    <li><strong>fish belly</strong> - a term applied to a girder  or a truss having its bottom flange or its bottom chord constructed either  haunched or bow-shaped with the convexity downward; see LENTICULAR TRUSS</li>
+                    <li><strong>fixed beam</strong> - a beam with a fixed end</li>
+                    <li><strong>fixed bearing</strong> - a bearing that allows  only rotational movement; see BEARING</li>
+                    <li><strong>fixed bridge</strong> - a bridge  having constant position, i.e., without provision for movement to create  increased navigation clearance</li>
+                    <li><strong>fixed end</strong> - movement is restrained</li>
+                    <li><strong>fixed-ended  arch</strong> - see  VOUSSOIR ARCH</li>
+                    <li><strong>fixed span</strong> - a superstructure span  having its position practically immovable, as compared to a movable span</li>
+                    <li><strong>fixed support</strong> - a support that will allow  rotation only, no longitudinal movement</li>
+                    <li><strong>flange</strong> - the (usually) horizontal  parts of a rolled I-shaped beam or of a built-up girder extending transversely  across the top and bottom of the web</li>
+                    <li><strong>flange angle</strong> - an angle used to form a  flange element of a built-up girder, column, strut or similar member</li>
+                    <li><strong>floating  bridge</strong> - see PONTOON BRIDGE</li>
+                    <li><strong>floating  foundation</strong> - used  to describe a soil-supported raft or mat foundation with low bearing pressures;  sometimes applied to a &quot;foundation raft&quot; or &quot;foundation  grillage&quot; </li>
+                    <li><strong>flood  frequency</strong> -  the average time interval in years in which a flow of a given magnitude will  recur</li>
+                    <li><strong>flood plain</strong> - area adjacent to a stream  or river subject to flooding</li>
+                    <li><strong>floor</strong> - see DECK</li>
+                    <li><strong>floorbeam</strong> - a primary horizontal  member located transversely to the general bridge alignment </li>
+                    <li><strong>floor system</strong> - the complete framework of  members supporting the bridge deck and the traffic loading </li>
+                    <li><strong>flow capacity </strong> - maximum  flow rate that a channel, conduit, or culvert structure is hydraulically  capable of carrying</li>
+                    <li><strong>flux</strong> - a material that protects  the weld from oxidation during the fusion process</li>
+                    <li><strong>footbridge</strong> - a bridge designed and constructed  to provide means of traverse for pedestrian traffic only; also known as  pedestrian bridge</li>
+                    <li><strong>footing</strong> - the enlarged, lower  portion of a substructure, which distributes the structure load either to the  earth or to supporting piles; the most common footing is the concrete slab;  footer is a colloquial term for footing</li>
+                    <li><strong>footing aprons</strong> - protective layers of material surrounding  the footing of a substructure unit </li>
+                    <li><strong>foot wall</strong> - see TOE WALL</li>
+                    <li><strong>force</strong> - an influence that tends to  accelerate a body or to change its movement</li>
+                    <li><strong>forms</strong> - the molds that hold  concrete in place while it is hardening; also known as form work, shuttering;  see LAGGING, STAY-IN-PLACE FORMS</li>
+                    <li><strong>form work</strong> - see FORMS</li>
+                    <li><strong>foundation</strong> - the supporting material  upon which the substructure portion of a bridge is placed</li>
+                    <li><strong>foundation  excavation</strong> - the excavation made to accommodate a footing for a structure; also known as  foundation pit</li>
+                    <li><strong>foundation  failure</strong> - failure of a foundation by differential settlement or by shear failure of the  soil</li>
+                    <li><strong>foundation  grillage</strong> -  a construction consisting of steel, timber, or concrete members placed in  layers; each layer is perpendicular to those above and below it and the members  within a layer are generally parallel, producing a crib or grid-like effect.  Grillages are usually placed under very heavy concentrated loads</li>
+                    <li><strong>foundation  load</strong> - the  load resulting from traffic, superstructure, substructure, approach embankment,  approach causeway, or other incidental load increment imposed upon a given  foundation area</li>
+                    <li><strong>foundation  pile</strong> - see  PILE</li>
+                    <li><strong>foundation pit</strong> - see FOUNDATION EXCAVATION</li>
+                    <li><strong>foundation  seal</strong> - a  mass of concrete placed underwater within a cofferdam for the base portion of  structure to close or seal the cofferdam against incoming water; see TREMIE</li>
+                    <li><strong>fracture</strong> - see BRITTLE FRACTURE</li>
+                    <li><strong>fracture critical member (FCM)</strong> - a steel member in tension, or with a tension  element, whose failure would probably cause a portion of or the entire bridge  to collapse</li>
+                    <li><strong>fracture critical member inspection</strong> - a  hands-on inspection of a fracture critical member or member components that may  include visual and other nondestructive evaluation</li>
+                    <li><strong>frame</strong> - a  structure which transmits bending moments from the horizontal beam member  through rigid joints to vertical or inclined supporting members </li>
+                    <li><strong>framing</strong> - the arrangement and  connection of the component members of a bridge superstructure </li>
+                    <li><strong>freeboard</strong> - the vertical distance between the design flood  water surface and the lowest point of the structure to account for waves,  surges, drift and other contingencies</li>
+                    <li><strong>free end</strong> - movement is not restrained</li>
+                    <li><strong>freeze-thaw</strong> - freezing of water within the capillaries and  pores of cement paste and aggregate resulting in internal overstressing of the  concrete, which leads to deterioration including cracking, scaling, and  crumbling.</li>
+                    <li><strong>fretting corrosion</strong> - occurs in elements in close contact that are  subject to vibrations such as intersecting truss diagonals</li>
+                    <li><strong>friction pile </strong> - a pile  that provides support through friction resistance between the pile and the  surrounding earth along the lateral surface of the pile</li>
+                    <li><strong>friction  roller</strong> - a  roller placed between members intended to facilitate change in their relative  positions by reducing the frictional resistance to translation movement</li>
+                    <li><strong>frost heave</strong> - the upward movement of,  or force exerted by, soil due to freezing of retained moisture</li>
+                    <li><strong>frost line</strong> - the depth to which soil may  be frozen</li>
+                    <li><strong>functionally  obsolete</strong> - a bridge that has deck geometry, load carrying capacity, clearance or approach  roadway alignment that no longer meets the criteria for the system of which the  bridge is a part </li>
+
+                    <li><strong>gabion</strong> - rock filled wire baskets  used to retain earth and provide erosion control</li>
+                    <li><strong>galvanic  action</strong> -<strong> </strong>electrical current between two unlike  metals</li>
+                    <li><strong>galvanize</strong> - to coat with zinc</li>
+                    <li><strong>gauge</strong> - the distance between parallel  lines of rails, rivet holes, etc; a measure of thickness of sheet metal or  wire; also known as gage</li>
+                    <li><strong>general scour</strong> - the lowering of a streambed across the waterway at  the bridge, which may or may not be uniform</li>
+                    <li><strong>geometry</strong> - shape or form; relationship  between lines or points</li>
+                    <li><strong>girder</strong> - a horizontal flexural  member that is the main or primary support for a structure; any large beam,  especially if built up</li>
+                    <li><strong>girder bridge</strong> - a bridge whose  superstructure consists of two or more girders supporting a separate floor  system as differentiated from a multi-beam bridge or a slab bridge</li>
+                    <li><strong>girder span</strong> - a span in which the major  longitudinal supporting members are girders</li>
+                    <li><strong>glue laminated</strong> - a member created by  gluing together two or more pieces of lumber</li>
+                    <li><strong>grade</strong> - the fall or rise per unit  horizontal length; see GRADIENT </li>
+                    <li><strong>grade crossing</strong> - a term applicable to an intersection of two highways, two railroads or  a railroad and a highway at a common grade or elevation; now commonly accepted  as meaning the last of these combinations</li>
+                    <li><strong>grade  intersection</strong> - the location where two roadway slopes meet in profile; to provide a smooth  transition from one to the other they are connected by a vertical curve and the  resulting profile is a sag or a crest</li>
+                    <li><strong>grade  separation</strong> - roadways crossing each other at different elevations; see OVERPASS, UNDERPASS</li>
+                    <li><strong>gradient</strong> - the rate of inclination  of the roadway and/or sidewalk surface(s) from the horizontal, applying to a  bridge and its approaches; it is commonly expressed as a percentage relation  (ratio) of horizontal to vertical dimensions</li>
+                    <li><strong>gravity  abutment</strong> -  a thick abutment that resists horizontal earth pressure through its own dead  weight</li>
+                    <li><strong>gravity wall</strong> - a retaining  wall that is prevented from overturning or sliding by its own dead weight</li>
+                    <li><strong>grid flooring </strong> - a steel  floor system comprising a lattice pattern that may or may not be filled with  concrete</li>
+                    <li><strong>grillage</strong> - assembly of parallel  beams, usually steel or concrete, placed side by side, often in layers with  alternating directions; see FOUNDATION GRILLAGE</li>
+                    <li><strong>groin</strong> - a wall built out from a  river bank to check scour</li>
+                    <li><strong>grout</strong> - mortar having a  sufficient water content to render it free-flowing, used for filling (grouting)  the joints in masonry, for fixing anchor bolts and for filling cored spaces;  usually a thin mix of cement, water and sometimes sand or admixtures</li>
+                    <li><strong>grouting</strong> - the process of filling in  voids with grout</li>
+                    <li><strong>guard pier</strong> - a pier-like structure  built to protect a swing span in its open position from collision with passing  vessels or water-borne debris; may be equipped with a rest pier upon which the  swing span in its open position may be latched; see FENDER PIER</li>
+                    <li><strong>guardrail</strong> - a safety feature element  intended to redirect an errant vehicle</li>
+                    <li><strong>guide banks</strong> - dikes that extend upstream from the approach embankment  at either or both sides of the bridge opening to direct flow through the  opening</li>
+                    <li><strong>guide rail</strong> - see GUARDRAIL</li>
+                    <li><strong>gunite</strong> - the process of blowing  Portland cement mortar or concrete onto a surface using compressed air</li>
+                    <li><strong>gusset plate</strong> - a plate that connects  the members of a structure and holds  them in correct position at a joint</li>
+                    <li><strong>gutter</strong> - a paved ditch; area  adjacent to a roadway curb used for drainage</li>
+                    <li><strong>guy</strong> - a cable member used to  anchor a structure in a desired position</li>
+                    <li><strong>H Loading</strong> - a combination of loads used to represent a two-axle truck developed by  AASHTO</li>
+                    <li><strong>hairline  cracks</strong> - very  narrow cracks that form in the surface of concrete due to tension caused by  loading</li>
+                    <li><strong>hammer</strong> - hand tool used for sounding  and surface inspection</li>
+                    <li><strong>hammerhead  pier</strong> - a pier  with a single cylindrical or rectangular shaft and a relatively long,  transverse cap; also known as a tee pier or cantilever pier</li>
+                    <li><strong>hand hole</strong> - hole provided in component plate of built-up box section to permit  access to the interior for construction and maintenance purposes</li>
+                    <li><strong>hand rail</strong> - commonly applies only to sidewalk railing presenting a latticed,  barred, balustered or other open web construction</li>
+                    <li><strong>hands-on</strong> - inspection within arms length of the component.  Inspection uses visual techniques that may be supplemented by nondestructive  testing</li>
+                    <li><strong>hands-on  access</strong> -  close enough to the member or component so that it can be touched with the  hands and inspected visually</li>
+                    <li><strong>hanger</strong> - a tension member serving  to suspend an attached member; allows for expansion between a cantilevered and  suspended span</li>
+                    <li><strong>haunch</strong> - an increase in the depth of  a member usually at points of support; the outside areas of a pipe between the  spring line and the bottom of the pipe</li>
+                    <li><strong>haunched  girder</strong> - a  horizontal beam whose cross sectional depth varies along its length</li>
+                    <li><strong>H-beam</strong> - a rolled steel member  having an H-shaped cross-section (flange width equals beam depth) commonly used  for piling; also H-pile</li>
+                    <li><strong>head</strong> - a measure of water pressure  expressed in terms of an equivalent weight or pressure exerted by a column of  water; the height of the equivalent column of water is the head</li>
+                    <li><strong>head loss</strong> - the loss of energy  between two points along the path of a flowing fluid due to fluid friction;  reported in feet of head</li>
+                    <li><strong>headwall</strong> - a concrete structure at the ends of a  culvert to retain the embankment slopes, anchor the culvert, and prevent  undercutting</li>
+                    <li><strong>headwater</strong> - the source or the upstream  waters of a stream</li>
+                    <li><strong>heat treatment</strong> - any of a number of  various operations involving controlled heating and cooling that are used to  impart specific properties to metals; examples are tempering, quenching, and  annealing</li>
+                    <li><strong>heave</strong> - the upward motion of soil  caused by outside forces such as excavation, pile driving, moisture or soil  expansion; see FROST HEAVE</li>
+                    <li><strong>heel</strong> - the portion of a footing  behind the stem</li>
+                    <li><strong>helical</strong> - having the form of a spiral</li>
+                    <li><strong>high carbon  steel</strong> - carbon steel containing 0.5 to 1.5% dissolved carbon</li>
+                    <li><strong>high strength  bolt</strong> - bolt  and nut made of high strength steel, usually A325 or A490</li>
+                    <li>
+                        <strong>highway </strong>- the term &lsquo;highway&rsquo; includes:
+                        <ul>
+                            <li>a road, street, and parkway;</li>
+                            <li>a right-of-way, bridge,  railroad-highway crossing, tunnel, drainage structure, sign, guardrail, and  protective structure, in connection with a highway; and</li>
+                            <li>a portion of any interstate or  international bridge or tunnel and the approaches thereto, the cost of which is  assumed by a State transportation department, including such facilities as may  be required by the United States Customs and Immigration Services in connection  with the operation of an international bridge or tunnel</li>
+                        </ul>
+                    </li>
+                    <li><strong>hinge</strong> - a point in a structure at  which a member is free to rotate</li>
+                    <li><strong>hinged joint</strong> - a joint constructed with a pin, cylinder segment, spherical segment  or other device permitting rotational movement</li>
+                    <li><strong>honeycomb</strong> - an area in concrete where  mortar has separated and left spaces between the coarse aggregate, usually  caused by improper vibration during concrete construction</li>
+                    <li><strong>horizontal  alignment</strong> -  a roadway&rsquo;s centerline or baseline alignment in the horizontal plane</li>
+                    <li><strong>horizontal  curve</strong> - a  roadway baseline or centerline alignment defined by a radius in the horizontal  plane</li>
+                    <li><strong>horizontal shear splits</strong> - separations of the wood fibers parallel to the  grain due to excessive loading</li>
+                    <li><strong>Howe truss</strong> - a truss of the parallel  chord type with a web system composed of vertical (tension) rods at the panel  points with an X pattern of diagonals</li>
+                    <li><strong>HS Loading</strong> - a combination of loads  developed by AASHTO used to represent a truck and trailer</li>
+                    <li><strong>hybrid girder</strong> - a girder whose flanges  and web are made from steel of different grades</li>
+                    <li><strong>hydraulic countermeasures</strong> - man-made or man-placed devices designed to direct  streamflow and to protect against lateral migration and scour</li>
+                    <li><strong>hydraulics</strong> - the mechanics of fluids</li>
+                    <li><strong>hydrology</strong> - study of the accumulation and flow of water  from watershed areas</li>
+                    <li><strong>hydroplaning</strong> - loss of contact between a  tire and the roadway surface when the tire planes or glides on a film of water</li>
+
+
+
+                    <li><strong>I-beam</strong> - a structural member with a  cross-sectional shape similar to the capital letter &quot;I&quot;</li>
+                    <li><strong>ice guard</strong> - see FENDER</li>
+                    <li><strong>impact</strong> - A factor that describes  the effect on live load due to dynamic and vibratory effects of a moving load;  in bridge design, a load based on a percentage of live load to include dynamic  and vibratory effects; in fracture mechanics, a rapidly applied load, such as a  collision or explosion</li>
+                    <li><strong>incomplete  fusion</strong> - a weld flaw where the weld metal has  not combined metallurgically with the base metal</li>
+                    <li><strong>in-depth  inspection</strong> - a close-up, inspection of one or more  members above or below the water level to identify any deficiencies not readily  detectable using routine inspection procedures; hands-on inspection may be  necessary at some locations</li>
+                    <li><strong>indeterminate  stress</strong> -  stress in a structural member which cannot be calculated directly; it is  computed by the iterative application of mathematical equations, usually with  an electronic computer; indeterminate stresses arise in continuous span and  frame type structures</li>
+                    <li><strong>individual  column footing</strong> - footing supporting one column</li>
+                    <li><strong>inelastic  compression</strong> - compression beyond the yield point</li>
+                    <li><strong>initial inspection</strong> - the first inspection of a bridge as it becomes a part of  the bridge file to provide all Structure Inventory and Appraisal (SI&amp;A)  data and other relevant data and to determine baseline structural conditions.</li>
+                    <li><strong>inlet</strong> - an opening in the floor of  a bridge leading to a drain; roadway drainage structure which collects surface  water and transfers it to pipes</li>
+                    <li><strong>inspection  frequency</strong> -  the frequency with which the bridge is inspected -- normally every two years</li>
+                    <li><strong>integral  abutment</strong> - an  abutment cast monolithically with the end diaphragm of the deck; such abutments  usually encase the ends of the deck beams and are pile supported</li>
+                    <li><strong>integral deck </strong> - a deck  which is monolithic with the superstructure; concrete tee beam bridges have  integral decks</li>
+                    <li><strong>intercepting  ditch</strong> - a  ditch constructed to prevent surface water from flowing in contact with the toe  of an embankment or causeway or down the slope of a cut</li>
+                    <li><strong>interior  girder</strong> - any girder between exterior or fascia girders</li>
+                    <li><strong>interior span </strong> - a span of  which both supports are intermediate substructure units</li>
+                    <li><strong>intermittent  weld</strong> - a  noncontinuous weld commonly composed of a series of short welds separated by  spaces of equal length</li>
+                    <li><strong>internal redundancy</strong> - a bridge member having several elements that are mechanically  fastened together</li>
+                    <li><strong>internal steel corrosion</strong> - occurs due to the elimination of the protection of  steel caused by chlorides</li>
+                    <li><strong>intrados</strong> - the curve defining the  interior (lower) surface of the arch; also known as soffit</li>
+                    <li><strong>inventory item </strong> - data  contained in the structure file pertaining to bridge identification, structure  type and material, age and service, geometric data, navigational data,  classification, load rating and posting, proposed improvements, and inspections</li>
+                    <li><strong>inventory  rating</strong> -  the capacity of a bridge to withstand loads under normal service conditions  based on 55% of yield strength</li>
+                    <li><strong>invert elevation</strong> - the bottom or lowest point of  the internal surface of the transverse cross section of a pipe or culvert</li>
+                    <li><strong>iron</strong> - a metallic element used in  cast iron, wrought iron and steel</li>
+                    <li><strong>isotropic</strong> - having the same material  properties in all directions, e.g., steel</li>
+
+                    <li><strong>jack arch</strong> - a deck support system  comprised of a brick or concrete arch springing from the bottom flanges of  adjacent rolled steel beams</li>
+                    <li><strong>jacking</strong> - the lifting of elements using a type of jack (e.g., hydraulic),  sometimes acts as a temporary support system</li>
+                    <li><strong>jack stringer</strong> - the outermost stringer  supporting the bridge floor in a panel or bay</li>
+                    <li><strong>jacket</strong> - a protective shell  surrounding a pile made of fabric, concrete or other material</li>
+                    <li><strong>jersey barrier</strong> - a concrete barrier with  sloping front face that was developed by the New Jersey Department of  Transportation</li>
+                    <li><strong>joint</strong> - in masonry, the space  between individual stones or bricks; in concrete, a division in continuity of  the concrete; in a truss, point at which members of a truss are joined</li>
+                    <li><strong>keeper plate</strong> - a plate, which is  connected to a sole plate, designed to prohibit a beam from becoming dislodged  from the bearing</li>
+                    <li><strong>key</strong> - a raised portion of concrete  on one face of a joint that fits into a depression on the adjacent face</li>
+                    <li><strong>keystone</strong> - the symmetrically shaped,  wedge-like stone located in a head ring course at the crown of an arch; the final stone placed, thereby closing  the arch</li>
+                    <li><strong>king-post</strong> - the vertical  member in a &quot;king-post&quot; type truss; also known as king rod</li>
+                    <li><strong>king-post  truss</strong> - two  triangular panels with a common center vertical; the simplest of triangular system trusses</li>
+                    <li><strong>kip</strong> - a kilo pound (1000 lb.);  convenient unit for structural calculations</li>
+                    <li><strong>knee brace</strong> - a short member engaging at  its ends two other members that are joined to form a right angle or a  near-right angle to strengthen and stiffen the connecting joint</li>
+                    <li><strong>knee wall</strong> - a return of the abutment  backwall at its ends to enclose the bridge seat on three of its sides; also  called cheek wall</li>
+                    <li><strong>knife edge</strong> - a condition in which  corrosion of a steel member has caused a sharp edge</li>
+                    <li><strong>knuckle</strong> - an appliance forming a part  of the anchorage of a suspension bridge main suspension member permitting movement  of the anchorage chain</li>
+                    <li><strong>knots</strong> - separations of the wood fibers due to the trunk growing around an  embedded limb</li>
+                    <li><strong>K-truss</strong> - a truss having a web system  wherein the diagonal members intersect the vertical members at or near the  mid-height; the assembly in each panel forms a letter &quot;K&quot; </li>
+
+
+
+                    <li><strong>L-abutment</strong> - a cantilever abutment with the stem flush with the toe of the  footing, forming an &quot;L&quot; in cross section</li>
+                    <li><strong>laced column</strong> - a riveted, steel built-up  column of usually four angles or two channels tied together laterally with  lacing</li>
+                    <li><strong>lacing</strong> - small flat plates,  usually with one rivet at each end, used to tie individual sections of built up  members; see LATTICE</li>
+                    <li><strong>lagging</strong> - horizontal members  spanning between piles to form a wall; forms used to produce curved surfaces;  see FORMS</li>
+                    <li><strong>lamellar tear</strong> - incipient cracking  parallel to the face of a steel member</li>
+                    <li><strong>laminated  timber</strong> -  timber planks glued together face to face to form a larger member; see GLUE  LAMINATED</li>
+                    <li><strong>lane loading</strong> - a design loading which  represents a line of trucks crossing over a bridge</li>
+                    <li><strong>lap joint</strong> - a joint between two  members in which the end of one member overlaps the end of the other</li>
+                    <li><strong>lateral</strong> - a member placed  approximately perpendicular to a primary member</li>
+                    <li><strong>lateral  bracing</strong> - the bracing assemblage engaging a member perpendicular to the plane of the  member; intended to resist transverse movement and deformation; also keeps  primary parallel elements in truss bridges and girder bridges aligned; see  BRACING</li>
+                    <li><strong>lateral stream migration</strong> - the relocation of the channel due to lateral  streambank erosion</li>
+                    <li><strong>lattice</strong> - a crisscross assemblage of  diagonal bars, channels, or angles on a truss; also known as latticing, lacing</li>
+                    <li><strong>lattice truss </strong> - in  general, a truss having its web members inclined but more commonly the term is  applied to a truss having two or more web systems composed entirely of diagonal  members at any interval and crossing each other without reference to vertical  members</li>
+                    <li><strong>leaching</strong> - the action of removing  substances from a material by passing water through it</li>
+                    <li><strong>lead line</strong> - a weighted cord  incrementally marked, used to determine the depth of a body of water; also  known as sounding line</li>
+                    <li><strong>leaf</strong> - the movable portion of a  bascule bridge that forms the span of the structure</li>
+                    <li><strong>legal load</strong> - the maximum legal load for each vehicle configuration  permitted by law for the State in which the bridge is located</li>
+                    <li><strong>lenticular  truss</strong> - a  truss having parabolic top and bottom chords curved in opposite directions with  their ends meeting at a common joint; also known as a fish belly truss</li>
+                    <li><strong>levee</strong> - an embankment built to  prevent flooding of low-lying land</li>
+                    <li><strong>leveling  course</strong> - a  layer of bituminous concrete placed to smooth an irregular surface</li>
+                    <li><strong>light-weight  concrete</strong> - concrete of less than standard unit weight; may be no-fines concrete, aerated  concrete, or concrete made with lightweight aggregate</li>
+                    <li><strong>link</strong> - a hanger plate in a pin and  hanger assembly whose shape is similar to an eyebar, e.g., the head (at the  pinhole) is wider than the shank</li>
+                    <li><strong>link and roller</strong> - a movable bridge element consisting of a hinged strut-like link  fitted with a roller at its bottom end, supported upon a shoe plate or pedestal  and operated by a thrust strut serving to force it into a vertical position and  to withdraw it therefrom; when installed at each outermost end of the girders  or the trusses of a swing span their major function is to lift them to an  extent that their camber or droop will be removed and the arms rendered free to  act as simple spans; when the links are withdrawn to an inclined position fixed  by the operating mechanism the span is free to be moved to an open position</li>
+                    <li><strong>live load</strong> - a temporary dynamic load  such as vehicular traffic that is applied to a structure; also accompanied by  vibration or movement affecting its intensity</li>
+                    <li><strong>load</strong> - a force carried by a  structure component</li>
+                    <li><strong>load factor  design</strong> - a  design method used by AASHTO, based on limit states of material and arbitrarily  increased loads</li>
+                    <li><strong>load  indicating washer</strong> - a washer with small projections on one side, which compress  as the bolt is tightened; gives a direct indication of the bolt tension that  has been achieved</li>
+                    <li><strong>load path redundancy</strong> - a bridge having three or more main load-carrying  members</li>
+                    <li><strong>load rating</strong> - the determination of the live load carrying capacity  of a bridge using bridge plans and supplemented by information gathered from a  field inspection </li>
+                    <li><strong>load and  resistance factor design (LRFD)</strong> - design method used by AASHTO, based on limit states  of material with increased loads and reduced member capacity based on  statistical probabilities</li>
+                    <li><strong>local buckling </strong> - localized  buckling of a beam&rsquo;s plate element, can lead to failure of member</li>
+                    <li><strong>local scour</strong> - the removal of streambed material adjacent to an  obstruction in a waterway, that has been placed within the stream (such as a  pier or abutment), and causes the acceleration of the flow induced by the  obstruction</li>
+                    <li><strong>longitudinal bracing</strong> - bracing that runs lengthwise with a bridge and  provides resistance against longitudinal movement and deformation of transverse  members</li>
+                    <li><strong>loss of  prestress</strong> - loss of prestressing force due to a variety of factors, including shrinkage and  creep of the concrete, creep of the prestressing tendons, and loss of bond</li>
+                    <li><strong>low-carbon  steel</strong> - steel with 0.04 to 0.25% dissolved carbon; also called mild steel</li>
+                    <li><strong>lower chord</strong> - the bottom horizontal  member of a truss</li>
+                    <li><strong>luminaire</strong> - a lighting fixture</li>
+
+
+
+                    <li><strong>macadam</strong> - roadway pavement made with crushed stone aggregate, of coarse open  gradation, compacted in place; asphaltic macadam included asphalt as a binder</li>
+                    <li><strong>main beam</strong> - a horizontal structural member which supports the span and bears  directly on a column or wall</li>
+                    <li><strong>maintenance</strong> - basic repairs performed on a facility to keep it at an adequate  level of service</li>
+                    <li><strong>maintenance and protection of traffic</strong> - the management of vehicular and pedestrian  traffic through a construction zone to ensure the safety of the public and the  construction workforce; MPT; TRAFFIC PROTECTION</li>
+                    <li><strong>marine borers</strong> - mollusks and crustaceans that live in water and destroy wood by  digesting it</li>
+                    <li><strong>masonry</strong> - that portion of a structure composed of  stone, brick or concrete block placed in courses and usually cemented with  mortar</li>
+                    <li><strong>masonry cement</strong> - Portland cement and lime used to make mortar  for masonry construction </li>
+                    <li><strong>masonry plate</strong> - a steel plate placed on the substructure to support a superstructure  bearing and to distribute the load to the masonry beneath</li>
+                    <li><strong>mattress</strong> - a flexible scour protection blanket composed  of interconnected timber, gabions, or concrete units.</li>
+                    <li><strong>meander</strong> - a twisting, winding action from side to side; characterizes the  serpentine curvature of a narrow, slow flowing stream in a wide flood plain</li>
+                    <li><strong>median</strong> - separation between opposing lanes of highway traffic;  also known as median strip</li>
+                    <li><strong>member</strong> - an individual angle, beam, plate, or built component piece intended  ultimately to become an integral part of an assembled frame or structure</li>
+                    <li><strong>metal corrosion</strong> - oxidation of metal by electro-galvanic action involving an  electrolyte (moisture), an anode (the metallic surface where oxidation occurs),  a cathode (the metallic surface that accepts electrons and does not corrode),  and a conductor (the metal piece itself)</li>
+                    <li><strong>midspan</strong> - a reference point half-way between the supports of a beam or span</li>
+                    <li><strong>mild steel</strong> - steel containing from 0.04 to 0.25% dissolved carbon; see LOW CARBON  STEEL</li>
+                    <li><strong>military loading</strong> - a loading pattern used to simulate heavy military vehicles passing  over a bridge</li>
+                    <li><strong>mill scale</strong> - dense iron oxide on iron or steel that forms on the  surface of metal that has been forged or hot worked</li>
+                    <li><strong>modular joint</strong> - a bridge joint designed to handle large movements consisting of an  assembly of several strip or compression seals</li>
+                    <li><strong>modulus of  elasticity</strong> - the ratio between the  stress applied and the resulting elastic strain</li>
+                    <li><strong>moisture content</strong> - the amount of water in a material expressed as a percent by weight</li>
+                    <li><strong>moment</strong> - the couple effect of forces about a given point; see BENDING MOMENT</li>
+                    <li><strong>monolithic</strong> - forming a single mass without joints</li>
+                    <li><strong>mortar</strong> - a paste of portland cement, sand, and water laid between bricks, stones or  blocks</li>
+                    <li><strong>movable bridge</strong> - a bridge having one or more  spans capable of being raised, turned, lifted, or slid from its normal service  location to provide a clear navigation passage; see BASCULE BRIDGE, VERTICAL  LIFT BRIDGE, PONTOON BRIDGE, RETRACTILE DRAW BRIDGE, ROLLING LIFT BRIDGE, and  SWING BRIDGE</li>
+                    <li><strong>movable span</strong> - a general term applied to a superstructure span designed to be  swung, lifted or otherwise moved longitudinally, horizontally or vertically,  usually to provide increased navigational clearance</li>
+                    <li><strong>moving load</strong> - a live load which is moving, for example, vehicular traffic</li>
+                    <li><strong>MPT</strong> - see MAINTENANCE AND  PROTECTION OF TRAFFIC</li>
+                    <li><strong>MSE</strong> - mechanically stabilized earth; see REINFORCED EARTH</li>
+                    <li><strong>multi-centered arch</strong> - an arch in which the intrados surface is outlined by two or more  arcs symmetrically arranged and having different radii that intersect  tangentially</li>
+
+
+
+                    <li><strong>nail laminated</strong> - a laminated member produced by nailing two or more pieces of timber  together face to face</li>
+                    <li><strong>National Bridge Inspection Standards</strong><strong> NBIS</strong> - National Bridge Inspection  Standards, first established in 1971 to set national policy regarding bridge  inspection frequency, inspector qualifications, report formats, and inspection  and rating procedures</li>
+                    <li><strong>National Bridge Inventory (NBI)</strong> - A database of Structure Inventory and Appraisal data collected by  each state or Federal bridge-owning agency to fulfill the requirements of the  NBIS </li>
+                    <li><strong>NCHRP</strong> - National Cooperative Highway Research Program</li>
+                    <li><strong>NICET</strong> - National  Institute for Certification in Engineering Technologies, the NICET  provides nationally applicable voluntary certification programs covering  several broad engineering technology fields and a number of specialized  subfields. For information on the NICET program certification contact: National  Institute for Certification in Engineering Technologies, 1420 King Street,  Alexandria, VA 22314-2794.</li>
+                    <li><strong>NDE</strong> - nondestructive evaluation</li>
+                    <li><strong>NDT</strong> - nondestructive testing; any testing method of checking structural quality of  materials that does not damage them</li>
+                    <li><strong>necking</strong> - the elongation and contraction in area that occurs when a ductile  material is stressed</li>
+                    <li><strong>negative bending</strong> - bending of a member that causes tension in the surface adjacent to  the load, e.g., moment at interior supports of a span or at the joints of a  frame</li>
+                    <li><strong>negative moment</strong> - bending moment in a member such that tension stresses are produced in  the top portions of the member; typically occurs in continuous beams and spans  over the intermediate supports</li>
+                    <li><strong>neoprene</strong> - a synthetic rubber-like material used in expansion joints and  elastomeric bearings</li>
+                    <li><strong>neutral axis</strong> - the internal axis of a member in bending along which the strain is  zero; on one side of the neutral axis the fibers are in tension, on the other  side the fibers are in compression</li>
+                    <li><strong>Non-homogeneous</strong> - </li>
+                    <li><strong>nose</strong> - a projection acting as a cut water on the upstream end of a pier; see  STARLING</li>
+                    <li><strong>notch effect</strong> - stress concentration caused by an abrupt discontinuity or change in  section</li>
+                    <li><strong>offset</strong> - a horizontal distance measured at right angles to a survey line to  locate a point off the line</li>
+                    <li><strong>on center</strong> - a description of a typical dimension between the centers of the  objects being measured</li>
+                    <li><strong>open spandrel arch</strong> - a bridge that has open spaces between the deck and  the arch members allowing  &quot;open&quot; visibility through the bridge</li>
+                    <li><strong>open spandrel ribbed arch</strong> - a structure in which two  or more comparatively narrow arch rings, called ribs, function in the place of  an arch barrel; the ribs are rigidly secured in position by arch rib struts  located at intervals along the length of the arch; the arch ribs carry a column  type open spandrel construction which supports the floor system and its loads</li>
+                    <li><strong>operating rating</strong> - the capacity of a bridge to withstand loads based on 75% of yield  strength; the maximum permissible live  load to which the structure may be subjected for the load configuration used in  the rating</li>
+                    <li><strong>operator's house</strong> - the building containing control devices required for opening and  closing a movable bridge span</li>
+                    <li><strong>orthotropic</strong> - having different properties in two or more directions at right angles  to each other (e.g., wood); see ANISOTROPY</li>
+                    <li><strong>outlet</strong> - in hydraulics, the discharge end of drains, sewers, or culverts</li>
+                    <li><strong>out-of-plane distortion</strong> - distortion of a member in a plane other than that  which the member was designed to resist</li>
+                    <li><strong>overlay</strong> - see WEARING SURFACE</li>
+                    <li><strong>overload</strong> - a weight greater than the structure is designed to carry</li>
+                    <li><strong>overload  damage</strong> - occurs when concrete members  are sufficiently overstressed</li>
+                    <li><strong>overpass</strong> - bridge over a roadway or railroad</li>
+                    <li><strong>overturning</strong> - tipping over; rotational movement</li>
+                    <li><strong>oxidation</strong> - the chemical breakdown of a substance due to its reaction with  oxygen from the air</li>
+                    <li><strong>oxidized steel</strong> - rust</li>
+
+
+
+                    <li><strong>pack</strong> - a steel plate inserted between two others to fill a gap and fit them tightly  together; also known as packing; fill; filler plate</li>
+                    <li><strong>pack rust</strong> - rust forming between adjacent steel surfaces in contact which tends  to force the surfaces apart due to the increase in material volume</li>
+                    <li><strong>paddleboard</strong> - striped, paddle-shaped signs or boards placed on the roadside in  front of a narrow bridge as a warning of reduced roadway width</li>
+                    <li><strong>panel </strong>-the portion of a truss span  between adjacent points of intersection of web and chord members</li>
+                    <li><strong>panel point</strong> - the point of intersection of primary web and chord members of a truss</li>
+                    <li><strong>parabolic arch</strong> - an arch in which the intrados surface is a segment of a symmetrical  parabolic surface (suited to concrete arches)</li>
+                    <li><strong>parabolic truss</strong> - a polygonal truss having  its top chord and end post vertices coincident with the arc of a parabola, its  bottom chord straight and its web system either triangular or quadrangular;  also known as a parabolic arched truss</li>
+                    <li><strong>parapet</strong> - a low wall along the outmost edge of the roadway of a bridge to  protect vehicles and pedestrians</li>
+                    <li><strong>pedestal</strong> - concrete or built-up metal member constructed on top of a bridge  seat for the purpose of providing a specific bearing seat elevation</li>
+                    <li><strong>pedestal pier</strong> - one or more piers built in block-like form that may be connected by  an integrally built web between them; when composed of a single, wide  block-like form, it is called a wall or solid pier</li>
+                    <li><strong>pedestrian bridge</strong> - see FOOT BRIDGE</li>
+                    <li><strong>penetration</strong> - when applied to creosoted lumber, the depth to which the surface wood  is permeated by the creosote oil; when applied to pile driving; the depth a  pile tip is driven into the ground</li>
+                    <li><strong>permanent  loads</strong> - loads that are constant for  the life of the structure</li>
+                    <li><strong>physical testing</strong> - the testing of bridge members in the field or laboratory</li>
+                    <li><strong>pier</strong> - a substructure unit that supports the spans of a multi-span superstructure at  an intermediate location between its abutments</li>
+                    <li><strong>pier cap</strong> - the topmost horizontal portion of a pier that distributes loads from  the superstructure to the vertical pier elements</li>
+                    <li><strong>pile</strong> - a shaft-like linear member which carries loads to underlying rock or soil  strata</li>
+                    <li><strong>pile bent</strong> - a row of driven or placed piles extending above the ground surface  supporting a pile cap; see BENT</li>
+                    <li><strong>pile bridge</strong> - a bridge carried on piles or pile bents</li>
+                    <li><strong>pile cap</strong> - a slab or beam which acts to secure the  piles in position laterally and provides a bridge seat to receive and  distribute superstructure loads</li>
+                    <li><strong>pile foundation</strong> - a foundation supported by piles in sufficient number and to a depth  adequate to develop the bearing resistance required to support the substructure  load</li>
+                    <li><strong>pile pier</strong> - see PILE BENT</li>
+                    <li><strong>piling</strong> - collective term applied to group of piles in a construction; see PILE,  SHEET PILES</li>
+                    <li><strong>pin</strong> - a cylindrical bar used to connect elements of a structure</li>
+                    <li><strong>pin-connected truss</strong> - a general  term applied to a truss of any type having its chord and web members connected  at each panel point by a single pin</li>
+                    <li><strong>pin and hanger</strong> - a hinged connection detail designed to allow for expansion and  rotation between a cantilevered and suspended span at a point between supports.</li>
+                    <li><strong>pin joint</strong> - a joint in a truss or other frame in which the members are assembled  upon a single cylindrical pin</li>
+                    <li><strong>pin packing</strong> - arrangement of truss members on a pin at a pinned joint</li>
+                    <li><strong>pin plate</strong> - a plate rigidly attached upon the end of a member to develop the  desired bearing upon a pin or pin-like bearing, and secure additional strength  and rigidity in the member; doubler plate</li>
+                    <li><strong>pintle</strong> - a relatively small steel pin engaging the rocker of an expansion bearing, in  a sole plate or masonry plate, thereby preventing sliding of the rocker</li>
+                    <li><strong>pipe</strong> - a hollow cylinder used for the conveyance of water, gas, steam etc.</li>
+                    <li><strong>piping</strong> - removal of fine particles from within a soil mass by flowing water</li>
+                    <li><strong>plain concrete</strong> - concrete with no structural reinforcement except, possibly, light  steel to reduce shrinkage and temperature cracking</li>
+                    <li><strong>plan and profile</strong> - a drawing that shows both the roadway plan view and profile view in  the same scale; see PLAN VIEW, PROFILE</li>
+                    <li><strong>plan view</strong> - drawing that represents the top view of the road or a structure </li>
+                    <li><strong>plastic deformation</strong> - permanent deformation of material beyond the elastic range</li>
+                    <li><strong>plastic  strain</strong> - the irreversible or  permanent distortion of a material</li>
+                    <li><strong>plate</strong> - a flat sheet of metal which is relatively thick; see SHEET STEEL</li>
+                    <li><strong>plate girder</strong> - a large I-shaped beam composed of a solid web plate with flange  plates attached to the web plate by flange angles or fillet welds</li>
+                    <li><strong>plug weld</strong> - a weld joining two members produced by depositing weld metal within  holes cut through one or more of the members; also known as slot weld</li>
+                    <li><strong>plumb bob</strong> - a weight hanging on a cord used to provide a true vertical reference</li>
+                    <li><strong>plumb line</strong> - a true vertical reference line established using a plumb bob</li>
+                    <li><strong>pneumatic caisson</strong> - an underwater caisson in which the working chamber is kept  free of water by compressed air at a pressure nearly equal to the water  pressure outside it</li>
+                    <li><strong>point loads</strong> - loads that are applied to a localized area</li>
+                    <li><strong>pointing</strong> - the compacting of the mortar into the  outermost portion of a joint and the troweling of its exposed surface to secure  water tightness or desired architectural effect; replacing deteriorated mortar</li>
+                    <li><strong>ponding</strong> - accumulation of water </li>
+                    <li><strong>pontoon bridge</strong> - a bridge supported by floating on pontoons moored to the riverbed; a  portion may be removable to facilitate navigation</li>
+                    <li><strong>pony truss</strong> - a through truss without top chord lateral bracing </li>
+                    <li><strong>pop-out</strong> - conical fragment broken out of a concrete surface by pressure from  reactive aggregate particles </li>
+                    <li><strong>portable bridge</strong> - a bridge that may be  readily erected for a temporary communication-transport service and  disassembled and reassembled at another location</li>
+                    <li><strong>portal</strong> - the clear unobstructed space of a through truss bridge forming the entrance  to the structure</li>
+                    <li><strong>portal bracing</strong> - a system of sway bracing placed in the plane of the end posts of the  trusses</li>
+                    <li><strong>portland  cement</strong> - a  fine dry powder made by grinding limestone clinker made by heating limestone in  a kiln; this material reacts chemically with water to produce a solid mass</li>
+                    <li><strong>portland cement concrete</strong> - a mixture of aggregate,  portland cement, water, and usually chemical admixtures</li>
+                    <li><strong>positive moment</strong> - a force applied over a distance that causes compression in the top  fiber of a beam and tension in the bottom fiber</li>
+                    <li><strong>post</strong> - a member resisting compressive stresses, located vertical to the bottom chord  of a truss and common to two truss panels; sometimes used synonymously for  vertical; see COLUMN</li>
+                    <li><strong>posting</strong> - a limiting dimension, speed, or loading  indicating larger dimensions, higher speeds, or greater loads cannot be safely  taken by the bridge</li>
+                    <li><strong>post-stressing</strong> - see POSTTENSIONING</li>
+                    <li><strong>posttensioning</strong> - a method of prestressing  concrete in which the tendons are stressed after the concrete has been cast and  hardens</li>
+                    <li><strong>pot bearing</strong> - a bearing type that allows  for multi-dimensional rotation by using a piston supported on an elastomer  contained on a cylinder (&quot;pot&quot;), or spherical bearing element</li>
+                    <li><strong>pot holes</strong> - irregular shaped, disintegrated areas of bridge deck or roadway  pavement caused by the failure of the surface material</li>
+                    <li><strong>Pratt truss</strong> - a truss with parallel chords and a web system composed of vertical  posts with diagonal ties inclined outward and upward from the bottom chord  panel points toward the ends of the truss; also known as N-truss </li>
+                    <li><strong>precast concrete</strong> - concrete members that are  cast and cured before being placed into their final positions on a construction  site</li>
+                    <li><strong>prestressed concrete</strong> - concrete with strands, tendons, or bars that are stressed before the live load  is applied</li>
+                    <li><strong>prestressing</strong> - applying forces to a structure to deform it in such a way that it will  withstand its working loads more effectively; see POSTTENSIONING, PRETENSIONING</li>
+                    <li><strong>pretensioning</strong> - a method of prestressing  concrete in which the strands are stressed before the concrete is placed;  strands are released after the concrete has hardened, inducing internal  compression into the concrete</li>
+                    <li><strong>primary member</strong> - a member designed to resist flexure and distribute primary live  loads and dead loads</li>
+                    <li><strong>priming coat</strong> - the first coat of paint applied to the metal or other material of a  bridge; also known as base coat, or primer</li>
+                    <li><strong>probing</strong> - investigating the location and condition of submerged foundation  material using a rod or shaft of appropriate length; checking the surface  condition of a timber member for decay using a pointed tool, e.g., an ice pick</li>
+                    <li><strong>Professional engineer (PE)</strong> - an  individual, who has fulfilled education and experience requirements and passed  rigorous exams that, under State licensure laws, permits them to offer  engineering services directly to the public. Engineering licensure laws vary  from State to State, but, in general, to become a PE an individual must be a  graduate of an engineering program accredited by the Accreditation Board for  Engineering and Technology, pass the Fundamentals of Engineering exam, gain  four years of experience working under a PE, and pass the Principles of  Practice of Engineering exam</li>
+                    <li><strong>profile</strong> - a section cut vertically along the center line of a roadway or  waterway to show the original and final ground levels</li>
+                    <li><strong>program manager</strong> - the individual in charge of  the program, that has been assigned or delegated the duties and  responsibilities for bridge inspection, reporting, and inventory. The program  manager provides overall leadership and is available to inspection team leaders  to provide guidance</li>
+                    <li><strong>programmed repair</strong> - those repairs that may be  performed in a scheduled program </li>
+                    <li><strong>protective system</strong> - a system used to protect bridges from environmental forces that cause  steel and concrete to deteriorate and timber to decay, typically a coating  system</li>
+                    <li><strong>PS&amp;E</strong> - Plans, Specifications, and Estimate; the final submission of the  designers to the owner</li>
+                    <li><strong>public road</strong>. - the term ``public road'' means any road or street under the  jurisdiction of and maintained by a public authority and open to public travel<strong> </strong></li>
+                    <li><strong>punching shear</strong> - shear stress in a slab due to the application of a concentrated load</li>
+
+
+
+                    <li><strong>quality assurance (QA)</strong> - the use of sampling and other measures to assure the  adequacy of quality control procedures in order to verify or measure the  quality level of the entire bridge inspection and load rating program</li>
+                    <li><strong>quality control (QC)</strong> - procedures that are intended to maintain the quality  of a bridge inspection and load rating at or above a specified level</li>
+                    <li><strong>queen-post truss</strong> - a parallel chord type of truss  having three panels with the top chord occupying only the length of the  center panel</li>
+
+
+                    <li><strong>railing</strong> - a fence-like construction built at the outermost edge of the roadway  or the sidewalk portion of a bridge to protect pedestrians and vehicles; see  HANDRAIL </li>
+                    <li><strong>rake</strong> - an angle of inclination of a surface in relation to a vertical plane; also  known as batter</li>
+                    <li><strong>ramp</strong> - an inclined traffic-way leading from one elevation to another</li>
+                    <li><strong>range of stress</strong> - the algebraic difference between the minimum and maximum stresses in a  member </li>
+                    <li><strong>raveling</strong> - the consistent loss of aggregate from a pavement resulting in a poor  riding surface</li>
+                    <li><strong>reaction</strong> - the resistance of a support to a load</li>
+                    <li><strong>rebar</strong> - see REINFORCING BAR</li>
+                    <li><strong>redundancy</strong> - the structural condition where there are more elements  of support than are necessary for stability.</li>
+                    <li><strong>redundant member</strong> - a member in a bridge which renders it a statically indeterminate  structure; the structure would be stable without the redundant member whose  primary purpose is to reduce the stresses carried by the determinate structure</li>
+                    <li><strong>rehabilitation</strong> - significant repair work to a structure</li>
+                    <li><strong>reinforced concrete</strong> - concrete with steel reinforcing bars embedded in it  to supply increased tensile strength and durability</li>
+                    <li><strong>reinforced concrete pipe</strong> - pipe manufactured of  concrete reinforced with steel bars or welded wire fabric</li>
+                    <li><strong>Reinforced Earth</strong> - proprietary retaining structure made of earth and steel strips  connected to concrete facing; the steel strips are embedded in backfill and  interlock with the facing; see MSE</li>
+                    <li><strong>reinforcement</strong> - rods or mesh embedded in concrete to strengthen it</li>
+                    <li><strong>reinforcing bar</strong> - a steel bar, plain or with a deformed surface, which bonds to the  concrete and supplies tensile strength to the concrete</li>
+                    <li><strong>relaxation</strong> - a decrease in stress caused by creep</li>
+                    <li><strong>residual stress</strong> - a stress that is trapped in a member after it is formed into its  final shape</li>
+                    <li><strong>resistivity of soil</strong> - an electrical measurement in ohm-cm that estimates the corrosion  activity potential of a given soil</li>
+                    <li><strong>resurfacing</strong> - a layer of wearing surface material that is put over the approach or  deck surface in order to create a more uniform riding surface</li>
+                    <li><strong>Retained Earth </strong>- proprietary retaining  structure made of weld wire fabric strips connected to concrete facing; see MSE</li>
+                    <li><strong>retaining wall</strong> - a structure designed to restrain and hold back a mass of earth</li>
+                    <li><strong>retractile draw bridge </strong>- a bridge with a superstructure designed to  move horizontally, either longitudinally or diagonally, from &quot;closed&quot;  to &quot;open&quot; position, the portion acting in cantilever being  counterweighted by that supported on rollers; also known as traverse draw  bridge</li>
+                    <li><strong>rib</strong> - curved structural member supporting a curved shape or panel</li>
+                    <li><strong>rigger</strong> - an individual who erects and maintains  scaffolding or other access equipment such as that used for bridge inspection</li>
+                    <li><strong>rigid frame</strong> - a structural frame in which bending moment is transferred between  horizontal and vertical or inclined members by joints </li>
+                    <li><strong>rigid frame bridge</strong> - a bridge with moment resisting joints between the horizontal portion  of the superstructure and vertical or inclined legs</li>
+                    <li><strong>rigid frame pier</strong> - a pier with two or more columns and a horizontal beam on top  constructed monolithically to act like a frame</li>
+                    <li><strong>rip-rap</strong> - stones, blocks of concrete or other objects placed upon river and  stream beds and banks, lake, tidal or other shores to prevent scour by water  flow or wave action</li>
+                    <li><strong>river  training structures</strong> - devices that  alter the flow of the river</li>
+                    <li><strong>rivet</strong> - a one-piece metal  fastener held in place by forged heads at each end</li>
+                    <li><strong>riveted joint</strong> - a joint in which the assembled members are fastened by rivets</li>
+                    <li><strong>roadway</strong> - the portion of the road intended for the use of vehicular traffic</li>
+                    <li><strong>roadway shoulder</strong> - drivable area immediately adjoining the traveled roadway</li>
+                    <li><strong>rocker bearing</strong> - a bridge support that accommodates expansion and contraction of the  superstructure through a tilting action</li>
+                    <li><strong>rocker bent</strong> - a bent hinged or otherwise articulated at one or both ends to  provide the longitudinal movements resulting from temperature changes and  superimposed loads</li>
+                    <li><strong>rolled shape</strong> - forms of rolled steel having &quot;I&quot;, &quot;H&quot;,  &quot;C&quot;, &quot;Z&quot; or other cross sectional shapes</li>
+                    <li><strong>rolled-steel section</strong> - any hot-rolled steel section including wide flange  shapes, channels, angles, etc.</li>
+                    <li><strong>roller</strong> - a steel cylinder intended to provide longitudinal movements by rolling  contact</li>
+                    <li><strong>roller bearing</strong> - a single roller or a group of rollers so installed as to permit  longitudinal movement of a structure</li>
+                    <li><strong>roller nest</strong> - a group of steel cylinders used to facilitate the longitudinal  movements resulting from temperature changes and superimposed loads</li>
+                    <li><strong>rolling lift bridge</strong> - a bridge of bascule type devised to roll backward and forward upon  supporting girders when operated through an &quot;open and closed&quot; cycle</li>
+                    <li><strong>routine inspection</strong> - regularly scheduled inspection consisting of observations  and/or measurements needed to determine the physical and functional condition  of the bridge, to identify any changes from initial or previously recorded  conditions, and to ensure that the structure continues to satisfy present  service requirements.</li>
+                    <li> <strong>routine permit load</strong> - a live load, which has a gross weight, axle weight or  distance between axles not conforming with State statutes for legally  configured vehicles, authorized for unlimited trips over an extended period of  time to move alongside other heavy vehicles on a regular basis.</li>
+                    <li><strong>rubble</strong> - irregularly shaped pieces of stone in the undressed condition obtained  from a quarry and varying in size</li>
+                    <li><strong>runoff</strong> - the quantity of precipitation that flows from a catchment area past a given  point over a certain period</li>
+
+
+                    <li><strong>sacrificial anode</strong> - the anode in a cathodic protection system</li>
+                    <li><strong>sacrificial coating</strong> - a coating over the base material to provide protection to the base  material; examples include galvanizing on steel and aluclading on aluminum</li>
+                    <li><strong>sacrificial protection</strong> - see CATHODIC PROTECTION</li>
+                    <li><strong>sacrificial thickness</strong> - additional material thickness provided for extra  service life of a member in an aggressive environment</li>
+                    <li><strong>saddle</strong> - a member located upon the topmost portion of the tower of a suspension  bridge which acts as a bearing surface for the catenary cable passing over it</li>
+                    <li><strong>safe load</strong> - the maximum load that a structure can support with an appropriate  factor of safety</li>
+                    <li><strong>safety belt</strong> - a belt worn in conjunction  with a safety line to prevent falling a long distance when working at heights;  no longer acceptable as fall protection under OSHA rules</li>
+                    <li><strong>safety curb</strong> - a curb between 9 inches and 24 inches wide serving as a limited use  refuge or walkway for pedestrians crossing a bridge</li>
+                    <li><strong>safety factor</strong> - the difference between the ultimate strength of a member and the  maximum load it is expected to carry</li>
+                    <li><strong>safety harness</strong> - harness with shoulder,  leg, and waist straps of approved OSHA design used as personal fall protection  in conjunction with appropriate lanyards and tie off devices </li>
+                    <li><strong>sag</strong> - to sink or bend downward due to weight or pressure</li>
+                    <li><strong>scab</strong> - a plank bolted over the joint between two timber members to hold them in  correct alignment and strengthen the joint; a short piece of I-beam or other  structural shape attached to the flange or web of a metal pile to increase its  resistance to penetration; also known as scab piece</li>
+                    <li><strong>scaling</strong> - the gradual disintegration of a concrete surface due to the failure of  the cement paste caused by chemical attack or freeze-thaw cycles</li>
+                    <li><strong>scour</strong> - removal of a streambed or bank area by stream flow; erosion of streambed or bank material due to flowing  water; often considered as being localized around piers and abutments of  bridges</li>
+                    <li><strong>scour critical bridge</strong> - a bridge with a foundation  element that has been determined to be unstable for the observed or evaluated  scour condition.</li>
+                    <li><strong>scour protection</strong> - protection of submerged material by steel sheet piling, rip rap,  concrete lining, or combination thereof </li>
+                    <li><strong>scuba</strong> - self-contained underwater breathing apparatus; a portable breathing  device for free swimming divers </li>
+                    <li><strong>scupper</strong> - an opening in the deck of a bridge to provide means for water  accumulated upon the roadway surface to drain </li>
+                    <li><strong>seam weld</strong> - a weld joining the edges of two members placed in contact; in  general, it is not a stress-carrying weld</li>
+                    <li><strong>seat</strong> - a base on which an object or member is placed</li>
+                    <li><strong>seat angle</strong> - a piece of angle attached to the side of a member to provide support  for a connecting member either temporarily during its erection or permanently;  also known as a shelf angle</li>
+                    <li><strong>secondary member</strong> - a member that does not carry  calculated live loads; bracing members</li>
+                    <li><strong>section loss</strong> - loss of a member's cross  sectional area usually by corrosion or decay</li>
+                    <li><strong>section view</strong> - an internal representation of a structure element as if a slice was  made through the element</li>
+                    <li><strong>seepage</strong> - the slow movement of water through a material</li>
+                    <li><strong>segmental</strong> - constructed of individual pieces or segments which are collectively  joined to form the whole</li>
+                    <li><strong>segmental arch</strong> - a circular arch in which the intrados is less than a semi-circle</li>
+                    <li><strong>segregation</strong> - in concrete construction, the separation of large aggregate from the  paste during placement</li>
+                    <li><strong>seismic</strong> - a term referring to earthquakes (e.g., seismic forces)</li>
+                    <li><strong>semi-stub abutment</strong> - cantilever abutment founded part way up the slope, intermediate in  size between a full height abutment and a stub abutment</li>
+                    <li><strong>service load design</strong> - AASHTO&rsquo;s description for Working Stress Design</li>
+                    <li><strong>settlement</strong> - the movement of substructure elements due to changes in the soil  properties</li>
+                    <li><strong>shadow  vehicle</strong> - vehicle used to prevent  vehicles from entering the work zone if the motorist drifts into the lane  closure</li>
+                    <li><strong>shakes</strong> -separations of the wood fibers parallel to the grain  between the annual growth rings</li>
+                    <li><strong>shear</strong> - the load acting across a beam near its support</li>
+                    <li><strong>shear connectors</strong> - devices that extend from the top flange of a beam and are embedded  in the above concrete slab, forcing the beam and the concrete to act as a  single unit</li>
+                    <li><strong>shear force</strong> - equal but opposite forces that tend to slide one  section of a member past the adjacent section</li>
+                    <li><strong>shear spiral</strong> - a coil-shaped component welded to the top flange of a beam, as a  shear connector</li>
+                    <li><strong>shear stress</strong> - the shear force per unit of cross-sectional area; also referred to as  diagonal tensile stress</li>
+                    <li><strong>shear stud</strong> - a type of shear connector in the form of a road with a head that is  attached to a beam with an automatic stud-welding gun</li>
+                    <li><strong>sheet pile cofferdam</strong> - a wall-like barrier composed of driven piling  constructed to surround the area to be occupied by a structure and permit  dewatering of the enclosure so that the excavation may be performed in the open air</li>
+                    <li><strong>sheet piles</strong> - flattened Z-shaped interlocking  piles driven into the ground to keep earth or water out of an excavation  or to protect an embankment</li>
+                    <li><strong>sheet piling</strong> - a general or collective term used to describe a number of sheet  piles installed to form a crib, cofferdam, bulkhead, etc.; also known as  sheeting</li>
+                    <li><strong>sheet steel</strong> - steel in the form of a  relatively thin sheet or plate; for flat rolled steel, specific thicknesses vs.  widths are classified by AISI as bar, strip, sheet or plate</li>
+                    <li><strong>shelf angle</strong> - see SEAT ANGLE</li>
+                    <li><strong>shim</strong> - a thin plate inserted between two elements to fix their relative position and  to transmit bearing stress</li>
+                    <li><strong>shoe</strong> - a steel or iron member, usually a casting or weldment, beneath the  superstructure bearing that transmits and distributes loads to the substructure  bearing area</li>
+                    <li><strong>shop</strong> - a factory or workshop</li>
+                    <li><strong>shop drawings</strong> - detailed drawings  developed from the more general design drawings used in the manufacture or  fabrication of bridge components</li>
+                    <li><strong>shoring</strong> - a strut or prop placed against or beneath a structure to restrain  movement; temporary soil retaining structure</li>
+                    <li><strong>shoulder abutment</strong> - a cantilever abutment extending from the grade line of the road  below to that of the road overhead, usually set just off the shoulder; see FULL  HEIGHT ABUTMENT</li>
+                    <li><strong>shoulder area</strong> - see ROADWAY SHOULDER</li>
+                    <li><strong>shrinkage</strong> - a reduction in volume caused by moisture loss in concrete or timber  while drying</li>
+                    <li><strong>sidewalk</strong> - the portion of the bridge floor area serving pedestrian traffic only </li>
+                    <li><strong>sidewalk bracket</strong> - frame attached to and projecting from the outside of a girder to serve  as a support for the sidewalk stringers, floor and railing or parapet</li>
+                    <li><strong>sight distance</strong> - the length of roadway ahead that is easily visible to the driver;  required sight distances are defined by AASHTO's &quot;A Policy on Geometric  Design of Highways and Streets&quot;</li>
+                    <li><strong>silt</strong> - very finely divided siliceous or other hard rock material removed from its  mother rock through erosive action rather than chemical decomposition</li>
+                    <li><strong>simple span</strong> - beam or truss with two  unrestraining supports near its ends</li>
+                    <li><strong>S-I-P forms</strong> - see STAY-IN-PLACE FORMS, FORMS</li>
+                    <li><strong>skew angle</strong> - the angle produced when the longitudinal  members of a bridge are not perpendicular to the substructure; the skew angle  is the acute angle between the alignment of the bridge and a line perpendicular  to the centerline of the substructure units</li>
+                    <li><strong>skewback</strong> - the inclined support at each end of an arch</li>
+                    <li><strong>skewback shoe</strong> - the member transmitting the thrust of an arch to the skewback course  or cushion course of an abutment or piers; also known as skewback pedestal</li>
+                    <li><strong>slab</strong> - a wide beam, usually of reinforced concrete, which supports load by flexure</li>
+                    <li><strong>slab bridge</strong> - a bridge having a superstructure composed of a reinforced concrete  slab constructed either as a single unit or as a series of narrow slabs placed  parallel with the roadway alignment and spanning the space between the  supporting substructure units </li>
+                    <li><strong>slide</strong> - movement on a slope because of an increase in  load or a removal of support at the toe; also known as landslide</li>
+                    <li><strong>slip form</strong> - to form concrete by advancing a mold</li>
+                    <li><strong>slope</strong> - the inclination of a surface expressed as a ratio of one unit of rise or fall  for so many horizontal units</li>
+                    <li><strong>slope protection</strong> - a thin surfacing of stone, concrete or other material deposited upon a  sloped surface to prevent its disintegration by rain, wind or other erosive  action; also known as slope pavement</li>
+                    <li><strong>slot weld</strong> - see PLUG WELD</li>
+                    <li><strong>slump</strong> - a measurement taken to determine the stiffness of  concrete; the measurement is the loss in height after a cone-shaped mold is  lifted</li>
+                    <li><strong>soffit</strong> - underside of a bridge deck; also see INTRADOS</li>
+                    <li><strong>soldier beam</strong> - a steel pile driven into the earth with its projecting butt end used  as a cantilever beam</li>
+                    <li><strong>soldier pile wall</strong> - a series of soldier beams supporting horizontal lagging to retain an  excavated surface; commonly used in limited right-of-way applications</li>
+                    <li><strong>soil interaction structure</strong> - a subsurface structure  that incorporates both the strength properties of a flexible structure and the  support properties of the soil surrounding the structure</li>
+                    <li><strong>sole plate</strong> - a plate attached to the bottom flange of a beam that distributes the  reaction of the bearing to the beam</li>
+                    <li><strong>solid sawn beam</strong> - a section of tree cut to  the desired size at a saw mill</li>
+                    <li><strong>sounding</strong> - determining the depth of  water by an echo-sounder or lead line; tapping a surface to detect  delaminations (concrete) or decay (timber)</li>
+                    <li><strong>spall</strong> - depression in concrete caused by a separation of a portion of the surface  concrete, revealing a fracture parallel with or slightly inclined to the  surface</li>
+                    <li><strong>span</strong> - the distance between the supports of a beam; the  distance between the faces of the substructure elements; the complete  superstructure of a single span bridge or a corresponding integral unit of a  multiple span structure; see CLEAR SPAN</li>
+                    <li><strong>spandrel</strong> - the space bounded by the arch extrados and the horizontal member above  it</li>
+                    <li><strong>spandrel column</strong> - a column constructed on the rib of an arch span and serving as a  support for the deck construction of an open spandrel arch; see OPEN SPANDREL  ARCH</li>
+                    <li><strong>spandrel fill</strong> - the fill material placed within the spandrel space of a closed  spandrel arch</li>
+                    <li><strong>spandrel tie</strong> - a wall or a beam-like member connecting the spandrel walls of an  arch and securing them against bulging and other deformation; in stone masonry  arches the spandrel tie walls served to some extent as counterforts</li>
+                    <li><strong>spandrel wall</strong> - a wall built on the extrados of an arch filling the space below the  deck; see TIE WALLS</li>
+                    <li><strong>special inspection</strong> - an inspection scheduled at the  discretion of the bridge owner, used to monitor a particular known or suspected  deficiency</li>
+                    <li><strong>specifications</strong> - a detailed description of requirements, materials, tolerances, etc.,  for construction which are not shown on  the drawings; also known as specs</li>
+                    <li><strong>spider</strong> - inspection access equipment  consisting of a bucket or basket which moves vertically on wire rope, driven by  an electric or compressed air motor</li>
+                    <li><strong>spillway</strong> - a channel used to carry water away from the top of a slope to an  adjoining outlet</li>
+                    <li><strong>splice</strong> - a structural joint between members to extend their effective length</li>
+                    <li><strong>splits </strong>- advanced checks that extended completely through the  piece of wood</li>
+                    <li><strong>spread footing</strong> - a  foundation, usually a reinforced concrete slab, which distributes load to the  earth or rock below the structure</li>
+                    <li><strong>spring line</strong> - the horizontal line along the face of an abutment or pier at which the  intrados of an arch begins</li>
+                    <li><strong>spurs</strong> - a projecting jetty-like construction placed adjacent to an abutment or  embankment to prevent scour </li>
+                    <li><strong>stage</strong> - inspection access equipment consisting of a flat platform supported by  horizontal wire-rope cables; the stage is then slid along the cables to the  desired position; a stage is typically 20 inches wide, with a variety of  lengths available</li>
+                    <li><strong>staged construction</strong> - construction performed in phases, usually to permit the flow of  traffic through the site</li>
+                    <li><strong>state transportation department</strong> - the term &ldquo;state transportation department&rdquo; means that  department, commission, board, or official of any State charged by its laws  with the responsibility for highway construction</li>
+                    <li><strong>statics</strong> - the study of forces and bodies at rest</li>
+                    <li><strong>station</strong> - 100 feet (U.S. customary);  100 meters (metric)</li>
+                    <li><strong>stationing</strong> - a system of measuring distance along a  baseline</li>
+                    <li><strong>stay-in-place forms</strong> - a corrugated metal sheet for forming deck concrete that will remain  in place after the concrete has set; the forms do not contribute to deck structural  capacity after the deck has cured; see FORMS, S.I.P FORMS</li>
+                    <li><strong>stay plate</strong> - a tie plate or diagonal brace to prevent movement</li>
+                    <li><strong>steel</strong> - an alloy of iron, carbon, and various other elements</li>
+                    <li><strong>stem</strong> - the vertical wall portion of an abutment retaining wall, or solid pier; see  BREASTWALL</li>
+                    <li><strong>stiffener</strong> - a small member attached to another member to transfer stress and to  prevent buckling</li>
+                    <li><strong>stiffening girder</strong> - a girder incorporated in a suspension bridge to distribute the traffic  loads uniformly among the suspenders and reduce local deflections</li>
+                    <li><strong>stiffening truss</strong> - a truss incorporated in a suspension bridge to distribute the traffic  loads uniformly among the suspenders and reduce local deflections</li>
+                    <li><strong>stirrup</strong> - U-shaped bar used as a connection device in timber and metal bridges;  U-shaped bar placed in concrete to resist diagonal tension (shear) stresses</li>
+                    <li><strong>stone masonry</strong> - the portion of a structure composed of stone, generally placed in  courses with mortar</li>
+                    <li><strong>straight abutment</strong> - an abutment whose stem and wings are in the same plane or whose stem  is included within a length of retaining wall</li>
+                    <li><strong>strain</strong> - the change in length of a body produced by the application of external  forces, measured in units of length; this is the proportional relation of the  amount of change in length divided by the original length</li>
+                    <li><strong>strain  hardening</strong> - the effect of increased  yield strength when a material has been plastically deformed</li>
+                    <li><strong>strand</strong> - a number of wires grouped together usually by twisting</li>
+                    <li><strong>streambanks</strong> - the sloped sides of the channel</li>
+                    <li><strong>streambed</strong> - the bottom of the channel</li>
+                    <li><strong>streamflow</strong> - the water, suspended sediment and any debris moving  through the channel</li>
+                    <li><strong>strengthening</strong> - adding to the capacity of a structural member</li>
+                    <li><strong>stress</strong> - the force acting across a unit area in a solid material</li>
+                    <li><strong>stress concentration</strong> - local increases in stress caused by a sudden  change of cross section in a member</li>
+                    <li><strong>stress  corrosion</strong> - occurs in metals with  high tensile forces such as prestressed reinforcement exposed to contaminants  such as chlorides</li>
+                    <li><strong>stress range</strong> - the variation in stress at a point with the passage of live load,  from initial dead load value to the maximum additional live load value and back </li>
+                    <li><strong>stress raiser</strong> - a detail that causes stress concentration</li>
+                    <li><strong>stress reversal</strong> - change of stress type from  tension (+) to compression (−) or vice versa</li>
+                    <li><strong>stress sheet</strong> - a drawing showing all computed stresses resulting from the  application of a system of loads together with the design composition of the  individual members resulting from the application of assumed unit stresses for  the material to be used in the structure</li>
+                    <li><strong>stress-laminated timber </strong>- consists of  multiple planks mechanically clamped together to perform as one unit </li>
+
+                    <li><strong>stringer</strong> - a longitudinal beam spanning between transverse floorbeams and  supporting a bridge deck</li>
+                    <li><strong>strip seal joint</strong> - a joint using a relatively thin neoprene seal fitted into the joint  opening</li>
+                    <li><strong>structural analysis</strong> - engineering computation to determine the carrying capacity of a  structure</li>
+                    <li><strong>structural member</strong> - an individual piece, such as a beam or strut, which is an integral  part of a structure</li>
+                    <li><strong>structural redundancy</strong> - the ability of an interior continuous span to  resist total collapse by cantilever action in the event of a fracture</li>
+                    <li><strong>structural shapes</strong> - the various types of rolled iron and steel having flat, round,  angle, channel, &quot;I&quot;, &quot;H&quot;, &quot;Z&quot; and other  cross-sectional shapes adapted to heavy construction </li>
+                    <li><strong>structural stability</strong> - the ability of a structure to maintain its normal  configuration, not collapse or tip in any way, under existing and expected  loads</li>
+                    <li><strong>structural tee</strong> - a tee-shaped rolled member formed by cutting a wide flange  longitudinally along the centerline of web</li>
+                    <li><strong>structurally deficient</strong> - bridges where 1) significant load carrying  elements are found to be in poor or worse condition due to deterioration and/or  damage or, 2) the adequacy of the waterway opening provided by the bridge is  determined to be extremely insufficient to the point of causing intolerable  traffic interruptions </li>
+                    <li><strong>structure</strong> - something, such as a bridge, that is designed and built to sustain a  load</li>
+                    <li><strong>strut</strong> - a member acting to resist axial compressive stress; usually a secondary  member</li>
+                    <li><strong>stub abutment</strong> - an abutment within the topmost portion of an embankment or slope  having a relatively small vertical height and usually pile supported; stub  abutments may also be founded on spread footings</li>
+                    <li><strong>subbase</strong> - a layer of material placed between the base course and the subgrade  within a flexible pavement structure</li>
+                    <li><strong>subgrade</strong> - natural earth below the  roadway pavement structure</li>
+                    <li><strong>sub-panel</strong> - a truss panel divided into two parts by an intermediate web member,  generally a subdiagonal or a hanger</li>
+                    <li><strong>substructure</strong> - the abutments and piers built to support the span of a bridge  superstructure</li>
+                    <li><strong>superelevation</strong> - the difference in elevation between the inside and outside edges of a  roadway in a horizontal curve; required to counteract the effects of  centrifugal force</li>
+                    <li><strong>superimposed dead load</strong> - dead load that is applied to a compositely designed  bridge after the concrete deck has cured; for example, the weight of parapets  or railings placed after the concrete deck has cured</li>
+                    <li><strong>superstructure</strong> - the entire portion of a bridge structure that primarily receives and  supports traffic loads and in turn transfers these loads to the bridge  substructure</li>
+                    <li><strong>surface  breakdown</strong> - see scaling</li>
+                    <li><strong>surface corrosion</strong> - rust that has not yet caused measurable section loss</li>
+                    <li><strong>suspended span</strong> - a simple span supported from the free ends of cantilevers</li>
+                    <li><strong>suspender</strong> - a vertical wire cable, metal rod, or bar connecting the catenary cable  of a suspension bridge or an arch rib to the bridge floor system, transferring  loads from the deck to the main members</li>
+                    <li><strong>suspension bridge</strong> - a bridge in which the floor system is supported by  catenary cables that are supported upon towers and are anchored at their  extreme ends</li>
+                    <li><strong>suspension cable</strong> - a catenary cable which is  one of the main members upon which the floor system of a suspension bridge is  supported; a cable spanning between towers</li>
+                    <li><strong>swale</strong> - a drainage ditch with moderately sloping sides</li>
+                    <li><strong>sway anchorage</strong> - a guy, stay cable or chain attached to the floor system of a  suspension bridge and anchored upon an abutment or pier to increase the  resistance of the suspension span to lateral movement; also known as sway cable</li>
+                    <li><strong>sway bracing</strong> - diagonal brace located at the top of a through truss, transverse to  the truss and usually in a vertical plane,  to resist transverse horizontal forces </li>
+                    <li><strong>sway frame</strong> - a complete panel or frame of sway bracing</li>
+                    <li><strong>swedged anchor bolt</strong> - anchor bolt with  deformations to increase bond in concrete; see ANCHOR BOLT</li>
+                    <li><strong>swing span bridge</strong> - a movable bridge in which the span rotates in a horizontal plane on  a pivot pier, to permit passage of marine traffic</li>
+
+
+                    <li><strong>tack welds</strong> - small welds used to hold member elements in place during fabrication  or erection</li>
+                    <li><strong>tail water</strong> - water ponded below the outlet of a waterway, thereby reducing the  amount of flow through the waterway; see HEADWATER</li>
+                    <li><strong>tape measure</strong> - a long, flexible strip of metal or fabric marked at regular intervals  for measuring</li>
+                    <li><strong>team leader</strong> - individual in charge of an inspection team responsible  for planning, preparing, and performing field inspection of the bridge</li>
+                    <li><strong>tee beam</strong> - a rolled steel section shaped like a &quot;T&quot;; reinforced  concrete beam shaped like the letter &quot;T&quot; </li>
+                    <li><strong>temperature steel</strong> - reinforcement in a concrete member to prevent cracks due to stresses  caused by temperature changes</li>
+                    <li><strong>temporary bridge</strong> - a structure built for emergency or interim use, intended to be  removed in a relatively short time</li>
+                    <li><strong>tendon</strong> - a prestressing cable, strand, or bar</li>
+                    <li><strong>tensile force</strong> - a force caused by pulling at the ends of a member; see TENSION</li>
+                    <li><strong>tensile strength</strong> - the maximum tensile stress at  which a material fails</li>
+                    <li><strong>tension</strong> - stress that tends to pull apart material</li>
+                    <li><strong>thalweg elevation</strong> - lowest elevation of the streambed</li>
+                    <li><strong>thermal movement</strong> - contraction and expansion of  a structure due to a change in temperature</li>
+                    <li><strong>three-hinged arch</strong> - an arch that is hinged at each support and at the crown</li>
+                    <li><strong>through arch</strong> - an arch bridge in which the deck passes between the arches</li>
+                    <li><strong>through girder bridge</strong> - normally a two-girder bridge where the deck is  between the supporting girders</li>
+                    <li><strong>tie</strong> - a member carrying tension</li>
+                    <li><strong>tie plate</strong> - relatively short, flat member carrying tension forces across a  transverse member; for example, the plate connecting a floor beam cantilever to  the main floor beam on the opposite side of a longitudinal girder; see STAY  PLATE</li>
+                    <li><strong>tie rod</strong> -a rod-like member in a  frame functioning to transmit tensile stress; also known as tie bar</li>
+                    <li><strong>tie walls</strong> - one of the walls built at intervals above an arch ring connecting  and supporting the spandrel walls; any wall designed to serve as a restraining  member to prevent bulging and distortion of two other walls connected thereby;  see DIAPHRAGM WALL</li>
+                    <li><strong>timber</strong> - wood suitable for construction purposes</li>
+                    <li><strong>toe</strong> - the front portion of a footing from the intersection of the front face of the  wall or abutment to the front edge of the footing; the line where the side  slope of an embankment meets the existing ground</li>
+                    <li><strong>toe of slope</strong> - the location defined by the intersection of the embankment with the  surface existing at a lower elevation; also known as toe</li>
+                    <li><strong>toe wall</strong> - a relatively low retaining wall placed near the  &quot;toe-of-slope&quot; location of an embankment to protect against scour or  to prevent the accumulation of stream debris; also known as footwall</li>
+                    <li><strong>ton</strong> - a unit of weight equal to 2,000 pounds</li>
+                    <li><strong>torque</strong> - the angular force causing rotation</li>
+                    <li><strong>torque wrench</strong> - a hand or power tool used to turn a nut on a bolt that can be adjusted  to deliver a predetermined amount of torque</li>
+                    <li><strong>torsion</strong> - twisting about the longitudinal axis of a member</li>
+                    <li><strong>torsional  force</strong> - an external moment that tends  to rotate or twist a member about its longitudinal axis</li>
+                    <li><strong>torsional rigidity</strong> - a beam&rsquo;s capacity to resist a twisting force along the longitudinal  axis</li>
+                    <li><strong>toughness</strong> - a measure of the energy required to break a  material</li>
+                    <li><strong>tower</strong> - a pier or frame supporting the catenary cables of a suspension bridge</li>
+                    <li><strong>traffic control</strong> - modification of normal traffic patterns by signs, cones, flagmen,  etc.</li>
+                    <li><strong>transducer</strong> - a device that converts one form of energy into another form, usually  electrical into mechanical or the reverse; the part of ultrasonic testing  device which transmits and receives sound waves\</li>
+                    <li><strong>transient  loads</strong> - temporary loads that change  over time</li>
+                    <li><strong>transverse bracing</strong> - the bracing assemblage  engaging the columns of bents and towers in planes transverse to the bridge  alignment that resists the transverse forces tending to produce lateral  movement and deformation of the columns</li>
+                    <li><strong>transverse girder</strong> - see CROSS GIRDER</li>
+                    <li><strong>travel way</strong> - the roadway</li>
+                    <li><strong>tremie</strong> - a piece of construction equipment (e.g., pipe or funnel) used to place  concrete underwater</li>
+                    <li><strong>trestle</strong> - a bridge structure consisting of  spans supported on braced towers or frame bents</li>
+                    <li><strong>truck loading</strong> - a combination of loads used to simulate a single truck passing over  a bridge</li>
+                    <li><strong>truss</strong> - a jointed structure made up of individual members primarily carrying axial  loads arranged and connected in triangular panels</li>
+                    <li><strong>truss bridge</strong> - a bridge having a pair of  trusses for a superstructure</li>
+                    <li><strong>trussed beam</strong> - a beam stiffened to reduce its deflection by a steel tie-rod that is  held at a short distance from the beam by struts</li>
+                    <li><strong>truss panel</strong> - see PANEL</li>
+                    <li><strong>tubular sections</strong> - structural steel tubes, rectangular, square or circular; also known as  hollow sections</li>
+                    <li><strong>tubular truss</strong> - a truss whose chords and struts are composed of pipes or cylindrical  tubes</li>
+                    <li><strong>tunnel</strong> - an underground passage, open to daylight at both ends</li>
+                    <li><strong>turnbuckle</strong> - a long, cylindrical, internally threaded nut with opposite hand  threads at either end used to connect the elements of adjustable rod and bar  members</li>
+                    <li><strong>two-hinged arch</strong> - a rigid frame that may be arch-shaped or rectangular with hinges at  both supports</li>
+
+
+                    <li><strong>U-bolt</strong> - a bar bent in the shape of the letter  &quot;U&quot; and fitted with threads and nuts at its ends</li>
+                    <li><strong>ultimate strength</strong> - the highest stress that a material can withstand before breaking</li>
+                    <li><strong>ultrasonic thickness gage</strong> - an instrument used to measure the thickness of a  steel element using a probe which emits and receives sound waves</li>
+                    <li><strong>ultrasonic testing</strong> - nondestructive testing of a material's integrity  using sound waves</li>
+                    <li><strong>undermining </strong>- the scouring away of stream and supporting  foundation material from beneath the substructure footing</li>
+                    <li><strong>underpass</strong> - the lowermost feature of a grade separated crossing; see OVERPASS</li>
+                    <li><strong>underwater diver bridge inspection training</strong> - training that covers all aspects  of underwater bridge inspection and enables inspectors to relate the conditions  of underwater bridge elements to established criteria (see the Bridge  Inspector's Reference Manual section on underwater inspection for the  recommended material to be covered in an underwater diver bridge inspection  training course).</li>
+                    <li> <strong>underwater inspection</strong> - inspection of the underwater portion of a bridge  substructure and the surrounding channel, which cannot be inspected visually at  low water by wading or probing, generally requiring diving or other appropriate  techniques. </li>
+                    <li><strong>uniform load</strong> - a load of constant magnitude along the length of a member</li>
+                    <li><strong>unit stress</strong> - the force per unit of surface or cross-sectional area</li>
+                    <li><strong>uplift</strong> - a negative reaction or a force tending to lift a beam, truss, pile, or any  other bridge element upwards</li>
+                    <li><strong>upper chord</strong> - the top longitudinal member of a truss</li>
+
+
+                    <li><strong>vertical</strong> - describes the axis of a bridge perpendicular to the underpass  surface</li>
+                    <li><strong>vertical alignment</strong> - a roadway&rsquo;s centerline or baseline alignment in the vertical plane</li>
+                    <li><strong>vertical clearance</strong> - the distance between the structure and the underpass</li>
+                    <li><strong>vertical curve</strong> - a sag or crest in the profile of a roadway, usually in the form of a  parabola, to transition between grades</li>
+                    <li><strong>vertical lift bridge</strong> - a bridge  in which the span moves up and down while remaining parallel to the roadway</li>
+                    <li><strong>viaduct</strong> - a series of spans carried on piers at short intervals</li>
+                    <li><strong>vibration</strong> - the act of vibrating concrete to compact it</li>
+                    <li><strong>Vierendeel truss</strong> - a truss with only chords and verticals joined with rigid connections  designed to transfer moment</li>
+                    <li><strong>voided slab</strong> - a precast concrete deck unit cast with cylindrical voids to reduce  dead load</li>
+                    <li><strong>voids</strong> - an empty or unfilled space in concrete</li>
+                    <li><strong>Voussoir</strong> - one of the truncated wedge-shaped stones  composing a ring course in a stone arch; also known as ring stone</li>
+                    <li><strong>voussoir arch</strong> - an arrangement of wedge shaped blocks set to form an arched bridge</li>
+
+
+                    <li><strong>wale, waler</strong> - horizontal bracing running along the inside walls of a sheeted pit  or cofferdam</li>
+                    <li><strong>Warren truss</strong> - a triangular truss consisting of sloping members between the top and  bottom chords and no verticals; members form the letter W</li>
+                    <li><strong>washer</strong> - a small metal ring used beneath the nut or the head of a bolt to distribute  the load or reduce galling during tightening</li>
+                    <li><strong>water-cement ratio</strong> - the weight of water divided by the weight of  portland cement in concrete; this ratio is a major factor in the strength of  concrete</li>
+                    <li><strong>waterproofing membrane</strong> - an impervious layer placed between the wearing  surface and the concrete deck, used to protect the deck from water and  corrosive chemicals that could damage it</li>
+                    <li><strong>waterway  area</strong> - the entire area beneath the  bridge which is available to pass flood flows</li>
+                    <li><strong>waterway opening</strong> - the available width for the passage of water beneath a bridge</li>
+                    <li><strong>wear</strong> - gradual removal of surface mortar due to friction</li>
+                    <li><strong>wearing surface</strong> - the topmost layer of material applied upon a roadway to receive the  traffic loads and to resist the resulting disintegrating action; also known as  wearing course</li>
+                    <li><strong>web</strong> - the portion of a beam located between and connected to the flanges; the stem  of a dumbbell type pier</li>
+                    <li><strong>web crippling</strong> - damage caused by high compressive stresses resulting from  concentrated loads</li>
+                    <li><strong>web members</strong> - the intermediate members of a truss, not including the end posts,  usually vertical or inclined</li>
+                    <li><strong>web plate</strong> - the plate forming the web element of a plate girder, built-up beam  or column</li>
+                    <li><strong>web stiffener</strong> - a small member welded to a beam web to prevent buckling of the web</li>
+                    <li><strong>weephole</strong> - a hole in a concrete retaining wall to provide drainage of the water  in the retained soil</li>
+                    <li><strong>weld</strong> - a joint between pieces of metal at faces that have been made plastic and  caused to flow together by heat or pressure</li>
+                    <li><strong>weldability</strong> - the degree to which steel  can be welded without using special techniques, such as pre-heating</li>
+                    <li><strong>welded bridge</strong> <strong>structure</strong> - a structure  whose metal elements are connected by welds</li>
+                    <li><strong>welded joint</strong> - a joint in which the assembled elements and members are connected by  welds</li>
+                    <li><strong>welding</strong> - the process of making a welded joint</li>
+                    <li><strong>weld layer</strong> - a single thickness of weld metal composed of beads (runs) laid in  contact to form a pad weld or a portion of a weld made up of superimposed beads</li>
+                    <li><strong>weld metal</strong> - fused filler metal added to the fused structure metal to produce a  welded joint or a weld layer</li>
+                    <li><strong>weld penetration</strong> - the depth beneath the original surface to which the structure metal  has been fused in the making of a fusion weld; see PENETRATION</li>
+                    <li><strong>weld sequence</strong> - the order of succession required for making the welds of a built-up  piece or the joints of a structure, to minimize distortion and residual  stresses</li>
+                    <li><strong>weld toe</strong> - particularly in a filet weld, the thin end of the taper furthest  from the center of the weld cross section</li>
+                    <li><strong>wheel guard</strong> - a raised curb along the outside edge of traffic lanes to safeguard  constructions outside the roadway limit from collision with vehicles</li>
+                    <li><strong>wheel load</strong> - the load carried by and transmitted to the supporting structure by one  wheel of a traffic vehicle, a movable bridge, or other motive equipment or  device; see AXLE LOAD</li>
+                    <li><strong>weep hole</strong> - a hole in a concrete element (abutment backwall or retaining wall)  used to drain water from behind the element; any small hole installed for  drainage</li>
+                    <li><strong>Whipple truss</strong> - a double-intersecting through Pratt truss where the diagonals extend  across two panels</li>
+                    <li><strong>wide flange</strong> - a rolled I-shaped member having flange plates of rectangular cross  section, differentiated from an S-beam (American Standard) in that the flanges  are not tapered</li>
+                    <li><strong>wind bracing</strong> - the bracing systems that function to resist the stresses induced by  wind forces</li>
+                    <li><strong>wind lock</strong> - a lateral restraining device found on steel girder and truss bridges </li>
+                    <li><strong>wingwall</strong> - the retaining wall extension of an abutment intended to restrain and  hold in place the side slope material of an approach roadway embankment</li>
+                    <li><strong>wire mesh reinforcement</strong> - a mesh made of steel wires welded together at their  intersections used to reinforce concrete; welded wire fabric</li>
+                    <li><strong>wire rope</strong> - steel cable of multiple strands which are composed of steel wires  twisted together</li>
+                    <li><strong>working stress</strong> - the unit stress in a member under service or design load</li>
+                    <li><strong>working stress design</strong> - a method of design using the yield stress of a  material and a factor of safety that determine the maximum allowable stresses</li>
+                    <li><strong>wrought iron</strong> - cast iron that has been mechanically worked to remove slag and  undissolved carbon</li>
+                    <li><strong>wythe</strong> - a single layer of brick  or stone in the thickness direction</li>
+
+
+                    <li><strong>X-ray testing</strong> - nondestructive testing technique used for  detecting internal flaws by passing X-rays through a material to film or other  detector</li>
+
+
+                    <li><strong>yield</strong> - permanent deformation (permanent set) which a metal piece takes when  it is stressed beyond the elastic limit</li>
+                    <li><strong>yield point</strong> - see YIELD STRESS</li>
+
+                    <li><strong>yield stress</strong> - the stress at which noticeable, suddenly increased deformation occurs  under slowly increasing load</li>
+                    <li><strong>yield  strength</strong> - the stress level at which  plastic deformation begins</li>
+
+
+                    <li><strong>zee </strong>- steel member shaped like a  modified &quot;Z&quot; in cross section</li>
+                </ul>
+            </div>
+            <!-- /listview -->
+
+            <div id="sorter">
+                <div id="scrollable">
+                    <ul data-role="listview">
+                        <li><span>A</span></li>
+                        <li><span>B</span></li>
+                        <li><span>C</span></li>
+                        <li><span>D</span></li>
+                        <li><span>E</span></li>
+                        <li><span>F</span></li>
+                        <li><span>G</span></li>
+                        <li><span>H</span></li>
+                        <li><span>I</span></li>
+                        <li><span>J</span></li>
+                        <li><span>K</span></li>
+                        <li><span>L</span></li>
+                        <li><span>M</span></li>
+                        <li><span>N</span></li>
+                        <li><span>O</span></li>
+                        <li><span>P</span></li>
+                        <li><span>Q</span></li>
+                        <li><span>R</span></li>
+                        <li><span>S</span></li>
+                        <li><span>T</span></li>
+                        <li><span>U</span></li>
+                        <li><span>V</span></li>
+                        <li><span>W</span></li>
+                        <li><span>X</span></li>
+                        <li><span>Y</span></li>
+                        <li><span>Z</span></li>
+                    </ul>
+                </div>
+            </div><!-- /sorter -->
+        </div>
+        <!-- End Content -->
+
+    </div>
+    <!-- End BIRM Glossary Page -->
+
+</body>
+</html>

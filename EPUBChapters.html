@@ -1,0 +1,182 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link href="jquery-mobile/BIRM-1.4.5.min.css" rel="stylesheet" type="text/css" />
+    <link href="jquery-mobile/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="jquery-mobile/jquery.mobile.structure-1.4.0.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/BIRM-Custom.css" rel="stylesheet" type="text/css" />
+
+    <script src="jquery-core/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+    <script src="ePubReader/lib/JSZip/jszip.js" type="text/javascript"></script>
+    <script src="ePubReader/lib/JSZip/jszip-load.js" type="text/javascript" ></script>
+    <script src="ePubReader/lib/JSZip/jszip-deflate.js" type="text/javascript" ></script>
+    <script src="ePubReader/lib/JSZip/jszip-inflate.js" type="text/javascript" ></script>
+
+    <script src="js/FileSystem.js" type="text/javascript"></script>
+    <script src="js/BIRM.js" type="text/javascript"></script>
+ <!--   <script src="js/Connection.js" type="text/javascript"></script> -->
+    <script src="js/Download.js" type="text/javascript"></script>
+    <script src="js/Database.js" type="text/javascript"></script>
+    <script src="js/EPUBChapters.js" type="text/javascript"></script>
+    <script src="filechooser/js/script.js" type="text/javascript"></script>
+    <script src="http://debug.build.phonegap.com/target/target-script-min.js#6600e460-8436-11e3-bfbe-22000aa44e44"></script>
+    <script src="phonegap.js" type="text/javascript"></script>
+
+    <title>Chapters List</title>
+</head>
+
+
+<body>
+
+    <!-- Start BIRM Chapter Page -->
+    <div data-role="page" id="chaptersList_page">
+
+        <!--  Start Header -->
+        <div data-id="header" data-role="header" data-add-back-btn="false" data-position="fixed" data-tap-toggle="false" data-disable-page-zoom="false" data-transition="none">
+            
+            <!--<div id="btnHome">
+            <ul>
+                <li><a href=""><img id="HomeButton" class="ui-btn ui-btn-icon-right" src="img/manual-icons/home-40-blue-ko.png" alt="Go back to main menu" /></a></li>
+
+            </ul>
+            </div>-->
+            <!--<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left">-->
+                <!--<a href="#" id="BackButton" class="ui-btn-center ui-btn ui-btn-inline ui-corner-all ui-btn-icon-center ui-icon-BIRMBack ui-btn-BIRM"></a>-->
+            <!--</div>-->
+            <a href="#" id="MenuOptions" data-tap-toggle="false" class="ui-btn ui-btn-left ui-btn-inline ui-corner-all ui-btn-icon-center ui-icon-BIRMPreferences ui-btn-BIRM"></a>
+            <h1>BIRM - Chapters</h1>
+            <a href="#" id="HomeButton" data-tap-toggle="false" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-btn-icon-center ui-icon-BIRMHome ui-btn-BIRM"></a>
+
+            <!-- Back Button -->
+            <!--<div id="btnBack">
+            <ul>
+                <li><a href="#"><img id="BackButton" src="img/previous-40-blue-ko.png" alt="Go back to previous screen" /></a></li>
+            </ul>
+            </div>-->
+            
+            <!--<h1>BIRM - Chapters</h1>-->
+
+            <!--<div id="grayChaptersBar">
+                <div id="chapterIconsCenter">
+                    <div id="btnImport">
+                        <ul>
+                            <li class="importContentButtonNoIcon"><a href="#popupNotesDialog" data-transition="pop" data-rel="popup" data-position-to="window"><img id="ImportButton" src="img/manual-icons/import-40-gray-ko.png" alt="Import Chapter Notes" /></a></li>
+
+                        </ul>
+                    </div>
+                    <div id="btnExport">
+                        <ul>
+                            <li><a href="#" data-transition="pop" data-rel="popup" data-position-to="window"><img id="ExportButton" src="img/manual-icons/export-40-gray-ko.png" alt="Export Chapter Notes" /></a></li>
+                        </ul>
+                    </div>
+                    <div id="btnDeleteChapter">
+                        <ul>
+                            <li><a href="#" data-transition="pop" data-rel="popup" data-position-to="window"><img src="img/delete-40-gray-ko.png" alt="Delete Chapter" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div id="Chapters">
+            <div id="ChapterContent">
+            </div>
+
+            <!--<div id="popupDownloadWarning" class="ui-fhwa-popup" data-role="popup" data-theme="b" data-overlay-theme="b" data-dismissible="false">
+                <div data-role="header" data-theme="a">
+                    <h1>Download Warning</h1>
+                </div>
+                <div role="main" class="ui-content ui-fhwa-popup-content">
+                    <h3>When performing a download, it is recommended to use a WiFi connection. Continue downloading?</h3>
+                    <p>This action cannot be undone.</p>
+                    <a href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-rel="back">No</a>
+                    <a id="btnDownloadWarning" href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-transition="flow" data-rel="back">Yes</a>
+                </div>
+            </div>-->
+
+            <!-- End Generic Progress Popup -->
+            <!-- Generic Notification Popup -->
+            <!--<div id="popupNotification" class="ui-fhwa-popup" data-role="popup" data-dismissible="false" data-theme="b" data-overlay-theme="b">
+                <div data-role="header" data-theme="a">
+                    <h1>Notification</h1>
+                </div>
+                <div role="main" class="ui-content ui-fhwa-popup-content">
+                    <h3>Your notes have been successfully exported.</h3>
+                    <a id="btnOK" href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-rel="back">OK</a>
+                </div>
+            </div>-->
+
+            <!-- END Import Progress Pop Up -->
+            <!-- START Confirm Chapter Deletion -->
+            <!--<div id="popupConfirmDelete" class="ui-fhwa-popup" data-role="popup" data-theme="b" data-overlay-theme="b" data-dismissible="false">
+                <div data-role="header" data-theme="a">
+                    <h1>Delete Chapter Confirmation</h1>
+                </div>
+                <div role="main" class="ui-content ui-fhwa-popup-content">
+                    <h3>Are you sure you want to delete the selected chapter(s)?</h3>
+                    <a id="btnDeleteNo" href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-rel="back">No</a>
+                    <a id="btnDeleteYes" href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-transition="flow" data-rel="back">Yes</a>
+                </div>
+            </div>-->
+            <!-- Start Options Menu -->
+            <div id="LeftOptionsMenu" class="ui-fhwa-popup  menu-options-left" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="true" data-shadow="false">
+                <ul data-role="listview" data-inset="false">
+                    <li id="btnImport" data-icon="false"><a href="#"> Import Notes </a></li>
+                    <li id="btnExport" data-icon="false"><a href="#"> Export Notes </a></li>
+                    <li id="btnDeleteChapter" data-icon="false"><a href="#"> Delete Chapter </a></li>
+                </ul>
+            </div>
+            <!-- End Options Menu -->
+            <!-- START IMPORT/RETRIEVE NOTE DIALOG POPUP -->
+            <div id="popupNotesDialog" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="false" data-transition="pop">
+                <div data-role="header" data-theme="a">
+                    <h1>Import Notes</h1>
+                </div>
+                <div>
+                    <input id="emailAskBox" type="email" placeholder="Enter your email address..." />
+                    <a href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-rel="back">Cancel</a>
+                    <a id="submitEmail" href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-transition="flow" data-rel="back">Retrieve</a>
+                    <div id="loadingDiv" style="display:none;">Loading... </div>
+                    <div id="notesList"></div>
+                    
+                </div>
+            </div>
+            <!-- END IMPORT/RETRIEVE NOTE DIALOG POPUP -->
+            <!-- START EXPORT NOTES VIA EMAIL DIALOG POPUP -->
+            <div id="popupExportDialog" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="false">
+                <div data-role="header" data-theme="a">
+                    <h1>Export Notes</h1>
+                </div>
+                <div role="main" class="ui-content ui-fhwa-popup-content-list">
+                    <input id="toEmailBox" type="email" placeholder="Enter Recipient's Email Address..." />
+                    <input id="fromEmailBox" type="email" placeholder="Enter Your Email Address..." />
+                    <input id="fileNameBox" type="text" placeholder="Enter a Filename..." />
+                    <a class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-rel="back">Cancel</a>
+                    <a id="exportSubmitButton" href="#" class="ui-btn ui-btn-inline ui-btn-c ui-fhwa-btn" data-transition="flow" data-rel="back">Export</a>
+                    <div id="loadingDiv" style="display:none;">Loading... </div>
+                </div>
+            </div>
+            <!-- END EXPORT NOTES VIA EMAIL DIALOG POPUP -->
+            <!-- Download Progress Pop Up -->
+        </div>
+        <!-- End Content -->
+        <!-- No Footer Content Needed -->
+        <!-- Start Footer -->
+        <!--<div data-role="footer" style="height: 1px; background-color: transparent !important; position: fixed; display: block;" id="birmFooter" data-position="fixed" data-tap-toggle="false" data-dismissible="false">
+        </div>-->
+        <!-- End Footer -->
+
+    </div>
+    <!-- End BIRM Chapter Page -->
+
+</body>
+</html>
