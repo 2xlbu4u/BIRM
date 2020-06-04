@@ -1,0 +1,499 @@
+﻿/* Start General Content Styles */
+/*#searchResults p:nth-child(odd),
+#searchResults ul:nth-child(odd),
+#searchResults ol:nth-child(odd) {
+    background-color: silver;
+}*/
+
+/*.odd {
+    background-color: silver;
+}*/
+
+div.jqi .jqititle{
+	color: #444444;
+}
+
+div.jqi{ 
+	font-size: 14px; 
+}
+
+.glossaryTerm {
+    border-bottom: double;
+}
+
+.modalWindow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1500;
+    background: white;
+    opacity: 0.7;
+}
+
+.ui-loader{
+    z-index: 1501;
+}
+
+/* Coker remove after testing to verify content size changes correctly. */
+#myContent {
+    /*-webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;*/
+}
+
+.fieldNotes-Header {
+    height: 200px;
+}
+
+.fieldNotes {
+    position: absolute;
+    top: 200px;
+    bottom: 40px;
+    left: 0px;
+    right: 0px;
+    overflow: scroll;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.fieldNotes-Footer {
+    height: 40px;
+}
+
+#WiFiContent, 
+#TermsContent,
+#NoteContent {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* End General Content Styles */
+
+/* Start Field Notes Styles */
+#NoteContent .ui-input-text {
+    width: 100%;
+}
+
+#NoteContent label {
+    font: bold;
+}
+/* End Field Notes Styles */
+
+/* Start BIRM Custom Buttons */
+#OptionsMenu {
+    position: fixed;
+    right: .25em;
+    top: 2.65em;
+}
+
+#LeftOptionsMenu {
+    position: fixed;
+    left: .25em;
+    top: 2.65em;
+}
+
+.ui-btn-BIRM {
+    width: 5px;
+    height: 10px;
+    border: none;
+    vertical-align: middle;
+}
+
+.ui-btn-BIRM-no-radius {
+    -webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.ui-icon-BIRMHome {
+	background-image: url("../img/manual-icons/home-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMBack {
+	background-image: url("../img/previous-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMSave {
+	background-image: url("../img/save-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMDownload:after {
+	background-image: url("../img/download-40-blue.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMDownloaded:after {
+	background-image: url("../img/downloaded-40-blue.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMMenu {
+	background-image: url("../img/manual-icons/manual-menu-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMBookmark {
+    background-image: url("../img/manual-icons/bookmark-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMNotes {
+    background-image: url("../img/manual-icons/notes-manual-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMFont {
+    background-image: url("../img/manual-icons/text-size-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMBackground {
+    background-image: url("../img/manual-icons/text-light-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMSearch {
+    background-image: url("../img/manual-icons/search-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMPreferences {
+    background-image: url("../images/preferences.svg");
+    background-size: 105%;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-BIRMDelete {
+    background-image: url("../img/delete-40-blue-ko.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/* End BIRM Custom Buttons */
+
+/* Start BIRM Search Styles */
+.searchbar {
+	width: 100%;
+	margin: 0em;
+    padding: 0em;
+	text-align: center;
+	background: #D9D9D9;	
+	position: relative;
+	height: 2.875em;
+}
+
+.searchbar-search {
+    background: #D9D9D9;
+}
+
+.searchbar-table {
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    border: none;
+}
+
+.searchbar-table td {
+    padding: 0em;
+    margin: 0em;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.searchbar-manual {
+    display: none;
+}
+
+.searchbar .ui-input-search {
+    top: .25em;
+    left: .25em;
+    width: 100%;
+}
+
+.flc-epubReader-highlighted {
+    background-color: #ffff00 !important;
+    border: 1px solid #000;
+}
+
+.flc-epubReader-highlighted-current {
+    background-color: #b8860b !important;
+    border: 1px solid #000;
+}
+
+/* End BIRM Search Styles */
+
+/* Start Header Sytles */
+/* Start Chapter Title Styles */
+#BIRMContent {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#grayChaptersBar {
+	background-color: #D9D9D9;
+	margin: 0 auto;
+	height: 2.0em;
+	position: relative;
+}
+
+#currentChapterName {
+	color: #273b8f;
+	text-transform: uppercase;
+    height: 2.00em;
+	position: absolute;
+	top: 20%;
+	width: 97%;
+    vertical-align: middle;
+    padding-left: 5px;
+    text-overflow:ellipsis; 
+	overflow: hidden;
+	white-space: nowrap;
+}
+/* End Chapter Title Styles */
+
+/* Start EPUB Reader Styles */
+.fl-epubReader-Note {
+    border: dotted;
+    border-color: black;
+}
+
+.fl-epubReader-Note img {
+    width: 18px;
+    height: 18px;
+    padding-right: 5px;
+}
+
+.fl-epubReader-Bookmark {
+    border: dotted;
+    border-color: green;
+}
+
+.fl-epubReader-Bookmark img {
+    width: 18px;
+    width: 18px;
+    padding-right: 5px;
+}
+
+.fl-epubReader-container {
+    height: 100%;
+    width: 100%;
+}
+
+.fl-epubReader-bookContainer {
+    height: 100%;
+}
+/* End EPUB Reader Styles */
+
+/* Start Bookmark/Notes List Styles */
+#EPUBNotes-popup,
+#EPUBBookmarks-popup
+{
+    width: 90%;
+}
+
+#EPUBNotes .ui-content {
+    height: auto;
+    overflow-y: auto;
+}
+
+.fl-epubReader-bookmarkContainer,
+.fl-epubReader-notesContainer {
+	width: 100% !important;
+    overflow: visible !important;
+	padding: 0 auto !important;
+	margin: 0 auto !important;
+	border: none;
+	border-spacing: 0;
+}
+
+.fl-epubReader-bookmarkContainer td,
+.fl-epubReader-notesContainer td {
+    border: none;
+}
+
+.fl-epubReader-bookmarkContainer tr,
+.fl-epubReader-notesContainer tr {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.fl-epubReader-bookmarkContainer th,
+.fl-epubReader-notesContainer th {
+    padding: 4px; 
+    text-align: center;
+    vertical-align: top;    
+    border: none;	
+    font-size: 1.1em;
+}
+
+.flc-epubReader-bookmark-button-cell {
+    width: .25em;
+    height: .25em;
+    padding: 0;
+}
+
+.flc-epubReader-bookmark-button-cell a {
+    margin: 0;
+}
+
+#EPUBNotes .ui-table-columntoggle-btn,
+#EPUBBookmarks .ui-table-columntoggle-btn {
+    display: none;
+}
+/* End Bookmark/Notes List Styles */
+
+/* Start Notes/Bookmark Form Styles */
+#notesForm .ui-content,
+#bookMarkForm .ui-content {
+    padding: 15px;
+}
+
+#notesForm .ui-input-text,
+#notesForm textarea,
+#bookMarkForm textarea {
+    width: 100%;
+}
+
+#notesForm .ui-btn,
+#bookMarkForm .ui-btn
+ {
+    display: inline-block;
+}
+/* Start Notes/Bookmark Form Styles */
+
+/* Start General Popup Styles */
+.ui-fhwa-popup-content-list {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ui-fhwa-popup-content > h1 {
+	/*font-size: 1.5em; 
+	color: #273b8f; 
+	font-weight: bold;
+	width: 100%;
+	display: inline;
+	padding: 0;
+	text-align: left;*/
+}
+
+.ui-fhwa-popup-progress-text {
+    /*width: 75% !important;
+    float: right;*/
+}
+
+.ui-fhwa-popup-progress-preloader {
+    /*width: auto;
+    overflow: auto;*/
+}
+
+.ui-fhwa-popup-content > h3 {
+	/*font-size: 1.2em; 
+	color: #000; 
+	font-weight: 300;
+	width: 100%;
+ 	margin: 0;
+	padding: 0;
+    text-align: left;*/
+}
+/* End General Popup Styles */
+
+/* Start Preloader Progress */
+/*Preloader Icon Container*/
+.ui-loader div {
+    background-color: #000;
+    border: 1px;
+}
+
+.ui-fhwa-preloader {
+	width: 2em;
+	height: 2em;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ui-fhwa-popup-progress {
+    border: 1px solid black;
+}
+
+.ui-fhwa-popup-progress-text {
+    width: 75% !important;
+    float: right;
+}
+
+.ui-fhwa-popup-progress-preloader {
+    width: auto;
+    overflow: auto;
+}
+/* End Preloader Progress */
+
+/* Start First Use/Preference Styles */
+.preferences-save-button {
+    margin-right: 10px; 
+    padding: 0px; 
+    float: right; 
+    border: 0px;
+}
+/* End First Use Styles */
+
+/* Start Collapsible Menu Styles */
+.ui-li-static.ui-collapsible > .ui-collapsible-heading {
+    margin: 0;
+}
+.ui-li-static.ui-collapsible {
+    padding: 0;
+}
+.ui-li-static.ui-collapsible > .ui-collapsible-heading > .ui-btn {
+    border-top-width: 0;
+}
+.ui-li-static.ui-collapsible > .ui-collapsible-heading.ui-collapsible-heading-collapsed > .ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-content {
+    border-bottom-width: 0;
+}
+/* End Collapsible Menu Styles */
+
+/* Start Video Player Styles */
+#VideoPlayerContent {
+    height: 100%;
+}
+/* End Video Player Styles */
+
+/* Start Notes/Bookmark Table Sytles */
+.fl-epubReader-notesContainer tbody tr:nth-child(odd) td,
+.fl-epubReader-bookmarkContainer tbody tr:nth-child(odd) td,
+.fl-epubReader-notesContainer tbody tr:nth-child(odd) th,
+.fl-epubReader-bookmarkContainer tbody tr:nth-child(odd) th {
+    background-color: #eeeeee; /* non-RGBA fallback  */
+    background-color: rgba(0,0,0,.04);
+}
+
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+    .fl-epubReader-notesContainer th.ui-table-priority-1,
+    .fl-epubReader-bookmarkContainer td.ui-table-priority-1 {
+        display: table-cell;
+    }
+}
+/* Show priority 2 at 560px (35em x 16px) */
+@media screen and (min-width: 35em) {
+    .fl-epubReader-notesContainer th.ui-table-priority-2,
+    .fl-epubReader-bookmarkContainer th.ui-table-priority-2,
+    .fl-epubReader-notesContainer td.ui-table-priority-2,
+    .fl-epubReader-bookmarkContainer td.ui-table-priority-2 {
+        display: table-cell;
+    }
+}
+/* End Notes/Bookmark Table Sytles */

@@ -1,0 +1,55 @@
+/* CSS Document */
+
+#sorter{
+	position: fixed;
+	top: 5em;
+    bottom: 0em;
+	right: 0em;
+	z-index: 5;	
+	margin-top: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+	border-left: #a0a0a0 2px solid;
+	width: 9%;
+    overflow: auto;
+    float: right;
+    -webkit-overflow-scrolling: touch;
+    min-width: 40px;
+}
+
+#sorter ul{
+	margin: auto;				
+	padding: auto;	
+}
+
+#sorter li{
+	color: #A0A0A0;
+	font-weight: bold;	
+	height: inherit;
+	padding: 5px;
+	margin: 0;
+	font-size: 85%;
+    text-align: center;
+}
+
+#sorter .ui-li.ui-li-static.ui-btn-up-c {
+    height: 3.2%;
+    padding: 0;
+    font-size: 8px;
+    line-height: 1.8em;
+}
+
+#sortedList{
+	width: 96%;
+    float: left;
+}
+
+#sortedList li.ui-li-divider {
+    /*text-align: center;*/
+}
+
+#sortedList li.ui-li-static.ui-body-inherit {	
+    /*white-space: normal;
+    padding-left: 2em;*/ 
+} 

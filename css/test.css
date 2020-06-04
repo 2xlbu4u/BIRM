@@ -1,0 +1,581 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+    margin:0;
+    padding:0;
+    border-width:0;
+
+}
+td, th {
+    border-style:solid;
+    border-width:1px;
+}
+table {
+    border-collapse:collapse;
+    margin: auto;
+    padding: auto;
+    width: 80%;
+}
+body {
+    -epub-hyphens:none;
+    adobe-hyphenate:none;
+}
+
+body, html {
+    height: 100%;
+}
+
+@page {
+    margin : 0px 0px 0px 0px;
+}
+div.img, img.img, div.Figure---Image {
+    max-height: 50%;
+    max-width: 50%;
+    text-align:center;
+    margin: auto;
+    padding: auto;
+}
+table.table-plain {
+    border-color:#000000;
+    border-style:solid;
+    border-width:1px;
+    margin-bottom:4px;
+    margin-top:4px;
+}
+td.header-cells {
+    background-color:#273b8f;
+    padding-bottom:4px;
+    padding-left:4px;
+    padding-right:4px;
+    padding-top:4px;
+}
+td.table-cells {
+    padding-bottom:4px;
+    padding-left:4px;
+    padding-right:4px;
+    padding-top:4px;
+}
+
+td.plain-centered-cells {
+    padding-bottom:10px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:10px;
+}
+p.chapter-number {
+    color:#273a8f;
+    font-family:Arial, sans-serif;
+    font-size: 1.75em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    margin:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:center;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:uppercase;
+    widows:1;
+}
+p.Section-Heading {
+    color:#273a8f;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:bold;
+    line-height:120%;
+    margin-bottom:10px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:20px;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+p.subtopicname {
+    color:#273a8f;
+    font-family:Arial, sans-serif;
+    font-size:1.125em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:bold;
+    line-height:120%;
+    margin-bottom:10px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:20px;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+p.topic-number {
+    color:#ec6725;
+    font-family:Arial, sans-serif;
+    font-size:1.25em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:bold;
+    line-height:120%;
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+    margin-top:25px;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:center;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:uppercase;
+    widows:1;
+}
+p.body {
+    -epub-hyphens:none;
+    -epub-text-align-last:left;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    margin-bottom:8px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:justify;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+p.centered {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:110%;
+    margin-bottom:8px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:center;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+p.ul {
+    -epub-hyphens:none;
+    -epub-text-align-last:left;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    margin-bottom:5px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:5px;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:justify;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+li.bullet-circle1 {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    list-style-position:outside;
+    list-style-type:disc;
+    margin-bottom:5px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+li.bullet-circle2-table {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    list-style-position:outside;
+    list-style-type:disc;
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+li.bullet-numbers1 {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    list-style-position:outside;
+    list-style-type:decimal;
+    margin-bottom:5px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+li.bullet-circle2 {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:1em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    list-style-position:outside;
+    list-style-type:disc;
+    margin-bottom:3px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:2px;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+li.bullet-arrow2 {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:1em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:1.25;
+    list-style-position:outside;
+    list-style-type: square;
+    margin-bottom:3px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+li.bullets_level-3_bulleted-list---dash {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:1em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:1.25;
+    list-style-position:outside;
+    margin-bottom:5px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+p.caption {
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:0.8em;
+    font-style:italic;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:120%;
+    margin-bottom:20px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:1px;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:center;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+strong.Body_bold {
+    font-style:normal;
+    font-weight:bold;
+    display: inline;
+}
+span.Body_hyperlink {
+    color:#ec6725;
+    font-style:italic;
+    font-weight:normal;
+    text-decoration:underline;
+    display: inline;
+}
+strong.text-white {
+    color:#ffffff;
+}
+em.Body_italic {
+    font-style:italic;
+    font-weight:normal;
+    display: inline;
+}
+span.chapter-name {
+    color:#273a8f;
+    font-size: 1em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:bold;
+    text-transform:none;
+    line-height:90%;
+    display: block;
+}
+span.topic-name {
+    color:#116ba8;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:bold;
+    text-transform:none;
+    display: block;
+}
+span.caption-bold {
+    font-style:italic;
+    font-weight:bold;
+    display: inline;
+}
+span.underline {
+    text-decoration:underline;
+    display: inline;
+}
+
+*span {
+    display: inline;
+}
+
+/*Symbols - no embedded font */
+
+span.symbolOffsetLow {
+    /*font-family:"Cambria Math", serif;*/
+    font-family: serif;
+    font-size:1em;
+    font-style:normal;
+    font-weight:normal;
+    vertical-align:sub;
+    display:inline;
+}
+span.symbolOffsetLowLarger {
+    /*font-family:"Cambria Math", serif;*/
+    font-family: serif;
+    font-size:1.333em;
+    font-style:normal;
+    font-weight:normal;
+    vertical-align:sub;
+    display:inline;
+}
+span.symbol {
+    /*font-family:"Cambria Math", serif;*/
+    font-family: serif;
+    font-size:1em;
+    font-style:normal;
+    font-weight:normal;
+    display:inline;
+}
+span.symbolLarger {
+    /*font-family:"Cambria Math", serif;*/
+    font-family: serif;
+    font-size:1.333em;
+    font-style:normal;
+    font-weight:normal;
+    display:inline;
+}
+sub.subscript-symbol {
+    /*font-family:"Cambria Math", serif;*/
+    font-family: serif;
+    font-size:1em;
+    font-style:normal;
+    font-weight:normal;
+    vertical-align:sub;
+    display:inline;
+}
+sub.subscript-larger {
+    /*font-family:"Cambria Math", serif;*/
+    font-family: serif;
+    font-size:1.333em;
+    font-style:normal;
+    font-weight:normal;
+    vertical-align:sub;
+    display:inline;
+}
+blockquote.inset {
+    -epub-hyphens:none;
+    -epub-text-align-last:left;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:110%;
+    margin-bottom:8px;
+    margin-left:15px;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:justify;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+
+p.table {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:0.75em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:110%;
+    margin-bottom:8px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+
+li.lowercase-letters1 {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:1.25;
+    list-style-position:outside;
+    list-style-type:lower-alpha;
+    margin-bottom:5px;
+    margin-left:45px;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+
+li.uppercase-letters1 {
+    -epub-hyphens:none;
+    color:#000000;
+    font-family:Arial, sans-serif;
+    font-size:.8em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:1.25;
+    list-style-position:outside;
+    list-style-type:upper-alpha;
+    margin-bottom:5px;
+    margin-left:45px;
+    margin-right:0;
+    margin-top:0;
+    orphans:1;
+    page-break-after:auto;
+    page-break-before:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    widows:1;
+}
+
+p.noIndent {
+    margin-left:0;
+}

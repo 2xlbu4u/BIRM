@@ -1,0 +1,643 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0px 0px;
+	border-width:0;
+	position: relative;
+}
+td, th {
+	border-style:solid;
+	border-width:1px;
+}
+
+
+table {
+	border-collapse:collapse;
+	margin: auto;
+	/*width: 80%;*/
+}
+
+body, html {
+	height: 100%;
+}
+
+@page {
+	margin : 0 0 0 0;
+}
+
+
+.Figure---Image {
+	max-height:100%;
+	max-width:100% ;
+    display: block;
+	margin: 0 auto;
+	text-align: center;
+
+
+}
+
+
+
+   
+
+.table-plain {
+	border-color:#000000;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:4px;
+	margin-top:4px;
+}
+.header-cells {
+	background-color:#273b8f;
+	padding: 4px;
+}
+.table-cells {
+	padding: 4px;
+}
+
+.plain-centered-cells {
+	padding: 4px;
+}
+.chapter-number {
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size: larger;
+	text-align:left;
+	text-transform:uppercase;
+    background-color: #DAE3E6;
+  	line-height:100%;
+	margin:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+}
+.chapter-name {
+	color:#FFFFFF;
+	font-family:Arial, sans-serif;
+	font-size: larger;
+	text-align:left;
+font-weight: normal;	
+  background-color: #273a8f;
+  	line-height:100%;
+	margin:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+}
+
+.Section-Heading {
+	color:#273a8f;
+	font-family:Arial, sans-serif;
+	font-size:small;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:120%;
+	margin-bottom:10px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:20px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align: left;
+	text-decoration: none;
+	text-indent:0;
+	text-transform:uppercase;
+	widows:1;
+  padding-left: 0%;
+}
+p.subtopicname {
+	color:#273a8f;
+	font-family:Arial, sans-serif;
+	font-size:100%;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:10px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:10px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+	position: relative;
+}
+.topic-number {
+	color:#ec6725;
+	font-family:Arial, sans-serif;
+	font-size: large;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:120%;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:25px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0%;
+	text-transform:uppercase;
+	widows:1;
+}
+.body {
+	-epub-hyphens:none;
+	-epub-text-align-last:left;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:100%;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:120%;
+	margin-bottom:8px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.centered {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:.8em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:110%;
+	margin-bottom:8px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.ul {
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:.8em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:120%;
+	margin-bottom:5px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:5px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.bullet-circle1 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:100%;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:120%;
+	list-style-position:outside;
+	list-style-type: square;
+	margin-bottom:5px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.bullet-circle2-table {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:100%;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:120%;
+	list-style-position:outside;
+	list-style-type:square;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.bullet-numbers1 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:100%;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:120%;
+	list-style-position:outside;
+	list-style-type:decimal;
+	margin-bottom:5px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.bullet-circle2 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:100%;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:120%;
+	list-style-position:outside;
+	list-style-type:square;
+	margin-bottom:3px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:2px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.bullet-arrow2 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.25;
+	list-style-position:outside;
+	list-style-type: square;
+	margin-bottom:3px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+li.bullets_level-3_bulleted-list---dash {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.25;
+	list-style-position:outside;
+	margin-bottom:5px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+.caption {
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:small;
+	font-style:italic;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:120%;
+	margin-bottom:20px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:1px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+strong.Body_bold {
+	font-style:normal;
+	font-weight:bold;
+	display: inline;
+}
+span.Body_hyperlink {
+	color:#ec6725;
+	font-style:italic;
+	font-weight:normal;
+	text-decoration:underline;
+	display: inline;
+}
+strong.text-white {
+	color:#ffffff;
+}
+em.Body_italic {
+	font-style:italic;
+	font-weight:normal;
+	display: inline;
+}
+span.chapter-name {
+	color:#273a8f;
+	font-size: 1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	text-transform:none;
+	line-height:90%;
+	display: block;
+}
+span.topic-name {
+	color:#116ba8;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	text-transform:none;
+	display: block;
+}
+span.caption-bold {
+	font-style:italic;
+	font-weight:bold;
+	display: inline;
+}
+span.underline {
+	text-decoration:underline;
+	display: inline;
+}
+
+*span {
+	display: inline;
+}
+
+
+
+
+span.symbolOffsetLow {
+font-family:"Cambria Math", serif;
+
+	font-family: serif;
+	font-size:1em;
+	font-style:normal;
+	font-weight:normal;
+	vertical-align:sub;
+	display:inline;
+}
+span.symbolOffsetLowLarger {
+font-family:"Cambria Math", serif;
+
+	font-family: serif;
+	font-size:1.333em;
+	font-style:normal;
+	font-weight:normal;
+	vertical-align:sub;
+	display:inline;
+}
+span.symbol {
+font-family:"Cambria Math", serif;
+
+	font-family: serif;
+	font-size:1em;
+	font-style:normal;
+	font-weight:normal;
+	display:inline;
+}
+span.symbolLarger {
+font-family:"Cambria Math", serif;
+
+	font-family: serif;
+	font-size:1.333em;
+	font-style:normal;
+	font-weight:normal;
+	display:inline;
+}
+sub.subscript-symbol {
+font-family:"Cambria Math", serif;
+
+	font-family: serif;
+	font-size:1em;
+	font-style:normal;
+	font-weight:normal;
+	vertical-align:sub;
+	display:inline;
+}
+sub.subscript-larger {
+font-family:"Cambria Math", serif;
+
+	font-family: serif;
+	font-size:1.333em;
+	font-style:normal;
+	font-weight:normal;
+	vertical-align:sub;
+	display:inline;
+}
+blockquote.inset {
+	-epub-hyphens:none;
+	-epub-text-align-last:left;
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:.8em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:110%;
+	margin-bottom:8px;
+	margin-left:15px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+
+p.table {
+	/*-epub-hyphens:none;*/
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:0.75em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:110%;
+	margin-bottom:8px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+
+li.lowercase-letters1 {
+	/*-epub-hyphens:none;*/
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:.8em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.25;
+	list-style-position:outside;
+	list-style-type:lower-alpha;
+	margin-bottom:5px;
+	margin-left:45px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+
+li.uppercase-letters1 {
+	/*-epub-hyphens:none;*/
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:.8em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.25;
+	list-style-position:outside;
+	list-style-type:upper-alpha;
+	margin-bottom:5px;
+	margin-left:45px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+
+p.noIndent {
+	margin-left:0;
+}
+
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/lato-black.eot');
+	src: url('../fonts/lato/lato-black.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-black.woff') format('woff'), url('../fonts/lato/lato-black.ttf') format('truetype'), url('../fonts/lato/lato-black.svg#latoblack') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/lato-bold.eot');
+	src: url('../fonts/lato/lato-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-bold.woff') format('woff'), url('../fonts/lato/lato-bold.ttf') format('truetype'), url('../fonts/lato/lato-bold.svg#latobold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/lato-bolditalic.eot');
+	src: url('../fonts/lato/lato-bolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-bolditalic.woff') format('woff'), url('../fonts/lato/lato-bolditalic.ttf') format('truetype'), url('../fonts/lato/lato-bolditalic.svg#latobold-italic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/lato-italic.eot');
+	src: url('../fonts/lato/lato-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-italic.woff') format('woff'), url('../fonts/lato/lato-italic.ttf') format('truetype'), url('../fonts/lato/lato-italic.svg#latoitalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/lato-light.eot');
+	src: url('../fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-light.woff') format('woff'), url('../fonts/lato/lato-light.ttf') format('truetype'), url('../fonts/lato/lato-light.svg#latolight') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/lato-regular.eot');
+	src: url('../fonts/lato/lato-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-regular.woff') format('woff'), url('../fonts/lato/lato-regular.ttf') format('truetype'), url('../fonts/lato/lato-regular.svg#latoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Flat-UI-Icons';
+	src: url('../fonts/glyphicons/flat-ui-icons-regular.eot');
+	src: url('../fonts/glyphicons/flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons/flat-ui-icons-regular.woff') format('woff'), url('../fonts/glyphicons/flat-ui-icons-regular.ttf') format('truetype'), url('../fonts/glyphicons/flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');
+}
