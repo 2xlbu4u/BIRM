@@ -827,8 +827,7 @@ jQuery.fn.highlight = function (words, options) {
             if ($('#searchField').val() === '') {
                 var sAlert = 'Please enter a search term.';
                 var sTitle = 'BIRM Search';
-                if (device.platform.indexOf('Win') > -1) {
-                    window.alert = navigator.notification.alert;
+                if (navigator.platform.indexOf('Win') > -1) {
                     window.alert(sAlert,
                         function () { },
                         sTitle);
@@ -906,8 +905,7 @@ jQuery.fn.highlight = function (words, options) {
             if (!currentSelectable) {
                 var sAlert = 'Please make a selection to create a note.';
                 var sTitle = 'Validation Error';
-                if (device.platform.indexOf('Win') > -1) {
-                    window.alert = navigator.notification.alert;
+                if (navigator.platform.indexOf('Win') > -1) {
                     window.alert(sAlert, function () { }, sTitle);
                 }
                 else {
@@ -942,8 +940,7 @@ jQuery.fn.highlight = function (words, options) {
                     noteIdVal === 'Enter Note Title...' || noteTextVal === 'Enter Note Description...') {
                     var sAlert = 'Please ensure all data has been entered.';
                     var sTitle = 'Validation Error';
-                    if (device.platform.indexOf('Win') > -1) {
-                        window.alert = navigator.notification.alert;
+                    if (navigator.platform.indexOf('Win') > -1) {
                         window.alert(sAlert, function () { }, sTitle);
                     }
                     else {
@@ -958,8 +955,7 @@ jQuery.fn.highlight = function (words, options) {
                         // Save the page with the embedded notes.
                         var sAlert = 'The note has been successfully saved.';
                         var sTitle = 'Save Note';
-                        if (device.platform.indexOf('Win') > -1) {
-                            window.alert = navigator.notification.alert;
+                        if (navigator.platform.indexOf('Win') > -1) {
                             window.alert(sAlert,
                                 function () {
                                     $('#notesForm').find('input').val('');
@@ -982,8 +978,7 @@ jQuery.fn.highlight = function (words, options) {
                     } else {
                         var sAlert = 'A note already exists.';
                         var sTitle = 'Validation Error';
-                        if (device.platform.indexOf('Win') > -1) {
-                            window.alert = navigator.notification.alert;
+                        if (navigator.platform.indexOf('Win') > -1) {
                             window.alert(sAlert, function () { }, sTitle);
                         }
                         else {
@@ -1006,8 +1001,7 @@ jQuery.fn.highlight = function (words, options) {
             }
             if (!currentSelectable) {
                 var sAlert = 'Please make a selection to create a bookmark.';
-                if (device.platform.indexOf('Win') > -1) {
-                    window.alert = navigator.notification.alert;
+                if (navigator.platform.indexOf('Win') > -1) {
                     window.alert(sAlert, function () { }, 'Validation Error');
                 }
                 else {
@@ -1030,8 +1024,7 @@ jQuery.fn.highlight = function (words, options) {
                 if (bookmarkTitle.length === 0 || bookmarkTitle.length === 0 || bookmarkTitle === 'Enter Bookmark...') {
                     var sAlert = 'Please enter a bookmark identifier.';
                     var sTitle = 'Validation Error';
-                    if (device.platform.indexOf('Win') > -1) {
-                        window.alert = navigator.notification.alert;
+                    if (navigator.platform.indexOf('Win') > -1) {
                         window.alert(sAlert, function () { }, sTitle);
                     }
                     else {
@@ -1043,8 +1036,7 @@ jQuery.fn.highlight = function (words, options) {
 
                         var sAlert = 'The bookmark has been successfully saved.';
                         var sTitle = 'Save Bookmark';
-                        if (device.platform.indexOf('Win') > -1) {
-                            window.alert = navigator.notification.alert;
+                        if (navigator.platform.indexOf('Win') > -1) {
                             window.alert(sAlert,
                                 function () {
                                     $('#bookmarkTitle').val('');
@@ -1064,8 +1056,7 @@ jQuery.fn.highlight = function (words, options) {
                     } else {
                         var sAlert = 'This bookmark already exists.';
                         var sTitle = 'Validation Error';
-                        if (device.platform.indexOf('Win') > -1) {
-                            window.alert = navigator.notification.alert;
+                        if (navigator.platform.indexOf('Win') > -1) {
                             window.alert(sAlert, function () { }, sTitle);
                         }
                         else {

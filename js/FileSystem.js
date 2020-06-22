@@ -12,7 +12,9 @@ var oFileSystem;
 	
 	var EventListener;
 	
-	var onGetDirectorySuccess = function(dir){
+	var onGetDirectorySuccess = function(dir)
+	{
+		console.log("onGetDirectorySuccess");
 		//alert('directory created ' + dir.name);
 		//alert('path + file ' + dir.fullPath + '/ch1.epub');
 		//sFile = dir.fullPath + '/ch1.epub';
@@ -24,7 +26,7 @@ var oFileSystem;
 	}
 	
 	var  onGetDirectoryFail = function(error) {
-		alert('Error creating directory ' + error.code);
+		console.log('Error creating directory ' + error.message);
 	}
 								
 	var gotFile = function(fileEntry){
@@ -32,13 +34,18 @@ var oFileSystem;
 		//sFile = fileEntry.name;
 	}
 	
-	var fail = function (evt){
-		alert('failed to get file' + evt.target.error.code);
-		alert('Download File in fail');
+	var fail = function (evt)
+	{
+		console.log('FileSystem fail' + evt.target.error.message);
 	}
 	
-	
-	BIRM.FileSystem.prototype.AppFullPath = function() {
+	function hidespin() 
+	{
+        $.mobile.loading("hide");
+    }
+
+	BIRM.FileSystem.prototype.AppFullPath = function() 
+	{
 		return sFullPath;
 	};
 	
@@ -46,16 +53,19 @@ var oFileSystem;
 	//	return sRootDirectory;
 	//};
 	
-	BIRM.FileSystem.prototype.AppDirectory = function() {
+	BIRM.FileSystem.prototype.AppDirectory = function() 
+	{
 		return sAppDirectory;
 	};
 	
-	var onInitFs = function() {
+	var onInitFs = function() 
+	{
 		//alert('done with fs');
 	}
 	
-	var errorHandler = function() {
-		alert('Error');
+	var errorHandler = function() 
+	{
+		console.log("FileSystem errorHandler");
 	}
 	
 	/**
@@ -65,47 +75,60 @@ var oFileSystem;
 	 * @param {Function} successCallback is called with the new DirectoryEntry from JQuery.getDirectory
 	 * @param {Function} errorCallback is called with the error from JQuery.getDirectory
 	 */	
-	BIRM.FileSystem.prototype.getDirectory = function (DirectoryName, Create, successCallback, errorCallback) {
+	BIRM.FileSystem.prototype.getDirectory = function (DirectoryName, Create, successCallback, errorCallback) 
+	{
 	
 		try {
-				
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-							function(fileSystem){ // success get file system
+	
+	        window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+			window.requestFileSystem(window.PERSISTENT, 1024*1024,
+							function(fileSystem)
+							{ // success get file system
 								sRootDirectory = fileSystem.root;							
 								sRootDirectory.getDirectory(DirectoryName, {create: Create, exclusive: false}, successCallback, errorCallback);					
-							}, function(evt){ // error get file system
+							}, function(evt)
+							{ // error get file system
+							    hidespin();
 								alert("File System Error: "+evt.target.error.code);
 							}
 						);
 		}
 		catch(e) {
+			hidespin();
 			alert('FileSystem.getDirectory: An error occurred getting ' + DirectoryName + '. (' + e.message + '.');
 		}
 	};
 	
-	BIRM.FileSystem.prototype.getFile = function (FileName, Create, successCallback, errorCallback) {
+	BIRM.FileSystem.prototype.getFile = function (FileName, Create, successCallback, errorCallback) 
+	{
 	//	alert('getBIRMDocument');
 		try {
-		
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-							function(fileSystem){ // success get file system
+	        window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;		
+			window.requestFileSystem(window.PERSISTENT, 0,
+							function(fileSystem)
+							{ 
 								sRootDirectory = fileSystem.root;
 								sRootDirectory.getFile(FileName, {create: Create, exclusive: false}, successCallback, errorCallback);			
-							}, function(evt){ // error get file system
+							}, 
+							function(evt)
+							{ 
+							    hidespin();
 								alert("File System Error: "+evt.target.error.code);
 							}
 						);
 		}
 		catch(e) {
+			hidespin();
 		    alert('FileSystem.getFile: An error occurred getting ' + FileName + '. (' + e.message + '.');
 		}	
 	};
 	
-	//Private function to get the file
-	BIRM.FileSystem.prototype.getFileSystem = function () {
+	//Private function to get the file (not used)
+	BIRM.FileSystem.prototype.getFileSystem = function () 
+	{
 	    try {
-	        
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+	        window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;	        
+			window.requestFileSystem(window.PERSISTENT, 0,
 							function(fileSystem){ // success get file system
 								oFileSystem = fileSystem;
 								//alert('FileSytem.getFileSystem: The fileSystem root is ' + sRootDirectory);
@@ -113,19 +136,21 @@ var oFileSystem;
 								//alert('the app directory in getFileSystem ' + sAppDirectory);
 								//sRootDirectory.getDirectory(sAppDirectory, {create: true, exclusive: false}, onGetDirectorySuccess, onGetDirectoryFail);
 							}, function(evt){ // error get file system
+							    hidespin();
 								alert("File System Error: "+evt.target.error.code);
 							}
 						);
 		}
 		catch(e) {
-		    alert('FileSystem:getFileSystem: An error occurred. (' + e.message + ')');
+			hidespin();
+		    console.log('FileSystem:getFileSystem: An error occurred. (' + e.message + ')');
 		}
 
 	    return oFileSystem;
 	}
 
-	BIRM.FileSystem.prototype.GetFiles = function (DirectoryName, successCallback, errorCallback) {
-
+	BIRM.FileSystem.prototype.GetFiles = function (DirectoryName, successCallback, errorCallback) 
+	{
 	    console.log('FileSystem.GetFiles: Getting the specific files in ' + DirectoryName + '.');
 
 	    try {

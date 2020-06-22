@@ -1140,8 +1140,7 @@ var BIRM = BIRM || {};
                         closeProgress();
                         var sAlert = 'The note import process successfully completed.';
                         var sTitle = 'Notes Importing';
-                        if (device.platform.indexOf('Win') > -1) {
-                            window.alert = navigator.notification.alert;
+                        if (navigator.platform.indexOf('Win') > -1) {
                             window.alert(sAlert, function () { }, sTitle);
                         }
                         else {
@@ -1154,8 +1153,7 @@ var BIRM = BIRM || {};
                 closeProgress();
                 var sAlert = e.message;
                 var sTitle = 'Import Error';
-                if (device.platform.indexOf('Win') > -1) {
-                    window.alert = navigator.notification.alert;
+                if (navigator.platform.indexOf('Win') > -1) {
                     window.alert(sAlert, function () { }, sTitle);
                 }
                 else {
@@ -1570,8 +1568,7 @@ var BIRM = BIRM || {};
 	                        closeProgress();
 	                        var sAlert = 'The note import process successfully completed.';
 	                        var sTitle = 'Notes Importing';
-	                        if (device.platform.indexOf('Win') > -1) {
-	                            window.alert = navigator.notification.alert;
+	                        if (navigator.platform.indexOf('Win') > -1) {
 	                            window.alert(sAlert, function () { }, sTitle);
 	                        }
 	                        else {

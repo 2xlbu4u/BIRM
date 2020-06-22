@@ -64,6 +64,7 @@
     <script src="js/fastclick.js" type="text/javascript"></script>
 
     <!--unviel plugin-->
+	<!-- Lazy load of images -->
     <script src="js/jquery.unveil.js" type="text/javascript"></script>
 
     <!--modal plugin-->
@@ -301,7 +302,8 @@
                 return aID;
             }
 
-            function downloadAttachment(Video) {
+            function downloadAttachment(Video) 
+            {
 
                 var oBIRMApp = new BIRM.BIRMApp();
                 var sAppDirectory = oBIRMApp.AppDirectory;
@@ -390,7 +392,8 @@
 
         }
 
-        function handleScreenSize() {
+        function handleScreenSize() 
+        {
             // Background fix.
 
             try {
@@ -421,7 +424,8 @@
             }
         }
 
-        $(document).on("pagecreate", function () {
+        $(document).on("pagecreate", function () 
+        {
 
             $("#popupSlides").on({
                 popupbeforeposition: function () {
@@ -484,12 +488,15 @@
 
       //      $('#cgOptions').controlgroup("refresh");
 
-            $(document).on('click', 'a.testlink', function (event, ui) {
+            $(document).on('click', 'a.testlink', function (event, ui) 
+            {
                 event.preventDefault();
                 goToElement("chapter1", "_id1", false);
                 tour1();
             });
-            $(document).on('click', 'a.flush', function (event, ui) {
+            
+            $(document).on('click', 'a.flush', function (event, ui) 
+            {
                 event.preventDefault();
                 menuOptionsAPI.close();
 
@@ -502,7 +509,7 @@
                             e.preventDefault();
                             $.jStorage.flush();
 
-                            var devicePlatform = device.platform;
+                            var devicePlatform = navigator.platform;
                             if (devicePlatform == 'Android') {
                                 navigator.app.exitApp();
                             }
@@ -1303,7 +1310,8 @@
                 timerID = setTimeout(function () { showSpinner('Loading', 'Loading...', curTheme); }, 3000);
 
                 displayPage(myVideos);
-                getDirectory();
+                LoadVideos();
+            //    getDirectory();
             });
             $(document).on('click touchend', 'a.btnVersion', function (event, ui) {
                 event.preventDefault();
@@ -1322,6 +1330,7 @@
                     }
                 })
             });
+
             $('#myChapters').on('click', 'a.externalLink', function (event, ui) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -2146,7 +2155,8 @@
             });
             //FUNCTIONS
 
-            function tour1() {
+            function tour1() 
+            {
 
                 var tourdemo = [
                     {
@@ -3227,12 +3237,15 @@
             function restoreDefaults() {
                 $("#searchTable").show();
             }
-            function displayPage(mypage) {
+			
+            function displayPage(mypage) 
+			{
+				console.log("in displayPage: " + mypage.context.title);
                 hideAll();
-
                 paintTheme(curTheme)
 
-                switch (mypage.attr("id")) {
+                switch (mypage.attr("id")) 
+				{
                     case "myChapters":
                         restoreDefaults();
 
@@ -3240,10 +3253,19 @@
                         $(window).trigger('resize');
                         mypage.show();
 
-                        $("#myChapters img").unveil();
+                        // Load images for this chapter
+                        // Allow them to be pinch zoomed 
+                        $("#myChapters img").unveil(200, 
+                            function() 
+                            {
+                                var id = this.id;
+                                $('#'+id).pinchzoomer();        
+                            });
+
                         $("#myChapters img").trigger("unveil");
 
-                        switch ($("#chapterBlock").attr("title")) {
+                        switch ($("#chapterBlock").attr("title")) 
+						{
                             case "appendixA":
                                 myHeaderText.text("Appendix A");
                                 $("#searchScope").val("off");
@@ -3282,8 +3304,8 @@
                                 $("#searchScope").trigger("change");
                                 $("#switchWrapper").hide();
 
-                                $('img').on('tap', function (event, ui) {
-
+                                $('img').on('tap', function (event, ui) 
+								{
                                     event.stopPropagation();
                                     event.preventDefault();
 
@@ -3293,127 +3315,29 @@
                                     var alt = $img.attr('alt');
                                     var imgHeight = $img.height();
                                     var oBIRMApp;
-
-                                    window.localStorage.setItem('theme', curTheme);
+                                    var devicePlatform = navigator.platform;
+                                    
+									window.localStorage.setItem('theme', curTheme);
                                     window.localStorage.setItem('imgsrc', src);
                                     window.localStorage.setItem('imgdatasrc', datasrc);
                                     window.localStorage.setItem('imgalt', alt);
-                                    window.localStorage.setItem('initsize', imgHeight);
-
-                                    showSpinner('Loading Photo', 'Loading...', curTheme);
-            
-                                    var arrPath;
-                                    try {
-                                        arrPath = (cordova.file.applicationDirectory + "www/" + src).split('file:///');
-                                    } 
-                                    catch (ex)
-                                    {
-                                        hidespin();
-                                        console.log("Unable to bring image into viewer");
-                                        return;
-                                    }
-                                                                        
-                                    var newPath = arrPath[1];
-                                    var stop = newPath.lastIndexOf('/');
-                                    newPath = newPath.substring(0, stop);
-                                    var imgFileName = src.split('/')[1];
-                                    var test = 'file:///data/data/com.ideationinc.birm/'
-                                    var onGetDirectoriesFailed = function (error) 
-                                    {
-                                        ShowAlert('Developer Notification', 'Search.onGetDirectoriesFailed: An error occurred while getting the directories. (Error Code: ' + error.code + ')');
-                                    }
-
-
-                                    var setRootDirectory = function (callback) {
-                                        //console.log('BIRMvideos.setRootDirectory: Setting the root directory.');
-                                        try {
-                                            var sAppRoot = oBIRMApp.AppDirectory;
-                                            var sEPUBRoot = oBIRMApp.EPUBDirectory;
-                                            var sVideoDirectory = oBIRMApp.ImageDirectory;
-
-                                            var oFS = new BIRM.FileSystem();
-                                            oFS.getDirectory(sAppRoot, true, function (dirEntry) {
-                                                //console.log('BIRMvideos.setRootDirectory: Got the root directory. (' + dirEntry.toURL() + ')');
-                                                dirEntry.getDirectory(sVideoDirectory, { create: true }, function (dirVideoEntry) {
-                                                    //console.log('BIRMvideos.setRootDirectory: Got the Video directory. (' + dirVideoEntry.toURL() + ')');
-                                                    oEPUBRoot = dirVideoEntry;
-                                                    callback(dirVideoEntry, src);
-                                                }, onGetDirectoriesFailed);
-                                            }, onGetDirectoriesFailed);
-                                        }
-                                        catch (error) {
-                                            ShowAlert('Notification', 'BIRMvideos.setRootDirectory: An error occurred. (' + error.message + ')');
-                                        }
-                                    }
-
-                                    var loadImage = function (imgDirectory, imgFileName) {
-                                        var request = new XMLHttpRequest();
-
-                                        request.onload = function () {
-
-                                            var arrayBuffer = request.response;
-                                            if (arrayBuffer) {
-                                                var sFileName = src.split('/')[1];
-                                                var myArray; //= your data in a UInt8Array
-                                                var blob = new Blob([arrayBuffer], { 'type': 'image/png' });
-
-                                                // Add remove code here
-                                                imgDirectory.getFile(sFileName, { create: true }, function (fileEntry) {
-                                                    fileEntry.createWriter(function (fileWriter) {
-                                                        fileWriter.onwrite = function (evt) {
-                                                            if (devicePlatform === 'iOS') {
-                                                                window.open(fileEntry.toNativeURL(), '_blank', 'location=no,EnableViewPortScale=yes');
-                                                            }
-
-                                                            if (devicePlatform === 'Android') {
-                                                                window.open(fileEntry.toNativeURL(), '_blank', 'location=no,zoom=yes');
-                                                            }
-
-                                                            hidespin();
-
-                                                        }
-                                                        fileWriter.seek(fileWriter.length);
-                                                        fileWriter.write(blob);
-                                                    },
-                                                        function () {
-                                                            alert('error creating writer');
-                                                        });
-                                                });
-                                            }
-                                            else {
-                                                alert('failed');
-                                            }
-                                        };
-
-                                        request.open("GET", imgFileName, true);
-                                        request.responseType = "arraybuffer";
-                                        request.send();
-                                    }
-
-                                    var onSuccess = function () {
-                                    }
-
-                                    var onFailure = function () {
-                                    }
-
-                                    function ShowAlert(Title, Alert, Callback) {
-                                        var oBIRMApp = new BIRM.BIRMApp();
-                                        oBIRMApp.ShowAlert(Title, Alert, Callback);
-                                    }
-                                    var devicePlatform = device.platform;
+                                    window.localStorage.setItem('initsize', imgHeight);  
+  
                                     if (devicePlatform === 'iOS') {
-                                        oBIRMApp = new BIRM.BIRMApp();
-                                        setRootDirectory(loadImage);
+                                        window.open(fileEntry.toNativeURL(), '_blank', 'location=no,EnableViewPortScale=yes');
                                     }
 
                                     if (devicePlatform === 'Android') {
-                                        oBIRMApp = new BIRM.BIRMApp();
-                                        setRootDirectory(loadImage);
+                                        window.open(fileEntry.toNativeURL(), '_blank', 'location=no,zoom=yes');
                                     }
+                               //     else
+                                //        window.open(src, '_blank', 'location=no,zoom=yes');
+                                    return;
                                 });
+								
                                 myFooter.text("Tap on text to add a note or bookmark.");
                                 myFooter.show();
-                        }
+                        } // end switch ($("#chapterBlock").attr("title"))
 
                         break;
                     case "annotations":
@@ -3500,12 +3424,13 @@
                             mypage.show();
                         }, 400);
                         break;
-                }
+                } // end switch (mypage.attr("id")) 
 
-            }
+            } // end function displayPage(mypage) 
 
             // scrollToElement plugin function
-            function scrollToElement(selector, time, verticalOffset) {
+            function scrollToElement(selector, time, verticalOffset) 
+			{
 
                 try {
                     time = typeof (time) != 'undefined' ? time : 1000;
@@ -3525,7 +3450,8 @@
 
 			// never called
             function downloadFile() {
-                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+                window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+                window.requestFileSystem(window.PERSISTENT, 0,
                     function onFileSystemSuccess(fileSystem) {
 
                         fileSystem.root.getFile(
@@ -3587,71 +3513,79 @@
                         var sVideo = '';
 
                         var arrFiles = null;
-                        oBIRMApp.GetVideos(function (dirEntries) {
-                            $('#videos').empty();
-                            $('#videos').find("ul[data-role='listview']").listview();
-                            sVideo = '<ul  data-role="listview">';
-                            arrFiles = dirEntries;
 
-                            var i = 0;
-                            for (i = 0; i < BIRMVideos.length; i++) {
-                                var bDownloaded = false;
-                                var sFullPathToFile = '';
-                                var sImg = '';
+                 //       oBIRMApp.GetVideos(function (dirEntries) {
+                        var dirEntries = null;
 
-                                if (dirEntries != null) {
-                                    var result = $.grep(dirEntries, function (e) { return e.name == BIRMVideos[i].FileName; });
-                                    if (result.length === 1) {
-                                        bDownloaded = true;
-                                        sFullPathToFile = result[0].toURL();
-                                        sVideo += '<li data-icon="false"><a href="#" class="Video" data-yt="false" data-value="' + sFullPathToFile + '">' + BIRMVideos[i].DisplayName + '</a><a href="#" class="ui-icon-check"></a></li>';
-                                        //sVideo += '<li data-icon="false"><a href="https://www.youtube.com/watch?v=egz_egNN32Y" class="Video">test</a><a href="#" class="ui-icon-check"></a></li>';
-                                    }
-                                    else {
-                                        //                                        console.log("Video.LoadVideos: Video has NOT been previously downloaded. (" + BIRMVideos[i].FileName + ").")
-                                        //                                        console.log("Video.LoadVideos: The path to the previously NOT downloaded. (" + BIRMVideos[i].YoutubeID + ").")
+                        $('#videos').empty();
+                        $('#videos').find("ul[data-role='listview']").listview();
+                        sVideo = '<ul  data-role="listview">';
+                        arrFiles = dirEntries;
 
-                                        sVideo += '<li data-icon="false"><a class="Video" data-yt="true" rel="external" data-value="' + BIRMVideos[i].YoutubeID + '">' + BIRMVideos[i].DisplayName + '</a><a href="#" class="btnDownloadVideo ui-icon-cloud-download" data-value="' + BIRMVideos[i].FileName + '"></a></li>';
-                                    }
+                        var i = 0;
+                        for (i = 0; i < BIRMVideos.length; i++) {
+                            var bDownloaded = false;
+                            var sFullPathToFile = '';
+                            var sImg = '';
+
+                            if (dirEntries != null) {
+                                var result = $.grep(dirEntries, function (e) { return e.name == BIRMVideos[i].FileName; });
+                                if (result.length === 1) {
+                                    bDownloaded = true;
+                                    sFullPathToFile = result[0].toURL();
+                                    sVideo += '<li data-icon="false"><a href="#" class="Video" data-yt="false" data-value="' + sFullPathToFile + '">' + BIRMVideos[i].DisplayName + '</a><a href="#" class="ui-icon-check"></a></li>';
+                                    //sVideo += '<li data-icon="false"><a href="https://www.youtube.com/watch?v=egz_egNN32Y" class="Video">test</a><a href="#" class="ui-icon-check"></a></li>';
                                 }
                                 else {
-                                    //                                    console.log("Video.LoadVideos: Video has NOT been previously downloaded. (" + BIRMVideos[i].FileName + ").")
-                                    //                                    console.log("Video.LoadVideos: The path to the previously NOT downloaded. (" + BIRMVideos[i].YoutubeID + ").")
+                                    //                                        console.log("Video.LoadVideos: Video has NOT been previously downloaded. (" + BIRMVideos[i].FileName + ").")
+                                    //                                        console.log("Video.LoadVideos: The path to the previously NOT downloaded. (" + BIRMVideos[i].YoutubeID + ").")
 
                                     sVideo += '<li data-icon="false"><a class="Video" data-yt="true" rel="external" data-value="' + BIRMVideos[i].YoutubeID + '">' + BIRMVideos[i].DisplayName + '</a><a href="#" class="btnDownloadVideo ui-icon-cloud-download" data-value="' + BIRMVideos[i].FileName + '"></a></li>';
                                 }
-                            } //end for
+                            }
+                            else {
+                                //                                    console.log("Video.LoadVideos: Video has NOT been previously downloaded. (" + BIRMVideos[i].FileName + ").")
+                                //                                    console.log("Video.LoadVideos: The path to the previously NOT downloaded. (" + BIRMVideos[i].YoutubeID + ").")
 
-                            sVideo += '</ul>';
-                            $('#videos').append(sVideo);
-                            $('#videos').find("ul[data-role='listview']").listview();
-                            $("#videos a").on('click', function (evt) {
-                                evt.stopPropagation();
-                            });
+                                sVideo += '<li data-icon="false"><a class="Video" data-yt="true" rel="external" data-value="' + BIRMVideos[i].YoutubeID + '">' + BIRMVideos[i].DisplayName + '</a><a href="#" class="btnDownloadVideo ui-icon-cloud-download" data-value="' + BIRMVideos[i].FileName + '"></a></li>';
+                            }
+                        } //end for
 
-                            $(".Video").on('click', (function (evt) {
-                                onSelectTbl2($(this));
-                            }));
+                        sVideo += '</ul>';
+                        $('#videos').append(sVideo);
+                        $('#videos').find("ul[data-role='listview']").listview();
+                        
+                        $("#videos a").on('click', function (evt) 
+                        {
+                            evt.stopPropagation();
+                        });
 
-                            $(".btnDownloadVideo").on('click', (function (evt) {
-                                DownloadVideo($(this));
-                            }));
+                        $(".Video").on('click', (function (evt) 
+                        {
+                            onSelectTbl2($(this));
+                        }));
 
-                            hidespin();
-                            clearTimeout(timerID);
-                        },
-                            function () { alert('An error occurred.'); });
+                        $(".btnDownloadVideo").on('click', (function (evt) 
+                        {
+                            DownloadVideo($(this));
+                        }));
+
+                        hidespin();
+                        clearTimeout(timerID);
+                     //   },
+                         //   function () { alert('An error occurred.'); });
                     }
                 }
-                catch (err) {
-                    //Handle errors here
-                    alert('Videos.LoadVideos: ' + err);
+                catch (err) 
+                {
+                    hidespin();
+                    console.log('Videos.LoadVideos: ' + err.message);
                 }
             }
 
             function getDirectory() {
-
-                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+                window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+                window.requestFileSystem(window.PERSISTENT, 0,
                     function (filesystem) {
 
                         // Get the app's directory
@@ -3690,46 +3624,24 @@
 
             }
 
-            function onSelectTbl2(obj) {
+            function onSelectTbl2(obj) 
+            {
                 //when the user clicks to watch on youtube only
                 //ks 03/24/2016 added check for youtube video links.
 
                 var videopath = obj.attr("data-value");
                 var videoType = obj.attr("data-yt");
-                var devicePlatform = device.platform;
+                var devicePlatform = navigator.platform;
 
-                try {
-                    if (videoType == "true") {
-                        var sConnType = navigator.network.connection.type;
+                try 
+                {
+                    if (videoType == "true") 
+                    {
+                        //var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                        var sConnType = NetworkInformation.type;//  connection.type;
 
-                        if (sConnType === 'wifi') {
-                            $.prompt("You are now leaving the BIRM App to view the video on YouTube.", {
-                                title: "Warning",
-                                buttons: { "Ok": true, "Cancel": false },
-                                top: "30%",
-                                submit: function (e, v, m, f) {
-                                    if (v) {
-                                        if (devicePlatform === 'Android') {
-                                            window.open(encodeURI(videopath), '_system');
-                                        }
-                                        else if (devicePlatform === 'iOS') {
-                                            window.open(encodeURI(videopath), '_blank', 'location=no');
-                                        }
-
-                                        e.preventDefault();
-                                        $.prompt.close();
-                                    } //end if
-
-                                    if (!v) {
-                                        e.preventDefault();
-                                        $.prompt.close();
-                                    } //end if
-                                } //end submit
-                            })//end prompt
-
-                        } //end wifi
-                        else {
-                            //alert('Please consider turning on wifi to conserve your data plan minutes.');
+                        if (devicePlatform !== "Win32" && sConnType !== 'wifi') 
+                        {
                             $.prompt("Please consider turning on wifi to conserve your data plan minutes.", {
                                 title: "Warning",
                                 buttons: { "Ok": true },
@@ -3741,27 +3653,52 @@
                                     }
                                 }
                             });
+                             
                         }
+
+                        $.prompt("You are now leaving the BIRM App to view the video on YouTube.", 
+                        {
+                            title: "Warning",
+                            buttons: { "Ok": true, "Cancel": false },
+                            top: "30%",
+                            submit: function (e, v, m, f) 
+                            {
+                                if (v) 
+                                {
+                                    if (devicePlatform === 'Android') 
+                                    {
+                                        window.open(encodeURI(videopath), '_system');
+                                    }
+                                    else {
+                                        window.open(encodeURI(videopath), '_blank', 'location=no');
+                                    }
+
+                                    e.preventDefault();
+                                    $.prompt.close();
+                                } //end if
+
+                                if (!v) 
+                                {
+                                    e.preventDefault();
+                                    
+                                }
+                            } //end submit
+                        })//end prompt
+                       
+
                     } //end if video type
-                    else//will play for local videos in native video player
+                    else //will play for local videos in native video player
                     {
-
-                        if (devicePlatform === 'Android') {
-                            window.open(encodeURI(videopath), '_blank', 'location=no');
-                        }
-
-                        if (devicePlatform === 'iOS') {
-                            window.open(encodeURI(videopath), '_blank', 'location=no');
-                        }
-
+                        window.open(encodeURI(videopath), '_blank', 'location=no');
                     }
                 }
                 catch (err) {
-                    alert('OpenVideo ' + err);
+                    console.log('OpenVideo ' + err.message);
                 }
             }
 
-            function DownloadVideo(obj) {
+            function DownloadVideo(obj) 
+            {
 
                 var videopath = obj.attr("data-value");
                 try {
@@ -13020,14 +12957,162 @@
         app.initialize();
     </script>
     <script>
-        window.onload = () => {
+        window.onload = () => 
+		{
             'use strict';
 
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker
-                    .register('./sw.js');
+            if ('serviceWorker' in navigator) 
+			{
+                navigator.serviceWorker.register('./sw.js');
+				console.log("Service Worker Registered")
             }
         }
+    </script>
+
+    <script>
+
+    /// Not used
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Everything below can be removed                                  
+
+
+//                                     showSpinner('Loading Photo', 'Loading...', curTheme);
+            
+//                             //        var arrPath;
+//                              //       try {
+//                             //            arrPath = (cordova.file.applicationDirectory + "www/" + src).split('file:///');
+//                             //        } 
+//                               //      catch (ex)
+//                              //       {
+//                              //           hidespin();
+//                              //           console.log("Unable to bring image into viewer");
+//                              //           return;
+//                              //       }
+                                                                        
+//                              //       var newPath = arrPath[1];
+//                               //      var stop = newPath.lastIndexOf('/');
+//                              //       newPath = newPath.substring(0, stop);
+//                                     var imgFileName = src.split('/')[1];
+//                               //      var test = 'file:///data/data/com.ideationinc.birm/'
+                                    
+//                                     var onGetDirectoriesFailed = function (error) 
+//                                     {
+//                                         // error.code error.message error.name
+//                                         hidespin();
+//                                         console.log('img tap onGetDirectoriesFailed: ' + error.name + ': ' + error.message);
+//                                     }
+
+
+//                                     var setRootDirectory = function (callback) 
+//                                     {
+//                                         //console.log('BIRMvideos.setRootDirectory: Setting the root directory.');
+//                                         try {
+//                                             var sAppRoot = oBIRMApp.AppDirectory;
+//                                             var sEPUBRoot = oBIRMApp.EPUBDirectory;
+//                                             var sVideoDirectory = oBIRMApp.ImageDirectory;
+
+//                                             var oFS = new BIRM.FileSystem();
+// 											oFS.getDirectory(sAppRoot, true, 
+// 												function (dirEntry) 
+// 												{
+// 													//console.log('BIRMvideos.setRootDirectory: Got the root directory. (' + dirEntry.toURL() + ')');
+// 													dirEntry.getDirectory(sVideoDirectory, { create: true }, 
+// 														function (dirVideoEntry) 
+// 														{
+// 														//console.log('BIRMvideos.setRootDirectory: Got the Video directory. (' + dirVideoEntry.toURL() + ')');
+// 														oEPUBRoot = dirVideoEntry;
+// 														callback(dirVideoEntry, src);
+// 														}, onGetDirectoriesFailed);
+// 												}, onGetDirectoriesFailed);
+//                                         }
+//                                         catch (error) {
+//                                             console.log('BIRMvideos.setRootDirectory: An error occurred. (' + error.message + ')');
+//                                         }
+//                                     }
+
+//                                     var loadImage = function (imgDirectory, imgFileName) 
+//                                     {
+// 										console.log("loadImage called");
+//                                         var request = new XMLHttpRequest();
+
+//                                         request.onload = function () {
+
+//                                             var arrayBuffer = request.response;
+//                                             if (arrayBuffer) {
+//                                                 var sFileName = src.split('/')[1];
+//                                                 var myArray; //= your data in a UInt8Array
+//                                                 var blob = new Blob([arrayBuffer], { 'type': 'image/png' });
+
+//                                                 // Add remove code here
+//                                                 imgDirectory.getFile(sFileName, { create: true }, function (fileEntry) {
+//                                                     fileEntry.createWriter(function (fileWriter) {
+//                                                         fileWriter.onwrite = function (evt) {
+//                                                             if (devicePlatform === 'iOS') {
+//                                                                 window.open(fileEntry.toNativeURL(), '_blank', 'location=no,EnableViewPortScale=yes');
+//                                                             }
+
+//                                                             if (devicePlatform === 'Android') {
+//                                                                 window.open(fileEntry.toNativeURL(), '_blank', 'location=no,zoom=yes');
+//                                                             }
+
+//                                                             hidespin();
+
+//                                                         }
+//                                                         fileWriter.seek(fileWriter.length);
+//                                                         fileWriter.write(blob);
+//                                                     },
+//                                                         function () {
+//                                                             alert('error creating writer');
+//                                                         });
+//                                                 });
+//                                             }
+//                                             else {
+//                                                 alert('failed');
+//                                             }
+//                                         };
+
+//                                         request.open("GET", imgFileName, true);
+//                                         request.responseType = "arraybuffer";
+//                                         request.send();
+//                                     }
+
+//                                     var onSuccess = function () 
+//                                     {
+//                                         console.log("onSuccess 3409");
+//                                     }
+
+//                                     var onFailure = function () 
+//                                     {
+//                                         console.log("onSuccess 3414");
+//                                     }
+
+//                                     function ShowAlert(Title, Alert, Callback) 
+//                                     {
+//                                         if (!oBIRMApp)  oBIRMApp = new BIRM.BIRMApp();
+//                                         oBIRMApp.ShowAlert(Title, Alert, Callback);
+//                                     }
+
+//                                     var devicePlatform = navigator.platform;
+
+//                                     if (devicePlatform === 'iOS') {
+//                                         oBIRMApp = new BIRM.BIRMApp();
+//                                         setRootDirectory(loadImage);
+//                                     }
+
+//                                     if (devicePlatform === 'Android') {
+//                                         oBIRMApp = new BIRM.BIRMApp();
+//                                         setRootDirectory(loadImage);
+//                                     }
+                              //      else
+                             //       {
+//                                        oBIRMApp = new BIRM.BIRMApp();
+//                                        setRootDirectory(loadImage);
+                                   // }
+									// end img on tap
+// Everything above can be removed									
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////									
+
+
     </script>
 </body >
 </html >

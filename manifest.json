@@ -1,6 +1,11 @@
 {
   "name": "Hello World",
   "short_name": "Hello",
+  "theme_color": "white",
+  "background_color": "white",
+  "display": "standalone", 
+  "scope":"/", 
+  "start_url": "/",      
   "icons": [{
     "src": "images/hello-icon-128.png",
       "sizes": "128x128",
@@ -27,8 +32,7 @@
       "type": "image/png"
     }],
   "lang": "en-US",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "white",
-  "theme_color": "white"
+  "permissions": [
+    "unlimitedStorage"
+  ]    
 }

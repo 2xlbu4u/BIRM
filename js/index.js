@@ -54,7 +54,7 @@ var app = {
         // app opened in landscape mode.
         screen.unlockOrientation();
 
-        var devicePlatform = device.platform;
+        var devicePlatform = navigator.platform;
         $('input').on('focus', function (e) {
             $.mobile.silentScroll($("#toolBar").offset().top);
             $("#pageFooter").hide();

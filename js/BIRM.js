@@ -207,13 +207,13 @@ var BIRM = BIRM || {};
 	    GetFiles(sAppDirectory + '/' + sVideoDirectory, successCallback, errorCallback);
 	}
 
-	BIRM.BIRMApp.prototype.ShowAlert = function (Title, Alert, Callback) {
-		console.log("BIRMApp.ShowAlert: platform: " + device.platform);		
+	BIRM.BIRMApp.prototype.ShowAlert = function (Title, Alert, Callback) 
+	{
+		console.log("BIRMApp.ShowAlert: platform: " + navigator.platform);		
 	    var sAlert = Alert;
 	    var sTitle = Title;
 	    // Check is performed per PhoneGap's suggested implementation for Windows.
-	    if (device.platform.indexOf('Win') > -1) {
-	        window.alert = navigator.notification.alert;
+	    if (navigator.platform.indexOf('Win') > -1) {
 	        window.alert(sAlert, Callback, sTitle);
 	    }
 	    else {
@@ -222,12 +222,11 @@ var BIRM = BIRM || {};
 	}
 
 	BIRM.BIRMApp.prototype.ShowConfirmation = function (Title, Alert, Callback, Buttons) {
-		console.log("BIRMApp.ShowConfirmation: platform: " + device.platform);				
+		console.log("BIRMApp.ShowConfirmation: platform: " + navigator.platform);				
 	    var sAlert = Alert;
 	    var sTitle = Title;
 	    // Check is performed per PhoneGap's suggested implementation for Windows.
-	    if (device.platform.indexOf('Win') > -1) {
-	        window.alert = navigator.notification.confirm;
+	    if (navigator.platform.indexOf('Win') > -1) {
 	        window.confirm(sAlert, Callback, sTitle, Buttons);
 	    }
 	    else {
