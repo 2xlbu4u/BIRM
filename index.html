@@ -29,7 +29,8 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.themes.css" />
 
     <!-- jQuery js -->
-    <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="js/jquery-2.1.3.js" type="text/javascript"></script>	
+   <!-- <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script> -->
 
     <!-- jqueryMobile js -->
     <script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
@@ -118,7 +119,8 @@
 
     <script type="text/javascript" charset="utf-8">
 		// never called
-        function downloadFile() {
+        function downloadFile() 
+		{
             var fileTransfer = new FileTransfer();
             fileTransfer.download(
                 "http://downloads.ideationinc.com/FixDTFs.txt",
@@ -134,7 +136,8 @@
                 }
             );
         }
-        function showLink(url) {
+        function showLink(url) 
+		{
             var divEl = document.getElementById("testarea");
             var aElem = document.createElement("a");
             aElem.setAttribute("target", "_blank");
@@ -142,8 +145,9 @@
             aElem.appendChild(document.createTextNode("Ready! Click To Open."))
             divEl.appendChild(aElem);
         }
-        function fail(evt) {
-            //            console.log(evt.target.error.code);
+        function fail(evt) 
+		{
+			outConsoleError(evt.target.error.code);
         }
     </script>
     <!-- birm scripts - document ready + event listeners + functions-->
@@ -152,7 +156,8 @@
         var myNotes = [];
         var curTheme = "c";
 
-        function handleOpenURL(url) {
+        function handleOpenURL(url) 
+		{
             //ks 03/23/2016 addded spinner to when import starts and changed text of first spinner and when import fails.
             var myacceptedTerm = $.jStorage.get("acceptedTerm");
             if (myacceptedTerm == null) {
@@ -218,7 +223,7 @@
                     }
                     catch (e) {
                         hidespin();
-                        alert(e.message);
+                        outConsoleError(e.message);
                     }
 
                 }
@@ -226,8 +231,8 @@
 
             }
 
-            function importNotes(arrNotes) {
-
+            function importNotes(arrNotes) 
+			{
                 var myImports = arrNotes;
                 /* Clear notes for the template being imported. */
 
@@ -333,7 +338,7 @@
                 catch (e) {
                     //$(".modalWindow").remove();
                     //hidespin();
-                    //alert("Video.DownloadVideo: Error - " + e.message + ".");
+                    //outConsoleError("Video.DownloadVideo: Error - " + e.message + ".");
                 }
 
             }
@@ -420,7 +425,7 @@
                 myContent.height(content);
 
             } catch (e) {
-                alert(e.message);
+                outConsoleError(e.message);
             }
         }
 
@@ -859,7 +864,7 @@
                         if (v) {
                             e.preventDefault();
                             if ($("#myExportTitle").val().length == 0) {
-                                alert("Please enter a valid Title for the Exported Notes.")
+                                outConsoleError("Please enter a valid Title for the Exported Notes.")
                                 return;
                             }
                             var myExports = [];
@@ -1433,7 +1438,7 @@
 
                     setTimeout(function () {
                         var arr = hrefURL.split('?');
-                        //* useful tester to see if the links in the TOC is correct. alert("The chapter is:"+arr[0]+" and the element is:"+arr[1])
+                        //* useful tester to see if the links in the TOC is correct. outConsoleError("The chapter is:"+arr[0]+" and the element is:"+arr[1])
                         var chapter = arr[0];
                         var elID = arr[1];
 
@@ -1982,7 +1987,7 @@
                             selectedText = rangy.serializeSelection(rangeText, true, content);
                         }
                     } catch (e) {
-                        alert('Serialization Error: ' + e.message);
+                        outConsoleError('Serialization Error: ' + e.message);
                     }
                 }
 
@@ -2073,7 +2078,7 @@
                     $("#popupMenuElementID").val(elID);
                     $("#popupMenuList").show();
                     $("#popupNote").hide();
-                    $("#popupMenu").popup("open", { positionTo: "origin" });
+                    $("#popupMenu").popup("open"); //, { positionTo: "origin" }
                     if (highlightID !== '') {
                         $('.popupRemoveHighlight').prop('id', highlightID);
                         highlightID = '';
@@ -2084,7 +2089,7 @@
                     }
                 }
                 catch (e) {
-                    alert(e.message);
+                    outConsoleError(e.message);
                 }
             }
 
@@ -2873,7 +2878,7 @@
                                 selectedText = '';
                             }, 200);
                         } catch (e) {
-                            alert('highlight error ' + e.message);
+                            outConsoleError('highlight error ' + e.message);
                         }
                         break;
                 }
@@ -2942,7 +2947,7 @@
                     $('#cgOptions').controlgroup("refresh");
                 }
                 catch (e) {
-                    alert(e.message);
+                    outConsoleError(e.message);
                 }
 
             }
@@ -3013,7 +3018,7 @@
                     }
                 }
                 catch (e) {
-                    alert(e);
+                    outConsoleError(e);
                 }
             }
 
@@ -3444,7 +3449,7 @@
                     $.mobile.silentScroll(offsetTop);
                 }
                 catch (e) {
-                    alert(e);
+                    outConsoleError(e);
                 }
             }
 
@@ -3478,23 +3483,23 @@
                     }, fail);
             };
 
-            function LoadVideos_old() {
-
-                //                console.log("BIRMApp.LoadVideos: Preloading BIRM videos.")
-                var Videos = new Array();
-                var arr = new Array();
-                arr = ['49 ROW PropMgm Final', '49_ROW_PropMgm_Final.mp4', 'http://www.youtube.com/embed/kWFFtmIUsok', '85']
-                Videos.push(arr);
-                arr = ['74 Contractor Payroll Final', '74_Contractor_Payroll_Final.mp4', 'http://www.youtube.com/embed/F23k9LfGhtM', '75']
-                Videos.push(arr);
-                arr = ['87 NBIS Final', '87_NBIS_Final.mp4', 'http://www.youtube.com/embed/sPhLc5Zfw3c', '77']
-                Videos.push(arr);
-                arr = ['56 Internal Controls Final', '56_Internal_Controls_Final.mp4', 'http://www.youtube.com/embed/2vH1kdelySc', '56']
-                Videos.push(arr);
-                Videos.sort()
-
-                return Videos;
-            }
+ //          function LoadVideos_old() {
+ //
+ //              //                console.log("BIRMApp.LoadVideos: Preloading BIRM videos.")
+ //              var Videos = new Array();
+ //              var arr = new Array();
+ //              arr = ['49 ROW PropMgm Final', '49_ROW_PropMgm_Final.mp4', 'http://www.youtube.com/embed/kWFFtmIUsok', '85']
+ //              Videos.push(arr);
+ //              arr = ['74 Contractor Payroll Final', '74_Contractor_Payroll_Final.mp4', 'http://www.youtube.com/embed/F23k9LfGhtM', '75']
+ //              Videos.push(arr);
+ //              arr = ['87 NBIS Final', '87_NBIS_Final.mp4', 'http://www.youtube.com/embed/sPhLc5Zfw3c', '77']
+ //              Videos.push(arr);
+ //              arr = ['56 Internal Controls Final', '56_Internal_Controls_Final.mp4', 'http://www.youtube.com/embed/2vH1kdelySc', '56']
+ //              Videos.push(arr);
+ //              Videos.sort()
+ //
+ //              return Videos;
+ //          }
 
             function LoadVideos() {
                 //ks 03/24/2016 added the atrribute data-youtube for youtube video links.
@@ -3573,7 +3578,7 @@
                         hidespin();
                         clearTimeout(timerID);
                      //   },
-                         //   function () { alert('An error occurred.'); });
+                         //   function () { outConsoleError('An error occurred.'); });
                     }
                 }
                 catch (err) 
@@ -3603,22 +3608,22 @@
                                             LoadVideos();
                                         },
                                         function (evt) {
-                                            alert("File System Error: " + evt.target.error.code);
+                                            outConsoleError("File System Error: " + evt.target.error.code);
                                         }
                                     );
                                 }
                                 catch (ev) {
-                                    alert("File System Error: " + evt.target.error.code);
+                                    outConsoleError("File System Error: " + evt.target.error.code);
                                 }
 
                             },
                             function (evt) {
-                                alert("File System Error: " + evt.target.error.code);
+                                outConsoleError("File System Error: " + evt.target.error.code);
                             }
                         );
                     },
                     function () {
-                        alert('no filesystem');
+                        outConsoleError('no filesystem');
                     }
                 );
 
@@ -3724,7 +3729,7 @@
                     }
                 }
                 catch (err) {
-                    alert('OpenVideo ' + err);
+                    outConsoleError('OpenVideo ' + err);
                 }
             }
 
@@ -3765,7 +3770,7 @@
                 catch (e) {
                     $(".modalWindow").remove();
                     hidespin();
-                    alert("Video.DownloadVideo: Error - " + e.message + ".");
+                    outConsoleError("Video.DownloadVideo: Error - " + e.message + ".");
                 }
 
             }
@@ -3900,6 +3905,10 @@
             $.mobile.loading("hide");
         }
 
+	function outConsoleError(message)
+	{
+		console.log("Error: " + message);
+	}
     </script>
 </head>
 <!------------------------------------------------------------------------------------------------------------------->
@@ -3985,6 +3994,8 @@
                 </div>
 
             </div>
+            
+            <!-- Code for adding notes -->
             <input type="hidden" id="popupMenuElementID" value="">
             <div data-role="popup" id="popupMenu" class="mypopup" style="max-width:300px !important; width: 300px !important">
                 <ul id="popupMenuList" data-role="listview"></ul>
@@ -13062,12 +13073,12 @@
 //                                                         fileWriter.write(blob);
 //                                                     },
 //                                                         function () {
-//                                                             alert('error creating writer');
+//                                                             outConsoleError('error creating writer');
 //                                                         });
 //                                                 });
 //                                             }
 //                                             else {
-//                                                 alert('failed');
+//                                                 outConsoleError('failed');
 //                                             }
 //                                         };
 
