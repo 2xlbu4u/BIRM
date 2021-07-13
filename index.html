@@ -3643,7 +3643,8 @@
                     if (videoType == "true") 
                     {
                         //var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-                        var sConnType = NetworkInformation.type;//  connection.type;
+						// Not supported
+                       /* var sConnType = null;// Not supported  NetworkInformation ? NetworkInformation.type : null;//  connection.type;
 
                         if (devicePlatform !== "Win32" && sConnType !== 'wifi') 
                         {
@@ -3659,7 +3660,7 @@
                                 }
                             });
                              
-                        }
+                        }*/
 
                         $.prompt("You are now leaving the BIRM App to view the video on YouTube.", 
                         {
